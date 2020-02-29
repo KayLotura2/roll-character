@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Keeper</title>
+  <!-- <script src="JSON/ancestry.json"></script>
+  <script src="JSON/gender.json"></script>
+  <script src="JSON/archetype.json"></script>
+  <script src="JSON/npcBlock.json"></script>
+  <script src="JSON/names.json"></script>
+  <script src="../src/randomizers.js"></script>
+  <script src="../src/ancestry_generator.js"></script>
+  <script src="../src/gender_generator.js"></script>
+  <script src="../src/archetype_generator.js"></script> -->
+  <script src="../dist/bundle.js"></script>
+</head>
+
+<body>
+  <p id="name"></p>
+  <p id="profile"></p>
+  <p id="archetype"></p>
+  <p id="trait"></p>
+  <p id="ideal"></p>
+  <p id="flaw"></p>
+  <p id="class">Class</p>
+  <p id="ancestry"></p>
+  <p id="type"></p>
+  <p id="ac">AC</p>
+  <p>Hit Points</p>
+  <p>Speed(s)</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">STR</th>
+        <th style="text-align: center">DEX</th>
+        <th style="text-align: center">CON</th>
+        <th style="text-align: center">INT</th>
+        <th style="text-align: center">WIS</th>
+        <th style="text-align: center">CHA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="STR" style="text-align: center">10 (0)</td>
+        <td id="DEX" style="text-align: center">10 (0)</td>
+        <td id="CON" style="text-align: center">10 (0)</td>
+        <td id="INT" style="text-align: center">10 (0)</td>
+        <td id="WIS" style="text-align: center">10 (0)</td>
+        <td id="CHA" style="text-align: center">10 (0)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Saves</p>
+  <p>Skills</p>
+  <p>Languages</p>
+  <p>Challenge</p>
+  <div>Passive</div>
+  <div>Actions</div>
+  <p>Club. Melee Weapon Attack: +2 to hit, reach 5 ft., one target.</p>
+  <p>Hit: 2 (1d4) bludgeoning damage.</p>
+</body>
+
+</html>
+<script>
+  var npcObj = window.bundle.generateNPC();
+  document.getElementById("name").innerHTML = "<h2>" + npcObj.archetype.name + "</h2>"
+  document.getElementById("ancestry").innerHTML = npcObj.ancestry.ancestry;
+  document.getElementById("type").innerHTML = npcObj.ancestry.types;
+  document.getElementById("profile").innerHTML = "<strong>Profile: </strong>" + npcObj.gender;
+  document.getElementById("archetype").innerHTML = "<strong>Archetype: </strong>" + npcObj.archetype.baseArchetype;
+  document.getElementById("trait").innerHTML = "<strong>Trait: </strong>" + npcObj.archetype.trait;
+  document.getElementById("ideal").innerHTML = "<strong>" + npcObj.archetype.ideal.name + ": </strong>" + npcObj.archetype.ideal.desc;
+  document.getElementById("flaw").innerHTML = "<strong>Flaw: </strong>" + npcObj.archetype.flaw;
+</script>

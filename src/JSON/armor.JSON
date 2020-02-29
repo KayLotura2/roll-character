@@ -1,0 +1,21 @@
+{
+  "armors": [{
+      "proficiency": "light",
+      "armorBonus": 2,
+      "armorAb": "dexterity",
+      "names": ["padded coat", "jack vest", "leather armor", "light chainmail", "hide armor", "scale"]
+    },
+    {
+      "proficiency": "heavy",
+      "armorBonus": 4,
+      "armorAb": "-",
+      "names": ["field plate", "gothic plate", "dwarven plate", "breastplate", "splint", "heavy ring mail"]
+    },
+    {
+      "proficiency": "shield",
+      "armorBonus": 2,
+      "armorAb": "-",
+      "names": ["targe", "kite shield", "heater shield", "buckler", "small shield", "notched shield", "large shield"]
+    }
+  ]
+}

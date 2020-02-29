@@ -1,0 +1,358 @@
+{
+  "weapons": [{
+      "name": "baton",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": false,
+      "finesse": true,
+      "light": true
+    },
+    {
+      "name": "knife",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "finesse": true,
+      "light": true
+    },
+    {
+      "name": "dart",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "piercing",
+      "melee": true,
+      "ranged": true,
+      "finesse": true,
+      "thrown": true,
+      "range1": 30,
+      "range2": 60
+    },
+    {
+      "name": "mace",
+      "proficiencyType": "simple",
+      "damageDieSize": 6,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": true,
+      "thrown": true,
+      "range1": 15,
+      "range2": 30,
+      "versatile": true
+    },
+    {
+      "name": "quarterstaff",
+      "proficiencyType": "simple",
+      "damageDieSize": 6,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": false,
+      "finesse": true,
+      "polearm": true,
+      "two-handed": true
+    },
+    {
+      "name": "sickle",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "versatile": true,
+      "finesse": true
+    },
+    {
+      "name": "spear",
+      "proficiencyType": "simple",
+      "damageDieSize": 6,
+      "damageType": "piercing",
+      "melee": true,
+      "ranged": true,
+      "range1": 30,
+      "range2": 60,
+      "versatile": true,
+      "polearm": true
+    },
+    {
+      "name": "throwing axe",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": true,
+      "range1": 30,
+      "range2": 60,
+      "light": true
+    },
+    {
+      "name": "unarmed strike",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": false
+    },
+    {
+      "name": "crossbow",
+      "proficiencyType": "simple",
+      "damageDieSize": 6,
+      "damageType": "piercing",
+      "melee": false,
+      "ranged": true,
+      "range1": 100,
+      "range2": 400,
+      "ammunition": true,
+      "loading": true,
+      "twoHanded": true,
+      "firearm": true
+    },
+    {
+      "name": "hand crossbow",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "piercing",
+      "melee": false,
+      "ranged": true,
+      "range1": 30,
+      "range2": 120,
+      "ammunition": true,
+      "loading": true,
+      "light": true,
+      "firearm": true
+    },
+    {
+      "name": "sling",
+      "proficiencyType": "simple",
+      "damageDieSize": 4,
+      "damageType": "bludgeoning",
+      "melee": false,
+      "ranged": true,
+      "range1": 60,
+      "range2": 200,
+      "ammunition": true
+    },
+    {
+      "name": "battle axe",
+      "proficiencyType": "martial",
+      "damageDieSize": 8,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "versatile": true
+    },
+    {
+      "name": "flail",
+      "proficiencyType": "martial",
+      "damageDieSize": 6,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": false,
+      "finesse": true,
+      "versatile": true
+    },
+    {
+      "name": "glaive",
+      "proficiencyType": "martial",
+      "damageDieSize": 8,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "reach": true,
+      "polearm": true,
+      "twoHanded": true
+    },
+    {
+      "name": "greatsword",
+      "proficiencyType": "martial",
+      "damageDieSize": 13,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "twoHanded": true
+    },
+    {
+      "name": "longsword",
+      "proficiencyType": "martial",
+      "damageDieSize": 9,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "versatile": true
+    },
+    {
+      "name": "maul",
+      "proficiencyType": "martial",
+      "damageDieSize": 13,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": false,
+      "twoHanded": true
+    },
+    {
+      "name": "naginata",
+      "proficiencyType": "martial",
+      "damageDieSize": 8,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "finesse": true,
+      "polearm": true,
+      "twoHanded": true
+    },
+    {
+      "name": "net",
+      "proficiencyType": "martial",
+      "damageDieSize": 4,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": true,
+      "range1": 10,
+      "range2": 30,
+      "other": ["Entangle"]
+    },
+    {
+      "name": "pike",
+      "proficiencyType": "martial",
+      "damageDieSize": 10,
+      "damageType": "piercing",
+      "melee": true,
+      "ranged": false,
+      "reach": true,
+      "polearm": true,
+      "twoHanded": true
+    },
+    {
+      "name": "rapier",
+      "proficiencyType": "martial",
+      "damageDieSize": 6,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "finesse": true,
+      "versatile": true
+    },
+    {
+      "name": "scimitar",
+      "proficiencyType": "martial",
+      "damageDieSize": 8,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "light": true,
+      "versatile": true
+    },
+    {
+      "name": "short sword",
+      "proficiencyType": "martial",
+      "damageDieSize": 6,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "light": true,
+      "finesse": true
+    },
+    {
+      "name": "spiked chain",
+      "proficiencyType": "martial",
+      "damageDieSize": 6,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "reach": true,
+      "twoHanded": true,
+      "finesse": true
+    },
+    {
+      "name": "war pick",
+      "proficiencyType": "martial",
+      "damageDieSize": 8,
+      "damageType": "piercing",
+      "melee": true,
+      "ranged": false,
+      "versatile": true
+    },
+    {
+      "name": "warhammer",
+      "proficiencyType": "martial",
+      "damageDieSize": 8,
+      "damageType": "bludgeoning",
+      "melee": true,
+      "ranged": true,
+      "range1": 30,
+      "range2": 60,
+
+      "versatile": true,
+      "thrown": true
+    },
+    {
+      "name": "whip",
+      "proficiencyType": "martial",
+      "damageDieSize": 4,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "reach": true,
+      "light": true,
+      "finesse": true
+    },
+    {
+      "name": "long bow",
+      "proficiencyType": "martial",
+      "damageDieSize": 8,
+      "damageType": "piercing",
+      "melee": false,
+      "ranged": true,
+      "range1": 160,
+      "range2": 600,
+      "ammunition": true,
+      "twoHanded": true
+    },
+    {
+      "name": "hand crossbow",
+      "proficiencyType": "martial",
+      "damageDieSize": 4,
+      "damageType": "piercing",
+      "melee": false,
+      "ranged": true,
+      "range1": 60,
+      "range2": 120,
+      "ammunition": true,
+      "light": true,
+      "loading": true,
+      "firearm": true
+    },
+    {
+      "name": "short bow",
+      "proficiencyType": "martial",
+      "damageDieSize": 9,
+      "damageType": "piercing",
+      "melee": false,
+      "ranged": true,
+      "range1": 80,
+      "range2": 300,
+      "ammunition": true,
+      "twoHanded": true
+    },
+    {
+      "name": "claw",
+      "proficiencyType": "natural",
+      "damageDieSize": 6,
+      "damageType": "slashing",
+      "melee": true,
+      "ranged": false,
+      "light": true,
+      "finesse": true
+    }, {
+      "name": "bite",
+      "proficiencyType": "natural",
+      "damageDieSize": 8,
+      "damageType": "piercing",
+      "melee": true,
+      "ranged": false,
+      "finesse": true
+    }
+  ]
+}

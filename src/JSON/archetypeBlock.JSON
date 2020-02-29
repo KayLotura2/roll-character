@@ -1,0 +1,68 @@
+{
+  "archetypeBlocks": [
+    {
+      "name": "commoner",
+      "hitDice": [
+        1,
+        2,
+        3
+      ],
+      "languages": [
+        "common"
+      ],
+      "bonusLanguages": [
+        0,
+        1
+      ],
+      "challenge": 0,
+      "weaponProficiencies": [
+        "club",
+        "dagger",
+        "quarterstaff"
+      ],
+      "shieldProf": false,
+      "lightArmorProf": false,
+      "hvyArmorProf": false,
+      "givenSkills": [],
+      "randomSkills": [
+        0,
+        1,
+        2
+      ],
+      "givenSaves": []
+    },
+    {
+      "name": "guard",
+      "hitDice": [
+        2,
+        3,
+        4
+      ],
+      "languages": [
+        "common"
+      ],
+      "bonusLanguages": [
+        1,
+        2
+      ],
+      "challenge": 0.125,
+      "weaponProficiencies": [
+        "mace",
+        "glaive",
+        "heavyCrossbow"
+      ],
+      "shieldProf": true,
+      "lightArmorProf": true,
+      "hvyArmorProf": true,
+      "givenSkills": [
+        "perception"
+      ],
+      "randomSkills": [
+        1,
+        2,
+        3
+      ],
+      "givenSaves": []
+    }
+  ]
+}

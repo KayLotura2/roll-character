@@ -1,0 +1,257 @@
+{
+  "skills": [
+    {
+      "name": "acrobatics",
+      "abMod": "DEX"
+    },
+    {
+      "name": "arcana",
+      "abMod": "INT"
+    },
+    {
+      "name": "athletics",
+      "abMod": "STR"
+    },
+    {
+      "name": "deception",
+      "abMod": "CHA"
+    },
+    {
+      "name": "history",
+      "abMod": "INT"
+    },
+    {
+      "name": "intimidation",
+      "abMod": "CHA"
+    },
+
+    {
+      "name": "investigation",
+      "abMod": "INT"
+    },
+    {
+      "name": "nature",
+      "abMod": "WIS"
+    },
+    {
+      "name": "perception",
+      "abMod": "WIS"
+    },
+    {
+      "name": "persuasion",
+      "abMod": "CHA"
+    },
+
+    {
+      "name": "religion",
+      "abMod": "WIS"
+    },
+    {
+      "name": "sleight of hand",
+      "abMod": "DEX"
+    },
+    {
+      "name": "stealth",
+      "abMod": "DEX"
+    },
+    {
+      "name": "survival",
+      "abMod": "WIS"
+    }
+  ],
+  "majorTools": [
+    {
+      "name": "alchemy tools",
+      "abMod": "CHA"
+    },
+    {
+      "name": "armory tools",
+      "abMod": "STR"
+    },
+    {
+      "name": "chirurgey tools",
+      "abMod": "CON"
+    },
+    {
+      "name": "engineering tools",
+      "abMod": "INT"
+    },
+    {
+      "name": "herbalism tools",
+      "abMod": "WIS"
+    },
+    {
+      "name": "thieves' tools",
+      "abMod": "DEX"
+    }
+  ],
+  "artisanTool": [
+    {
+      "name": "brewer's tools",
+      "abMod": "WIS"
+    },
+    {
+      "name": "calligrapher's tools",
+      "abMod": "DEX"
+    },
+    {
+      "name": "chirurgey tools",
+      "abMod": "CON"
+    },
+    {
+      "name": "carpenter’s tools",
+      "abMod": "STR"
+    },
+    {
+      "name": "cartographer’s tools",
+      "abMod": "WIS"
+    },
+    {
+      "name": "cobbler’s tools",
+      "abMod": "INT"
+    },
+    {
+      "name": "cook's tools",
+      "abMod": "WIS"
+    },
+    {
+      "name": "glassblower’s tools",
+      "abMod": "CON"
+    },
+    {
+      "name": "jeweler’s tools",
+      "abMod": "INT"
+    },
+    {
+      "name": "leatherworker’s tools",
+      "abMod": "DEX"
+    },
+    {
+      "name": "mason’s tools",
+      "abMod": "STR"
+    },
+    {
+      "name": "navigator's tools",
+      "abMod": "WIS"
+    },
+    {
+      "name": "painter's tools",
+      "abMod": "CHA"
+    },
+    {
+      "name": "potter’s tools",
+      "abMod": "DEX"
+    },
+    {
+      "name": "weaver’s tools",
+      "abMod": "WIS"
+    },
+    {
+      "name": "land vehicles",
+      "abMod": "WIS"
+    },
+    {
+      "name": "water vehicles",
+      "abMod": "WIS"
+    }
+
+  ],
+  "performanceTools": [
+    {
+      "name": "bagpipes",
+      "abMod": "CHA"
+    },
+    {
+      "name": "bells",
+      "abMod": "CHA"
+    },
+    {
+      "name": "chimes",
+      "abMod": "CHA"
+    },
+    {
+      "name": "dancing",
+      "abMod": "CHA"
+    },
+    {
+      "name": "drums",
+      "abMod": "CHA"
+    },
+    {
+      "name": "dulcimer",
+      "abMod": "CHA"
+    },
+    {
+      "name": "fiddle",
+      "abMod": "CHA"
+    },
+    {
+      "name": "flute",
+      "abMod": "CHA"
+    },
+    {
+      "name": "harp",
+      "abMod": "CHA"
+    },
+    {
+      "name": "harpsichord",
+      "abMod": "CHA"
+    },
+    {
+      "name": "horn",
+      "abMod": "CHA"
+    },
+    {
+      "name": "lute",
+      "abMod": "CHA"
+    },
+    {
+      "name": "lyre",
+      "abMod": "CHA"
+    },
+    {
+      "name": "mandolin",
+      "abMod": "CHA"
+    },
+    {
+      "name": "ocarina",
+      "abMod": "CHA"
+    },
+    {
+      "name": "pan-flue",
+      "abMod": "CHA"
+    },
+    {
+      "name": "piano",
+      "abMod": "CHA"
+    },
+    {
+      "name": "pipe-organ",
+      "abMod": "CHA"
+    },
+    {
+      "name": "recorder",
+      "abMod": "CHA"
+    },
+    {
+      "name": "shwam",
+      "abMod": "CHA"
+    },
+    {
+      "name": "singing",
+      "abMod": "CHA"
+    },
+    {
+      "name": "trumpet",
+      "abMod": "CHA"
+    },
+    {
+      "name": "viol",
+      "abMod": "CHA"
+    },
+    {
+      "name": "weapon-drill",
+      "abMod": "CHA"
+    }
+  ]
+}
