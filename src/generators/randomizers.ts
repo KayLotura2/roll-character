@@ -21,7 +21,6 @@ function dieRoll(diesize: number): number {
   return result;
 }
 
-
 /**
  * Takes in an array and a value, and returns a new array of distinct random values
  * from the original array. This new array has a length equal to the value.

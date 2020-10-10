@@ -1,0 +1,147 @@
+{
+  "genderDescriptors": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "cis",
+    "androgynous",
+    "butch",
+    "demi",
+    "femme",
+    "fluid",
+    "gender-apathic",
+    "gender-queer",
+    "gray",
+    "hairy",
+    "hard",
+    "intersex",
+    "masculine",
+    "non-binary",
+    "non-conforming",
+    "masculine",
+    "sparkle",
+    "soft",
+    "trans"
+  ],
+  "genderRoots": [{
+      "gen": "androgyne",
+      "pron": "they"
+    },
+    {
+      "gen": "agender",
+      "pron": "they"
+    }, {
+      "gen": "boy",
+      "pron": "he"
+    }, {
+      "gen": "enby",
+      "pron": "they"
+    }, {
+      "gen": "epicine",
+      "pron": "they"
+    }, {
+      "gen": "girl",
+      "pron": "she"
+    }, {
+      "gen": "man",
+      "pron": "he"
+    }, {
+      "gen": "nuetrois",
+      "pron": "they"
+    }, {
+      "gen": "gender-questioning",
+      "pron": "they"
+    }, {
+      "gen": "queer",
+      "pron": "they"
+    }, {
+      "gen": "woman",
+      "pron": "she"
+    }
+  ],
+  "pronouns": [{
+    "key": "ey",
+    "name": "ey/em",
+    "subPrn": "ey",
+    "objPrn": "em",
+    "possAdj": "eir",
+    "possPrn": "eirs",
+    "rflxPrn": "eirself"
+  }, {
+    "key": "gein",
+    "name": "gein/gein",
+    "subPrn": "gein",
+    "objPrn": "gein",
+    "possAdj": "geins",
+    "possPrn": "geins",
+    "rflxPrn": "geinself"
+  }, {
+    "key": "he",
+    "name": "he/him",
+    "subPrn": "he",
+    "objPrn": "him",
+    "possAdj": "his",
+    "possPrn": "his",
+    "rflxPrn": "himself"
+  }, {
+    "key": "she",
+    "name": "she/her",
+    "subPrn": "she",
+    "objPrn": "her",
+    "possAdj": "her",
+    "possPrn": "hers",
+    "rflxPrn": "herself"
+  }, {
+    "key": "sie",
+    "name": "sie/sie",
+    "subPrn": "sie",
+    "objPrn": "sie",
+    "possAdj": "hir",
+    "possPrn": "hirs",
+    "rflxPrn": "hirself"
+  }, {
+    "key": "tey",
+    "name": "tey/ter",
+    "subPrn": "tey",
+    "objPrn": "ter",
+    "possAdj": "tem",
+    "possPrn": "ters",
+    "rflxPrn": "terself"
+  }, {
+    "key": "they",
+    "name": "they/them",
+    "subPrn": "they",
+    "objPrn": "them",
+    "possAdj": "their",
+    "possPrn": "theirs",
+    "rflxPrn": "themself"
+  }, {
+    "key": "ve",
+    "name": "ve/ver",
+    "subPrn": "vey",
+    "objPrn": "ver",
+    "possAdj": "vis",
+    "possPrn": "vers",
+    "rflxPrn": "verself"
+  }, {
+    "key": "xe",
+    "name": "xe/xem",
+    "subPrn": "xe",
+    "objPrn": "xem",
+    "possAdj": "xyr",
+    "possPrn": "xyrs",
+    "rflxPrn": "xemself"
+  }, {
+    "key": "zie",
+    "name": "zie/zim",
+    "subPrn": "zie",
+    "objPrn": "zim",
+    "possAdj": "zir",
+    "possPrn": "zirs",
+    "rflxPrn": "zieself"
+  }],
+  "attractionDescriptors": [" ", " ", " ", "demi-", "fray-", "gray-"],
+  "attractionRoots": ["a", "bi", "hetero", "homo", "pan"]
+}
