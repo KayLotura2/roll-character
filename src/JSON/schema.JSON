@@ -503,6 +503,12 @@
           "$ref": "http://localhost/personality#/definitions/pronoun"
         }
       },
+      "asethtics": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
       "attractionRoots": {
         "type": "array",
         "items": {
