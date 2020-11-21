@@ -7,11 +7,11 @@ const names: string[] = (<any>namesJSON).names
 const quirks: string[] = (<any>personalityJSON).quirks
 const ideals: string[] = (<any>personalityJSON).ideals
 const flaws: string[] = (<any>personalityJSON).flaws
-const genderDescriptors: string[] = (<any>personalityJSON).flaws
-const genderRoots: string[] = (<any>personalityJSON).flaws
-const pronouns: string[] = (<any>personalityJSON).flaws
-const attractionDescriptors: string[] = (<any>personalityJSON).flaws
-const attractionRoots: string[] = (<any>personalityJSON).flaws
+const genderDescriptors: string[] = (<any>identityJSON).genderDescriptors
+const genderRoots: string[] = (<any>identityJSON).genderRoots
+const pronouns: string[] = (<any>identityJSON).pronouns
+const attractionDescriptors: string[] = (<any>identityJSON).attractionDescriptors
+const attractionRoots: string[] = (<any>identityJSON).attractionRoots
 
 // One to Four names, with shorter names represented by empty strings
 export type Name = {
@@ -58,8 +58,6 @@ export type Identity = {
   sexualAttraction: string,
   romanticAttraction: string
 }
-
-
 
 /**
  * Retruns a character name composed with 1 to 4 names.
@@ -109,7 +107,6 @@ export function generatePersonality(): Personality {
   return result
 }
 
-
 /**
  * Retruns a complex gender/orientation profile.
  */
@@ -142,8 +139,11 @@ export function generateIdentity(): Identity {
     // genRoots = [randomizer(genderRoots)]
   }
 
-  const totalGenders: GenderRoot[] = randomizerCount(genderRoots, numberOfGenders)
+  console.log("GenderRoots Rando: ", genderRoots)
+  console.log("numberOfGenders Rando: ", numberOfGenders)
 
+  const totalGenders: GenderRoot[] = randomizerCount(genderRoots, numberOfGenders)
+  const charpronouns = randomizerCount(pronouns, numberOfGenders);
   // const possiblePronouns: Pronoun[] = totalGenders.map(gen => gen.pronoun)
 
   const gender: GenderObject = {
@@ -154,13 +154,21 @@ export function generateIdentity(): Identity {
   const sxlAttraction = 'sexualAttraction'
   const rtcAttraction = 'romanticAttraction'
 
+  console.log("Descriptor:", descriptor)
+  console.log("Desc: ", gender.desc)
+  console.log("Roots: ", gender.rts)
+  console.log("RootsJoin: ", gender.rts.map(g => g.gen).join(" "))
+  console.log("Pronouns: ", charpronouns)
+
+
 
   const result: Identity = {
-    gender: `${descriptor} ${gender.desc} ${gender.rts.join(" ")}`,
-    pronoun: pronouns.join(" "),
+    gender: `${gender.desc} ${gender.rts.map(g => g.gen).join(" ")}`,
+    pronoun: charpronouns.map(p => p.name).join(" "),
     sexualAttraction: sxlAttraction,
     romanticAttraction: rtcAttraction
   }
 
+  console.log(result.gender)
   return result
 }

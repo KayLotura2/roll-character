@@ -4,15 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Dice Keeper</title>
-  <!-- <script src="JSON/ancestry.json"></script>
-  <script src="JSON/gender.json"></script>
-  <script src="JSON/archetype.json"></script>
-  <script src="JSON/npcBlock.json"></script>
-  <script src="JSON/names.json"></script>
-  <script src="../src/randomizers.js"></script>
-  <script src="../src/ancestry_generator.js"></script>
-  <script src="../src/gender_generator.js"></script>
-  <script src="../src/archetype_generator.js"></script> -->
   <script src="../dist/bundle.js"></script>
 </head>
 
@@ -65,10 +56,7 @@
 <script>
   var npcObj = window.bundle.generateNPC();
   document.getElementById("name").innerHTML = "<h2>" + npcObj.archetype.name + "</h2>"
-  document.getElementById("ancestry").innerHTML = npcObj.ancestry.ancestry;
-  document.getElementById("type").innerHTML = npcObj.ancestry.types;
   document.getElementById("profile").innerHTML = "<strong>Profile: </strong>" + npcObj.gender;
-  document.getElementById("archetype").innerHTML = "<strong>Archetype: </strong>" + npcObj.archetype.baseArchetype;
   document.getElementById("trait").innerHTML = "<strong>Trait: </strong>" + npcObj.archetype.trait;
   document.getElementById("ideal").innerHTML = "<strong>" + npcObj.archetype.ideal.name + ": </strong>" + npcObj.archetype.ideal.desc;
   document.getElementById("flaw").innerHTML = "<strong>Flaw: </strong>" + npcObj.archetype.flaw;

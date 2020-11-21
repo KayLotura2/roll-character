@@ -1,6 +1,0 @@
-import { randomizer, dieRoll } from "./randomizers";
-
-//An NPC is a class, and an NPC has a lot of stats...
-
-
-// class NPC = ....
