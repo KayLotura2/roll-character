@@ -30,46 +30,58 @@
     "soft",
     "trans"
   ],
-  "genderRoots": [{
+  "genderRoots": [
+    {
       "gen": "androgyne",
       "pron": "they"
     },
     {
       "gen": "agender",
       "pron": "they"
-    }, {
+    },
+    {
       "gen": "boy",
       "pron": "he"
-    }, {
+    },
+    {
       "gen": "enby",
       "pron": "they"
-    }, {
+    },
+    {
       "gen": "epicine",
       "pron": "they"
-      }, {
+      },
+      {
         "gen": "goth",
         "pron": "they"
-    }, {
+    },
+    {
       "gen": "girl",
       "pron": "she"
-    }, {
+    },
+    {
       "gen": "man",
       "pron": "he"
-    }, {
+    },
+    {
       "gen": "nuetrois",
       "pron": "they"
-    }, {
+    },
+    {
       "gen": "gender-questioning",
       "pron": "they"
-    }, {
+    },
+    {
       "gen": "queer",
       "pron": "they"
-    }, {
+    },
+    {
       "gen": "woman",
       "pron": "she"
     }
   ],
-  "pronouns": [{
+  "pronouns": [
+    {
     "key": "ey",
     "name": "ey/em",
     "subPrn": "ey",
@@ -77,7 +89,8 @@
     "possAdj": "eir",
     "possPrn": "eirs",
     "rflxPrn": "eirself"
-  }, {
+  },
+  {
     "key": "gein",
     "name": "gein/gein",
     "subPrn": "gein",
@@ -85,7 +98,8 @@
     "possAdj": "geins",
     "possPrn": "geins",
     "rflxPrn": "geinself"
-  }, {
+  },
+  {
     "key": "he",
     "name": "he/him",
     "subPrn": "he",
@@ -93,7 +107,8 @@
     "possAdj": "his",
     "possPrn": "his",
     "rflxPrn": "himself"
-  }, {
+  },
+  {
     "key": "she",
     "name": "she/her",
     "subPrn": "she",
@@ -101,7 +116,8 @@
     "possAdj": "her",
     "possPrn": "hers",
     "rflxPrn": "herself"
-  }, {
+  },
+  {
     "key": "sie",
     "name": "sie/sie",
     "subPrn": "sie",
@@ -109,7 +125,8 @@
     "possAdj": "hir",
     "possPrn": "hirs",
     "rflxPrn": "hirself"
-  }, {
+  },
+  {
     "key": "tey",
     "name": "tey/ter",
     "subPrn": "tey",
@@ -117,7 +134,8 @@
     "possAdj": "tem",
     "possPrn": "ters",
     "rflxPrn": "terself"
-  }, {
+  },
+  {
     "key": "they",
     "name": "they/them",
     "subPrn": "they",
@@ -125,7 +143,8 @@
     "possAdj": "their",
     "possPrn": "theirs",
     "rflxPrn": "themself"
-  }, {
+  },
+  {
     "key": "ve",
     "name": "ve/ver",
     "subPrn": "vey",
@@ -133,7 +152,8 @@
     "possAdj": "vis",
     "possPrn": "vers",
     "rflxPrn": "verself"
-  }, {
+  },
+  {
     "key": "xe",
     "name": "xe/xem",
     "subPrn": "xe",
@@ -141,7 +161,8 @@
     "possAdj": "xyr",
     "possPrn": "xyrs",
     "rflxPrn": "xemself"
-  }, {
+  },
+  {
     "key": "zie",
     "name": "zie/zim",
     "subPrn": "zie",
@@ -149,8 +170,10 @@
     "possAdj": "zir",
     "possPrn": "zirs",
     "rflxPrn": "zieself"
-  }],
-  "asethtics": [
+  }
+],
+  "asethtics":
+  [
     "loves plaid",
     "has a sharp sideshave",
     "is covered in tattoos",
