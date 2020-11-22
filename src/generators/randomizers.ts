@@ -14,13 +14,13 @@ function randomizer(array: any[]) {
  * Takes in an integer for die size, and returns a random result for that die.
  * @param diesize
  */
-
 function dieRoll(diesize: number): number {
   var die: number[] = Array.from(Array(diesize)).map((e, i) => i)
   var result: number = (randomizer(die) + 1);
   return result;
 }
 
+// TODO: Fix this it doesn't seem to be working right...
 /**
  * Takes in an array and a value, and returns a new array of distinct random values
  * from the original array. This new array has a length equal to the value.

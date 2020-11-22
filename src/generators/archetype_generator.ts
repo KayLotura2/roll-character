@@ -13,24 +13,13 @@ const pronouns: string[] = (<any>identityJSON).pronouns
 const attractionDescriptors: string[] = (<any>identityJSON).attractionDescriptors
 const attractionRoots: string[] = (<any>identityJSON).attractionRoots
 
-// One to Four names, with shorter names represented by empty strings
+// One to Four names, with empty names represented by empty strings
 export type Name = {
   firstName: string,
   secondName: string,
   thirdName: string
   fourthName: string
 }
-
-// A complex Pronoun structure
-// export type Pronoun = {
-//   key: string,
-//   name: string,
-//   subPrn: string,
-//   objPrn: string,
-//   possAdj: string,
-//   possPrn: string,
-//   rflxPrn: string
-// }
 
 // A character's personality based on quirks, ideals, and flaws
 export type Personality = {
@@ -42,7 +31,8 @@ export type Personality = {
 type GenderRoot = {
   gen: string,
   // change this to a complex pronoun object
-  pronoun: string
+  // prnoun name not coming in right
+  pron: string
 }
 
 export type GenderObject = {
@@ -116,35 +106,36 @@ export function generateIdentity(): Identity {
 
   // Determine Mild Probability of Multigender Identities
   // 5% Bigender, 3% Polygender, 2% Pangender
-  const tenPct: number = dieRoll(100)
-  if (96 > tenPct && tenPct > 90 ) {
+  const multigenderDie: number = dieRoll(100)
+  if (96 > multigenderDie && multigenderDie > 90 ) {
     descriptor = 'bigender'
     numberOfGenders = 2
-  } else if (99 > tenPct && tenPct > 95 ) {
+  } else if (99 > multigenderDie && multigenderDie > 95 ) {
     descriptor = 'polygender'
     numberOfGenders = dieRoll(4) + 1
-  } else if (tenPct > 98 ) {
+  } else if (multigenderDie > 98 ) {
     descriptor = 'pangender'
     numberOfGenders = genderRoots.length
   } else {
     // this is the instance where one is not Multigender
-
-    // check to see if 50% chance of gender descriptor needed
-    const fiftyPct: number = dieRoll(2)
-    if (fiftyPct === 2 ) {
+    // check to see if 50% chance of gender descriptor for single-gender
+    const genderAdjCoinFlip: number = dieRoll(2)
+    if (genderAdjCoinFlip === 2 ) {
       descriptor = randomizer(genderDescriptors)
     }
-
-    // Not sure what this was for tbh
-    // genRoots = [randomizer(genderRoots)]
   }
 
-  console.log("GenderRoots Rando: ", genderRoots)
-  console.log("numberOfGenders Rando: ", numberOfGenders)
-
   const totalGenders: GenderRoot[] = randomizerCount(genderRoots, numberOfGenders)
-  const charpronouns = randomizerCount(pronouns, numberOfGenders);
-  // const possiblePronouns: Pronoun[] = totalGenders.map(gen => gen.pronoun)
+
+  let pronouns: string[] = []
+  // 75% chance that a prnoun is the typical pronoun for the given gender
+  const expectedPronDie: number = dieRoll(100)
+  if (expectedPronDie > 74) {
+    pronouns = randomizerCount(pronouns, numberOfGenders);
+  } else {
+    console.log( totalGenders.map(g => g.pron))
+    pronouns = totalGenders.map(g => g.pron)
+  }
 
   const gender: GenderObject = {
     rts: totalGenders,
@@ -158,13 +149,13 @@ export function generateIdentity(): Identity {
   console.log("Desc: ", gender.desc)
   console.log("Roots: ", gender.rts)
   console.log("RootsJoin: ", gender.rts.map(g => g.gen).join(" "))
-  console.log("Pronouns: ", charpronouns)
+  console.log("Pronouns: ", pronouns)
 
 
 
   const result: Identity = {
-    gender: `${gender.desc} ${gender.rts.map(g => g.gen).join(" ")}`,
-    pronoun: charpronouns.map(p => p.name).join(" "),
+    gender: `${gender.desc} ${gender.rts.map(g => g.gen).join("/")}`,
+    pronoun: pronouns.join(" "),
     sexualAttraction: sxlAttraction,
     romanticAttraction: rtcAttraction
   }
