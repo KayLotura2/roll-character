@@ -12,8 +12,8 @@
   <p id="profile"></p>
   <p id="archetype"></p>
   <p id="trait"></p>
-  <p id="ideal"></p>
-  <p id="flaw"></p>
+  <p id="virtue"></p>
+  <p id="trouble"></p>
   <p id="class">Class</p>
   <p id="ancestry"></p>
   <p id="type"></p>
@@ -58,6 +58,6 @@
   document.getElementById("name").innerHTML = "<h2>" + npcObj.archetype.name + "</h2>"
   document.getElementById("profile").innerHTML = "<strong>Profile: </strong>" + npcObj.gender;
   document.getElementById("trait").innerHTML = "<strong>Trait: </strong>" + npcObj.archetype.trait;
-  document.getElementById("ideal").innerHTML = "<strong>" + npcObj.archetype.ideal.name + ": </strong>" + npcObj.archetype.ideal.desc;
-  document.getElementById("flaw").innerHTML = "<strong>Flaw: </strong>" + npcObj.archetype.flaw;
+  document.getElementById("virtue").innerHTML = "<strong>" + npcObj.archetype.virtue.name + ": </strong>" + npcObj.archetype.virtue.desc;
+  document.getElementById("trouble").innerHTML = "<strong>trouble: </strong>" + npcObj.archetype.trouble;
 </script>

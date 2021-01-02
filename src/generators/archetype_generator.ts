@@ -3,38 +3,39 @@ import * as personalityJSON from "../JSON/personality.json"
 import * as identityJSON from "../JSON/identity.json"
 import { randomizer, dieRoll, randomizerCount } from "./randomizers";
 
-const names: string[] = (<any>namesJSON).names
-const quirks: string[] = (<any>personalityJSON).quirks
-const ideals: string[] = (<any>personalityJSON).ideals
-const flaws: string[] = (<any>personalityJSON).flaws
-const genderDescriptors: string[] = (<any>identityJSON).genderDescriptors
-const genderRoots: string[] = (<any>identityJSON).genderRoots
-const pronouns: string[] = (<any>identityJSON).pronouns
-const attractionDescriptors: string[] = (<any>identityJSON).attractionDescriptors
-const attractionRoots: string[] = (<any>identityJSON).attractionRoots
-
 // One to Four names, with empty names represented by empty strings
 export type Name = {
   firstName: string,
   secondName: string,
-  thirdName: string
-  fourthName: string
+  thirdName: string,
+  fourthName: string,
 }
 
-// A character's personality based on quirks, ideals, and flaws
+// A character's personality based on quirks, virtues, and troubles
 export type Personality = {
   quirk: string,
-  ideal: string,
-  flaw: string
+  virtue: string,
+  trouble: string,
 }
 
+// A complete pronoun object
+type Pronoun = {
+  key: string,
+  name: string,
+  subPrn: string,
+  objPrn: string,
+  possAdj: string,
+  possPrn: string,
+  rflxPrn: string
+}
+
+// A gender and typical pronoun
 type GenderRoot = {
   gen: string,
-  // change this to a complex pronoun object
-  // prnoun name not coming in right
-  pron: string
+  pron: Pronoun,
 }
 
+// A gender and a descriptor
 export type GenderObject = {
   rts: GenderRoot[]
   desc: string
@@ -47,7 +48,18 @@ export type Identity = {
   pronoun: string,
   sexualAttraction: string,
   romanticAttraction: string
+
 }
+
+const names: string[] = (<any>namesJSON).names
+const quirks: string[] = (<any>personalityJSON).quirks
+const virtues: string[] = (<any>personalityJSON).virtues
+const troubles: string[] = (<any>personalityJSON).troubles
+const genderDescriptors: string[] = (<any>identityJSON).genderDescriptors
+const genderRoots: string[] = (<any>identityJSON).genderRoots
+const pronouns: Pronoun[] = (<any>identityJSON).pronouns
+const attractionDescriptors: string[] = (<any>identityJSON).attractionDescriptors
+const attractionRoots: string[] = (<any>identityJSON).attractionRoots
 
 /**
  * Retruns a character name composed with 1 to 4 names.
@@ -81,17 +93,17 @@ export function generateName(): Name {
 }
 
 /**
- * Retruns a personality  constructed from quirk, ideal, and flaw.
+ * Retruns a personality  constructed from quirk, virtue, and trouble.
  */
 export function generatePersonality(): Personality {
   const quirk: string = randomizer(quirks);
-  const ideal: string = randomizer(ideals);
-  const flaw: string = randomizer(flaws);
+  const virtue: string = randomizer(virtues);
+  const trouble: string = randomizer(troubles);
 
   const result: Personality = {
     quirk: quirk,
-    ideal: ideal,
-    flaw: flaw,
+    virtue: virtue,
+    trouble: trouble,
   }
 
   return result
@@ -127,14 +139,13 @@ export function generateIdentity(): Identity {
 
   const totalGenders: GenderRoot[] = randomizerCount(genderRoots, numberOfGenders)
 
-  let pronouns: string[] = []
+  let charPronouns: string[] = []
   // 75% chance that a prnoun is the typical pronoun for the given gender
   const expectedPronDie: number = dieRoll(100)
   if (expectedPronDie > 74) {
-    pronouns = randomizerCount(pronouns, numberOfGenders);
+    charPronouns = randomizerCount(pronouns.map(p => p.key), numberOfGenders);
   } else {
-    console.log( totalGenders.map(g => g.pron))
-    pronouns = totalGenders.map(g => g.pron)
+    charPronouns = totalGenders.map(g => g.pron.key)
   }
 
   const gender: GenderObject = {
@@ -142,24 +153,33 @@ export function generateIdentity(): Identity {
     desc: descriptor
   }
 
-  const sxlAttraction = 'sexualAttraction'
-  const rtcAttraction = 'romanticAttraction'
+  const sexualAttractionDesc: string = randomizer(attractionDescriptors)
+  const sexualAttractionRoot: string = randomizer(attractionRoots)
+  let romanticAttractionDesc: string
+  let romanticAttractionRoot: string
 
-  console.log("Descriptor:", descriptor)
-  console.log("Desc: ", gender.desc)
-  console.log("Roots: ", gender.rts)
-  console.log("RootsJoin: ", gender.rts.map(g => g.gen).join(" "))
-  console.log("Pronouns: ", pronouns)
+  const expectedAttractionDie: number = dieRoll(100)
+  // 50% chance of a split orientation
+  if (expectedAttractionDie > 50) {
+    romanticAttractionDesc = sexualAttractionDesc;
+    romanticAttractionRoot = sexualAttractionRoot;
+  } else {
+    romanticAttractionDesc = randomizer(attractionDescriptors)
+    romanticAttractionRoot = randomizer(attractionRoots)
+  }
+
+  const sexualAttraction = `${sexualAttractionDesc}${sexualAttractionRoot}sexual`
+  const romantictAttraction = `${romanticAttractionDesc}${romanticAttractionRoot}romantic`
 
 
+  console.log(charPronouns.join("/"))
 
   const result: Identity = {
     gender: `${gender.desc} ${gender.rts.map(g => g.gen).join("/")}`,
-    pronoun: pronouns.join(" "),
-    sexualAttraction: sxlAttraction,
-    romanticAttraction: rtcAttraction
+    pronoun: charPronouns.join("/"),
+    sexualAttraction: sexualAttraction,
+    romanticAttraction: romantictAttraction
   }
 
-  console.log(result.gender)
   return result
 }

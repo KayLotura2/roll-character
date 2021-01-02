@@ -33,51 +33,147 @@
   "genderRoots": [
     {
       "gen": "androgyne",
-      "pron": "they"
+      "pron":   {
+          "key": "they",
+          "name": "they/them",
+          "subPrn": "they",
+          "objPrn": "them",
+          "possAdj": "their",
+          "possPrn": "theirs",
+          "rflxPrn": "themself"
+        }
     },
     {
       "gen": "agender",
-      "pron": "they"
+      "pron":   {
+          "key": "they",
+          "name": "they/them",
+          "subPrn": "they",
+          "objPrn": "them",
+          "possAdj": "their",
+          "possPrn": "theirs",
+          "rflxPrn": "themself"
+        }
     },
     {
       "gen": "boy",
-      "pron": "he"
+      "pron": {
+        "key": "he",
+        "name": "he/him",
+        "subPrn": "he",
+        "objPrn": "him",
+        "possAdj": "his",
+        "possPrn": "his",
+        "rflxPrn": "himself"
+      }
     },
     {
       "gen": "enby",
-      "pron": "they"
+      "pron":   {
+          "key": "they",
+          "name": "they/them",
+          "subPrn": "they",
+          "objPrn": "them",
+          "possAdj": "their",
+          "possPrn": "theirs",
+          "rflxPrn": "themself"
+        }
     },
     {
       "gen": "epicine",
-      "pron": "they"
+      "pron":   {
+          "key": "they",
+          "name": "they/them",
+          "subPrn": "they",
+          "objPrn": "them",
+          "possAdj": "their",
+          "possPrn": "theirs",
+          "rflxPrn": "themself"
+        }
       },
-      {
+    {
         "gen": "goth",
-        "pron": "they"
+        "pron":   {
+            "key": "they",
+            "name": "they/them",
+            "subPrn": "they",
+            "objPrn": "them",
+            "possAdj": "their",
+            "possPrn": "theirs",
+            "rflxPrn": "themself"
+          }
     },
     {
       "gen": "girl",
-      "pron": "she"
+      "pron":   {
+          "key": "she",
+          "name": "she/her",
+          "subPrn": "she",
+          "objPrn": "her",
+          "possAdj": "her",
+          "possPrn": "hers",
+          "rflxPrn": "herself"
+        }
     },
     {
       "gen": "man",
-      "pron": "he"
+      "pron": {
+        "key": "he",
+        "name": "he/him",
+        "subPrn": "he",
+        "objPrn": "him",
+        "possAdj": "his",
+        "possPrn": "his",
+        "rflxPrn": "himself"
+      }
     },
     {
       "gen": "nuetrois",
-      "pron": "they"
+      "pron":   {
+          "key": "they",
+          "name": "they/them",
+          "subPrn": "they",
+          "objPrn": "them",
+          "possAdj": "their",
+          "possPrn": "theirs",
+          "rflxPrn": "themself"
+        }
     },
     {
       "gen": "gender-questioning",
-      "pron": "they"
+      "pron":   {
+          "key": "they",
+          "name": "they/them",
+          "subPrn": "they",
+          "objPrn": "them",
+          "possAdj": "their",
+          "possPrn": "theirs",
+          "rflxPrn": "themself"
+        }
     },
     {
       "gen": "queer",
-      "pron": "they"
+      "pron":   {
+          "key": "they",
+          "name": "they/them",
+          "subPrn": "they",
+          "objPrn": "them",
+          "possAdj": "their",
+          "possPrn": "theirs",
+          "rflxPrn": "themself"
+        }
     },
     {
       "gen": "woman",
-      "pron": "she"
+      "pron":   {
+          "key": "she",
+          "name": "she/her",
+          "subPrn": "she",
+          "objPrn": "her",
+          "possAdj": "her",
+          "possPrn": "hers",
+          "rflxPrn": "herself"
+        }
     }
   ],
   "pronouns": [
@@ -90,7 +186,7 @@
     "possPrn": "eirs",
     "rflxPrn": "eirself"
   },
-  {
+    {
     "key": "gein",
     "name": "gein/gein",
     "subPrn": "gein",
@@ -99,15 +195,15 @@
     "possPrn": "geins",
     "rflxPrn": "geinself"
   },
-  {
-    "key": "he",
-    "name": "he/him",
-    "subPrn": "he",
-    "objPrn": "him",
-    "possAdj": "his",
-    "possPrn": "his",
-    "rflxPrn": "himself"
-  },
+    {
+      "key": "he",
+      "name": "he/him",
+      "subPrn": "he",
+      "objPrn": "him",
+      "possAdj": "his",
+      "possPrn": "his",
+      "rflxPrn": "himself"
+    },
   {
     "key": "she",
     "name": "she/her",

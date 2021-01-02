@@ -94,7 +94,7 @@ var bundle =
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: Unexpected token (19:1)\nFile was processed with these loaders:\n * ./node_modules/ts-loader/index.js\nYou may need an additional loader to handle the result of these loaders.\n| const traits = archetypeJSON.archetypeTraits;\n| const flaws = archetypeJSON.archetypeFlaws;\n>  || boolean,\n|     range;\n| boolean || {");
+throw new Error("Module parse failed: Unexpected token (19:1)\nFile was processed with these loaders:\n * ./node_modules/ts-loader/index.js\nYou may need an additional loader to handle the result of these loaders.\n| const traits = archetypeJSON.archetypeTraits;\n| const troubles = archetypeJSON.archetypetroubles;\n>  || boolean,\n|     range;\n| boolean || {");
 
 /***/ })
 

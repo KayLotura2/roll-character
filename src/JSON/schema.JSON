@@ -47,13 +47,13 @@
           "type": "string"
         }
       },
-      "ideals": {
+      "virtues": {
         "type": "array",
         "items": {
-          "$ref": "http://localhost/personality#/definitions/ideal"
+          "$ref": "http://localhost/personality#/definitions/virtue"
         }
       },
-      "flaws": {
+      "troubles": {
         "type": "array",
         "items": {
           "type": "string"
@@ -67,8 +67,8 @@
       "attractionRoots",
       "attractionDescriptors",
       "personalityTraits",
-      "ideals",
-      "flaws"
+      "virtues",
+      "troubles"
     ],
     "definitions": {
       "genderRoot": {
@@ -134,19 +134,19 @@
           "rflxPrn"
         ]
       },
-      "ideal": {
-        "title": "Ideal",
-        "description": "A two part ideal. A Word, and Phrase.",
+      "virtue": {
+        "title": "virtue",
+        "description": "A two part virtue. A Word, and Phrase.",
         "type": "object",
         "properties": {
           "name": {
-            "title": "Ideal Name",
-            "description": "The Name of the Ideal.",
+            "title": "virtue Name",
+            "description": "The Name of the virtue.",
             "type": "string"
           },
           "description": {
             "title": "description",
-            "description": "A brief description of the ideal.",
+            "description": "A brief description of the virtue.",
             "type": "string"
           }
         }

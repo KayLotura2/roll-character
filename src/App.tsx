@@ -35,8 +35,8 @@ export const App = () => {
         <div> {`${myNpc.identity.romanticAttraction}\ ${myNpc.identity.sexualAttraction}`} </div>
         <ul>
           <li>{myNpc.personality.quirk} </li>
-          <li>{myNpc.personality.ideal} </li>
-          <li>{myNpc.personality.flaw} </li>
+          <li>{myNpc.personality.virtue} </li>
+          <li>{myNpc.personality.trouble} </li>
         </ul>
         <button onClick={reloader}>New NPC!</button>
         <br/>
