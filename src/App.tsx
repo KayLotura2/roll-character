@@ -34,6 +34,7 @@ export const App = () => {
         <div> {`${myNpc.identity.gender}, uses ${myNpc.identity.pronoun} pronouns`} </div>
         <div> {`${myNpc.identity.romanticAttraction}\ ${myNpc.identity.sexualAttraction}`} </div>
         <ul>
+          <li>{myNpc.personality.aesthetic} </li>
           <li>{myNpc.personality.quirk} </li>
           <li>{myNpc.personality.virtue} </li>
           <li>{myNpc.personality.trouble} </li>

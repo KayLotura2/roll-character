@@ -13,6 +13,7 @@ export type Name = {
 
 // A character's personality based on quirks, virtues, and troubles
 export type Personality = {
+  aesthetic: string,
   quirk: string,
   virtue: string,
   trouble: string,
@@ -52,6 +53,7 @@ export type Identity = {
 }
 
 const names: string[] = (<any>namesJSON).names
+const aesthetics: string[] = (<any>personalityJSON).aesthetics
 const quirks: string[] = (<any>personalityJSON).quirks
 const virtues: string[] = (<any>personalityJSON).virtues
 const troubles: string[] = (<any>personalityJSON).troubles
@@ -96,11 +98,13 @@ export function generateName(): Name {
  * Retruns a personality  constructed from quirk, virtue, and trouble.
  */
 export function generatePersonality(): Personality {
+  const aesthetic: string = randomizer(aesthetics);
   const quirk: string = randomizer(quirks);
   const virtue: string = randomizer(virtues);
   const trouble: string = randomizer(troubles);
 
   const result: Personality = {
+    aesthetic: aesthetic,
     quirk: quirk,
     virtue: virtue,
     trouble: trouble,
