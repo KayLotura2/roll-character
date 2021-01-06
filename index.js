@@ -1,4 +1,4 @@
-import generateIdentity from "src/generators/archetype_generator"
+
 require('dotenv').config();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
@@ -9,7 +9,6 @@ bot.login(TOKEN);
 
 bot.on('ready', () => {
   console.info(`Logged in as ${bot.user.tag}!`);
-  console.log(generateIdentity())
 });
 
 
