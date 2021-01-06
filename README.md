@@ -1,6 +1,6 @@
 Roll Character is intended to be a single-page web app that allows for the
 dynamic creation of robust non-player characters, with a comprehensive
-gender, attraction-model, and pronoun profile. They will also have an origin,
+gender, attraction-model, and pronoun profile. They will also have an aesthetic,
 a background, a quirk, a belief, and a trouble.
 
 
