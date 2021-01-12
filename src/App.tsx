@@ -8,7 +8,7 @@ export type Npc = {
   identity: Identity
 }
 
-function generateNPC(): Npc {
+export function generateNPC(): Npc {
   const name1 = generateName()
   const personality1 = generatePersonality()
   const identity1 = generateIdentity()

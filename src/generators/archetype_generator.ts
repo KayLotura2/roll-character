@@ -147,9 +147,9 @@ export function generateIdentity(): Identity {
   // 75% chance that a prnoun is the typical pronoun for the given gender
   const expectedPronDie: number = dieRoll(100)
   if (expectedPronDie > 74) {
-    charPronouns = randomizerCount(pronouns.map(p => p.key), numberOfGenders);
+    charPronouns = randomizerCount(pronouns.map(p => p.name), numberOfGenders);
   } else {
-    charPronouns = totalGenders.map(g => g.pron.key)
+    charPronouns = totalGenders.map(g => g.pron.name)
   }
 
   const gender: GenderObject = {
