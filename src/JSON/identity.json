@@ -5,37 +5,37 @@
     "",
     "",
     "",
-    "cis",
-    "androgynous",
-    "butch",
-    "daddly",
-    "demi",
-    "fem",
-    "fluid",
-    "gender-apathic",
-    "gender-queer",
-    "goblin",
-    "goth",
-    "gray",
-    "hairy",
-    "hard",
-    "intersex",
-    "masculine",
-    "motherly",
-    "non-binary",
-    "non-conforming",
-    "nurturing",
-    "masculine",
-    "sparkle",
-    "soft",
-    "trans"
+    "Cis",
+    "Androgynous",
+    "Butch",
+    "Daddly",
+    "Demi",
+    "Fem",
+    "Fluid",
+    "Gender-apathic",
+    "Gender-queer",
+    "Goblin",
+    "Goth",
+    "Gray",
+    "Hairy",
+    "Hard",
+    "Intersex",
+    "Masculine",
+    "Motherly",
+    "Non-binary",
+    "Non-conforming",
+    "Nurturing",
+    "Masculine",
+    "Sparkle",
+    "Soft",
+    "Trans"
   ],
   "genderRoots": [
     {
-      "gen": "androgyne",
+      "gen": "Androgyne",
       "pron":   {
           "key": "they",
-          "name": "they/them",
+          "name": "They/Them",
           "subPrn": "they",
           "objPrn": "them",
           "possAdj": "their",
@@ -44,10 +44,10 @@
         }
     },
     {
-      "gen": "agender",
+      "gen": "Agender",
       "pron":   {
           "key": "they",
-          "name": "they/them",
+          "name": "They/Them",
           "subPrn": "they",
           "objPrn": "them",
           "possAdj": "their",
@@ -56,10 +56,10 @@
         }
     },
     {
-      "gen": "boy",
+      "gen": "Boy",
       "pron": {
         "key": "he",
-        "name": "he/him",
+        "name": "He/Him",
         "subPrn": "he",
         "objPrn": "him",
         "possAdj": "his",
@@ -68,10 +68,10 @@
       }
     },
     {
-      "gen": "enby",
+      "gen": "Enby",
       "pron":   {
           "key": "they",
-          "name": "they/them",
+          "name": "They/Them",
           "subPrn": "they",
           "objPrn": "them",
           "possAdj": "their",
@@ -80,10 +80,10 @@
         }
     },
     {
-      "gen": "epicine",
+      "gen": "Epicine",
       "pron":   {
           "key": "they",
-          "name": "they/them",
+          "name": "They/Them",
           "subPrn": "they",
           "objPrn": "them",
           "possAdj": "their",
@@ -92,10 +92,10 @@
         }
       },
     {
-        "gen": "goth",
+        "gen": "Goth",
         "pron":   {
             "key": "they",
-            "name": "they/them",
+            "name": "They/Them",
             "subPrn": "they",
             "objPrn": "them",
             "possAdj": "their",
@@ -104,10 +104,10 @@
           }
     },
     {
-      "gen": "girl",
+      "gen": "Girl",
       "pron":   {
           "key": "she",
-          "name": "she/her",
+          "name": "She/Her",
           "subPrn": "she",
           "objPrn": "her",
           "possAdj": "her",
@@ -116,10 +116,10 @@
         }
     },
     {
-      "gen": "man",
+      "gen": "Man",
       "pron": {
         "key": "he",
-        "name": "he/him",
+        "name": "He/Him",
         "subPrn": "he",
         "objPrn": "him",
         "possAdj": "his",
@@ -128,10 +128,10 @@
       }
     },
     {
-      "gen": "nuetrois",
+      "gen": "Nuetrois",
       "pron":   {
           "key": "they",
-          "name": "they/them",
+          "name": "They/Them",
           "subPrn": "they",
           "objPrn": "them",
           "possAdj": "their",
@@ -140,10 +140,10 @@
         }
     },
     {
-      "gen": "gender-questioning",
+      "gen": "Gender-questioning",
       "pron":   {
           "key": "they",
-          "name": "they/them",
+          "name": "They/Them",
           "subPrn": "they",
           "objPrn": "them",
           "possAdj": "their",
@@ -152,10 +152,10 @@
         }
     },
     {
-      "gen": "queer",
+      "gen": "Queer",
       "pron":   {
           "key": "they",
-          "name": "they/them",
+          "name": "They/Them",
           "subPrn": "they",
           "objPrn": "them",
           "possAdj": "their",
@@ -164,10 +164,10 @@
         }
     },
     {
-      "gen": "woman",
+      "gen": "Woman",
       "pron":   {
           "key": "she",
-          "name": "she/her",
+          "name": "She/Her",
           "subPrn": "she",
           "objPrn": "her",
           "possAdj": "her",
@@ -179,7 +179,7 @@
   "pronouns": [
     {
     "key": "ey",
-    "name": "ey/em",
+    "name": "Ey/Em",
     "subPrn": "ey",
     "objPrn": "em",
     "possAdj": "eir",
@@ -188,7 +188,7 @@
   },
     {
     "key": "gein",
-    "name": "gein/gein",
+    "name": "Gein/Gein",
     "subPrn": "gein",
     "objPrn": "gein",
     "possAdj": "geins",
@@ -197,7 +197,7 @@
   },
     {
       "key": "he",
-      "name": "he/him",
+      "name": "He/Him",
       "subPrn": "he",
       "objPrn": "him",
       "possAdj": "his",
@@ -206,7 +206,7 @@
     },
   {
     "key": "she",
-    "name": "she/her",
+    "name": "She/Her",
     "subPrn": "she",
     "objPrn": "her",
     "possAdj": "her",
@@ -215,7 +215,7 @@
   },
   {
     "key": "sie",
-    "name": "sie/sie",
+    "name": "Sie/Sie",
     "subPrn": "sie",
     "objPrn": "sie",
     "possAdj": "hir",
@@ -224,7 +224,7 @@
   },
   {
     "key": "tey",
-    "name": "tey/ter",
+    "name": "Tey/Ter",
     "subPrn": "tey",
     "objPrn": "ter",
     "possAdj": "tem",
@@ -233,7 +233,7 @@
   },
   {
     "key": "they",
-    "name": "they/them",
+    "name": "They/Them",
     "subPrn": "they",
     "objPrn": "them",
     "possAdj": "their",
@@ -242,7 +242,7 @@
   },
   {
     "key": "ve",
-    "name": "ve/ver",
+    "name": "Ve/Ver",
     "subPrn": "vey",
     "objPrn": "ver",
     "possAdj": "vis",
@@ -251,7 +251,7 @@
   },
   {
     "key": "xe",
-    "name": "xe/xem",
+    "name": "Xe/Xem",
     "subPrn": "xe",
     "objPrn": "xem",
     "possAdj": "xyr",
@@ -260,7 +260,7 @@
   },
   {
     "key": "zie",
-    "name": "zie/zim",
+    "name": "Zie/Zim",
     "subPrn": "zie",
     "objPrn": "zim",
     "possAdj": "zir",
@@ -268,6 +268,6 @@
     "rflxPrn": "zieself"
   }
 ],
-  "attractionDescriptors": [" ", " ", " ", "demi-", "fray-", "gray-"],
-  "attractionRoots": ["a", "bi", "hetero", "homo", "pan"]
+  "attractionDescriptors": [" ", " ", " ", "Demi-", "Fray-", "Gray-"],
+  "attractionRoots": ["A", "Bi", "Hetero", "Homo", "Pan"]
 }
