@@ -31,14 +31,14 @@ function generateNPC(): string {
 
 
 client.on('ready', () => {
-  console.log('Here I am, rock you like a hurricane!');
+  console.log('My client is is ready, and my clown is clean!!');
 });
 
 client.on('message', (msg) => {
   const content = msg.content
-  const channel = msg.channel as Discord.TextChannel
+  const channel = msg.channel as Discord.TextChannel;
   if (content === '!npc') {
     const npc = generateNPC();
-    channel.send(npc)
+    channel.send(npc);
   }
 })

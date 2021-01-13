@@ -175,9 +175,6 @@ export function generateIdentity(): Identity {
   const sexualAttraction = `${sexualAttractionDesc}${sexualAttractionRoot}sexual`
   const romantictAttraction = `${romanticAttractionDesc}${romanticAttractionRoot}romantic`
 
-
-  console.log(charPronouns.join("/"))
-
   const result: Identity = {
     gender: `${gender.desc} ${gender.rts.map(g => g.gen).join("/")}`,
     pronoun: charPronouns.join("/"),
