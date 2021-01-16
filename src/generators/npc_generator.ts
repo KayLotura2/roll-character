@@ -192,7 +192,7 @@ const gender: GenderObject = {
 
   const result: Identity = {
     gender: `${gender.desc} ${gender.rts.join("/")}`,
-    pronoun: charPronouns.join(","),
+    pronoun: charPronouns.join(", "),
     sexualAttraction: sexualAttraction,
     romanticAttraction: romantictAttraction
   }
