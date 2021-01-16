@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev src/bot.ts",
-    "start": "node"
+    "start": "ts-node src/bot.ts"
   },
   "browserslist": {
     "production": [
