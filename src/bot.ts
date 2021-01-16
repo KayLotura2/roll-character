@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import Discord from 'discord.js';
-import {Name, Personality, Identity, generateName, generatePersonality, generateIdentity} from './generators/archetype_generator'
+import {Name, Personality, Identity, generateName, generatePersonality, generateIdentity} from './generators/npc_generator'
 dotenv.config();
 const client = new Discord.Client();
 client.login(process.env.TOKEN);
@@ -31,7 +31,7 @@ function generateNPC(): string {
 
 
 client.on('ready', () => {
-  console.log('My client is is ready, and my clown is clean!!');
+  console.log('Client Ready');
 });
 
 client.on('message', (msg) => {

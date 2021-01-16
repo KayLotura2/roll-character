@@ -1,13 +1,8 @@
 {
   "genderDescriptors": [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Cis",
     "Androgynous",
     "Butch",
+    "Cis",
     "Daddly",
     "Demi",
     "Fem",
@@ -21,253 +16,53 @@
     "Hard",
     "Intersex",
     "Masculine",
+    "Masculine",
     "Motherly",
     "Non-binary",
     "Non-conforming",
     "Nurturing",
-    "Masculine",
-    "Sparkle",
     "Soft",
+    "Sparkle",
     "Trans"
   ],
   "genderRoots": [
-    {
-      "gen": "Androgyne",
-      "pron":   {
-          "key": "they",
-          "name": "They/Them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "Agender",
-      "pron":   {
-          "key": "they",
-          "name": "They/Them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "Boy",
-      "pron": {
-        "key": "he",
-        "name": "He/Him",
-        "subPrn": "he",
-        "objPrn": "him",
-        "possAdj": "his",
-        "possPrn": "his",
-        "rflxPrn": "himself"
-      }
-    },
-    {
-      "gen": "Enby",
-      "pron":   {
-          "key": "they",
-          "name": "They/Them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "Epicine",
-      "pron":   {
-          "key": "they",
-          "name": "They/Them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-      },
-    {
-        "gen": "Goth",
-        "pron":   {
-            "key": "they",
-            "name": "They/Them",
-            "subPrn": "they",
-            "objPrn": "them",
-            "possAdj": "their",
-            "possPrn": "theirs",
-            "rflxPrn": "themself"
-          }
-    },
-    {
-      "gen": "Girl",
-      "pron":   {
-          "key": "she",
-          "name": "She/Her",
-          "subPrn": "she",
-          "objPrn": "her",
-          "possAdj": "her",
-          "possPrn": "hers",
-          "rflxPrn": "herself"
-        }
-    },
-    {
-      "gen": "Man",
-      "pron": {
-        "key": "he",
-        "name": "He/Him",
-        "subPrn": "he",
-        "objPrn": "him",
-        "possAdj": "his",
-        "possPrn": "his",
-        "rflxPrn": "himself"
-      }
-    },
-    {
-      "gen": "Nuetrois",
-      "pron":   {
-          "key": "they",
-          "name": "They/Them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "Gender-questioning",
-      "pron":   {
-          "key": "they",
-          "name": "They/Them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "Queer",
-      "pron":   {
-          "key": "they",
-          "name": "They/Them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "Woman",
-      "pron":   {
-          "key": "she",
-          "name": "She/Her",
-          "subPrn": "she",
-          "objPrn": "her",
-          "possAdj": "her",
-          "possPrn": "hers",
-          "rflxPrn": "herself"
-        }
-    }
+    "Agender",
+    "Androgyne",
+    "Boy",
+    "Disaster",
+    "Enby",
+    "Epicine",
+    "Gender-Questioning",
+    "Girl",
+    "Goth",
+    "Man",
+    "Nuetrois",
+    "Queer",
+    "Woman"
   ],
   "pronouns": [
-    {
-    "key": "ey",
-    "name": "Ey/Em",
-    "subPrn": "ey",
-    "objPrn": "em",
-    "possAdj": "eir",
-    "possPrn": "eirs",
-    "rflxPrn": "eirself"
-  },
-    {
-    "key": "gein",
-    "name": "Gein/Gein",
-    "subPrn": "gein",
-    "objPrn": "gein",
-    "possAdj": "geins",
-    "possPrn": "geins",
-    "rflxPrn": "geinself"
-  },
-    {
-      "key": "he",
-      "name": "He/Him",
-      "subPrn": "he",
-      "objPrn": "him",
-      "possAdj": "his",
-      "possPrn": "his",
-      "rflxPrn": "himself"
-    },
-  {
-    "key": "she",
-    "name": "She/Her",
-    "subPrn": "she",
-    "objPrn": "her",
-    "possAdj": "her",
-    "possPrn": "hers",
-    "rflxPrn": "herself"
-  },
-  {
-    "key": "sie",
-    "name": "Sie/Sie",
-    "subPrn": "sie",
-    "objPrn": "sie",
-    "possAdj": "hir",
-    "possPrn": "hirs",
-    "rflxPrn": "hirself"
-  },
-  {
-    "key": "tey",
-    "name": "Tey/Ter",
-    "subPrn": "tey",
-    "objPrn": "ter",
-    "possAdj": "tem",
-    "possPrn": "ters",
-    "rflxPrn": "terself"
-  },
-  {
-    "key": "they",
-    "name": "They/Them",
-    "subPrn": "they",
-    "objPrn": "them",
-    "possAdj": "their",
-    "possPrn": "theirs",
-    "rflxPrn": "themself"
-  },
-  {
-    "key": "ve",
-    "name": "Ve/Ver",
-    "subPrn": "vey",
-    "objPrn": "ver",
-    "possAdj": "vis",
-    "possPrn": "vers",
-    "rflxPrn": "verself"
-  },
-  {
-    "key": "xe",
-    "name": "Xe/Xem",
-    "subPrn": "xe",
-    "objPrn": "xem",
-    "possAdj": "xyr",
-    "possPrn": "xyrs",
-    "rflxPrn": "xemself"
-  },
-  {
-    "key": "zie",
-    "name": "Zie/Zim",
-    "subPrn": "zie",
-    "objPrn": "zim",
-    "possAdj": "zir",
-    "possPrn": "zirs",
-    "rflxPrn": "zieself"
-  }
-],
-  "attractionDescriptors": [" ", " ", " ", "Demi-", "Fray-", "Gray-"],
-  "attractionRoots": ["A", "Bi", "Hetero", "Homo", "Pan"]
+    "Ae/Aer",
+    "Ey/Em",
+    "Fae/Faer",
+    "He/Him",
+    "She/Her",
+    "Sie/Sie",
+    "Tey/Ter",
+    "They/Them",
+    "Ve/Ver",
+    "Xe/Xem",
+    "Zie/Zim"
+    ],
+  "attractionDescriptors": [
+    "Demi-",
+    "Fray-",
+    "Gray-"
+  ],
+  "attractionRoots": [
+    "A",
+    "Bi",
+    "Hetero",
+    "Homo",
+    "Pan"
+  ]
 }

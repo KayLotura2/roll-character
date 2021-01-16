@@ -1,6 +1,5 @@
 // This module holds the randomizers.
 
-
 /**
  * Takes in an array, and returns a value from a random index.
  * @param array
@@ -9,18 +8,16 @@ function randomizer(array: any[]) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-
 /**
  * Takes in an integer for die size, and returns a random result for that die.
  * @param diesize
  */
 function dieRoll(diesize: number): number {
-  var die: number[] = Array.from(Array(diesize)).map((e, i) => i)
+  var die: number[] = Array.from(Array(diesize)).map((e, i) => i);
   var result: number = (randomizer(die) + 1);
   return result;
 }
 
-// TODO: Fix this it doesn't seem to be working right...
 /**
  * Takes in an array and a value, and returns a new array of distinct random values
  * from the original array. This new array has a length equal to the value.
@@ -47,8 +44,9 @@ function randomizerCount(originalArray: any[], num: number): any[] {
   return resultBasket;
 }
 
-
-// Uses randomizer to randomly return true or false.
+/**
+ * Uses randomizer to randomly return true or false.
+ */
 function flipCoin() {
   var coin = [0, 1];
   var flip = randomizer(coin);
