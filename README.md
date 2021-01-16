@@ -6,9 +6,7 @@ In the project directory:
 
 create a file named `.env`
 inside that file write `TOKEN={Your Bot's Token}`
-then run
-
-### `npm run dev`
+then run `npm run dev`
 
 This will spin up an instance of roll-character.
 Your terminal should read `Client Ready.`
