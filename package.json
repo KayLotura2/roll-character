@@ -1,28 +1,16 @@
 {
   "name": "roll-character",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.1",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
     "@types/node": "^12.12.28",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "^4.0.1",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "npm i; react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "dev": "ts-node-dev src/bot.ts",
+    "start": "node"
   },
   "browserslist": {
     "production": [
@@ -35,5 +23,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.1"
   }
 }

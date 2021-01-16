@@ -1,273 +1,69 @@
 {
   "genderDescriptors": [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "cis",
-    "androgynous",
-    "butch",
-    "daddly",
-    "demi",
-    "fem",
-    "fluid",
-    "gender-apathic",
-    "gender-queer",
-    "goblin",
-    "goth",
-    "gray",
-    "hairy",
-    "hard",
-    "intersex",
-    "masculine",
-    "motherly",
-    "non-binary",
-    "non-conforming",
-    "nurturing",
-    "masculine",
-    "sparkle",
-    "soft",
-    "trans"
+    "Androgynous",
+    "Butch",
+    "Cis",
+    "Daddly",
+    "Demi",
+    "Fem",
+    "Fluid",
+    "Gender-apathic",
+    "Gender-queer",
+    "Goblin",
+    "Goth",
+    "Gray",
+    "Hard",
+    "Intersex",
+    "Masculine",
+    "Masculine",
+    "Motherly",
+    "Non-binary",
+    "Non-conforming",
+    "Nurturing",
+    "Pangender",
+    "Soft",
+    "Sparkle",
+    "Trans"
   ],
   "genderRoots": [
-    {
-      "gen": "androgyne",
-      "pron":   {
-          "key": "they",
-          "name": "they/them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "agender",
-      "pron":   {
-          "key": "they",
-          "name": "they/them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "boy",
-      "pron": {
-        "key": "he",
-        "name": "he/him",
-        "subPrn": "he",
-        "objPrn": "him",
-        "possAdj": "his",
-        "possPrn": "his",
-        "rflxPrn": "himself"
-      }
-    },
-    {
-      "gen": "enby",
-      "pron":   {
-          "key": "they",
-          "name": "they/them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "epicine",
-      "pron":   {
-          "key": "they",
-          "name": "they/them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-      },
-    {
-        "gen": "goth",
-        "pron":   {
-            "key": "they",
-            "name": "they/them",
-            "subPrn": "they",
-            "objPrn": "them",
-            "possAdj": "their",
-            "possPrn": "theirs",
-            "rflxPrn": "themself"
-          }
-    },
-    {
-      "gen": "girl",
-      "pron":   {
-          "key": "she",
-          "name": "she/her",
-          "subPrn": "she",
-          "objPrn": "her",
-          "possAdj": "her",
-          "possPrn": "hers",
-          "rflxPrn": "herself"
-        }
-    },
-    {
-      "gen": "man",
-      "pron": {
-        "key": "he",
-        "name": "he/him",
-        "subPrn": "he",
-        "objPrn": "him",
-        "possAdj": "his",
-        "possPrn": "his",
-        "rflxPrn": "himself"
-      }
-    },
-    {
-      "gen": "nuetrois",
-      "pron":   {
-          "key": "they",
-          "name": "they/them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "gender-questioning",
-      "pron":   {
-          "key": "they",
-          "name": "they/them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "queer",
-      "pron":   {
-          "key": "they",
-          "name": "they/them",
-          "subPrn": "they",
-          "objPrn": "them",
-          "possAdj": "their",
-          "possPrn": "theirs",
-          "rflxPrn": "themself"
-        }
-    },
-    {
-      "gen": "woman",
-      "pron":   {
-          "key": "she",
-          "name": "she/her",
-          "subPrn": "she",
-          "objPrn": "her",
-          "possAdj": "her",
-          "possPrn": "hers",
-          "rflxPrn": "herself"
-        }
-    }
+    "Agender",
+    "Androgyne",
+    "Boy",
+    "Disaster",
+    "Enby",
+    "Epicine",
+    "Gender-Questioning",
+    "Girl",
+    "Goth",
+    "Man",
+    "Nuetrois",
+    "Queer",
+    "Woman"
   ],
   "pronouns": [
-    {
-    "key": "ey",
-    "name": "ey/em",
-    "subPrn": "ey",
-    "objPrn": "em",
-    "possAdj": "eir",
-    "possPrn": "eirs",
-    "rflxPrn": "eirself"
-  },
-    {
-    "key": "gein",
-    "name": "gein/gein",
-    "subPrn": "gein",
-    "objPrn": "gein",
-    "possAdj": "geins",
-    "possPrn": "geins",
-    "rflxPrn": "geinself"
-  },
-    {
-      "key": "he",
-      "name": "he/him",
-      "subPrn": "he",
-      "objPrn": "him",
-      "possAdj": "his",
-      "possPrn": "his",
-      "rflxPrn": "himself"
-    },
-  {
-    "key": "she",
-    "name": "she/her",
-    "subPrn": "she",
-    "objPrn": "her",
-    "possAdj": "her",
-    "possPrn": "hers",
-    "rflxPrn": "herself"
-  },
-  {
-    "key": "sie",
-    "name": "sie/sie",
-    "subPrn": "sie",
-    "objPrn": "sie",
-    "possAdj": "hir",
-    "possPrn": "hirs",
-    "rflxPrn": "hirself"
-  },
-  {
-    "key": "tey",
-    "name": "tey/ter",
-    "subPrn": "tey",
-    "objPrn": "ter",
-    "possAdj": "tem",
-    "possPrn": "ters",
-    "rflxPrn": "terself"
-  },
-  {
-    "key": "they",
-    "name": "they/them",
-    "subPrn": "they",
-    "objPrn": "them",
-    "possAdj": "their",
-    "possPrn": "theirs",
-    "rflxPrn": "themself"
-  },
-  {
-    "key": "ve",
-    "name": "ve/ver",
-    "subPrn": "vey",
-    "objPrn": "ver",
-    "possAdj": "vis",
-    "possPrn": "vers",
-    "rflxPrn": "verself"
-  },
-  {
-    "key": "xe",
-    "name": "xe/xem",
-    "subPrn": "xe",
-    "objPrn": "xem",
-    "possAdj": "xyr",
-    "possPrn": "xyrs",
-    "rflxPrn": "xemself"
-  },
-  {
-    "key": "zie",
-    "name": "zie/zim",
-    "subPrn": "zie",
-    "objPrn": "zim",
-    "possAdj": "zir",
-    "possPrn": "zirs",
-    "rflxPrn": "zieself"
-  }
-],
-  "attractionDescriptors": [" ", " ", " ", "demi-", "fray-", "gray-"],
-  "attractionRoots": ["a", "bi", "hetero", "homo", "pan"]
+    "Ae/Aer",
+    "Ey/Em",
+    "Fae/Faer",
+    "He/Him",
+    "She/Her",
+    "Sie/Sie",
+    "Tey/Ter",
+    "They/Them",
+    "Ve/Ver",
+    "Xe/Xem",
+    "Zie/Zim"
+    ],
+  "attractionDescriptors": [
+    "Demi-",
+    "Fray-",
+    "Gray-"
+  ],
+  "attractionRoots": [
+    "A",
+    "Bi",
+    "Hetero",
+    "Homo",
+    "Pan",
+    "Poly"
+  ]
 }
