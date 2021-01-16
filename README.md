@@ -1,18 +1,16 @@
-Roll Character is intended to be a single-page web app that allows for the
-dynamic creation of robust non-player characters, with a comprehensive
-gender, attraction-model, and pronoun profile. They will also have an origin,
-a background, a quirk, a belief, and a trouble.
+Roll Character is a simple discord bot that generates dynamic NPCS.
 
+## To Run Your Own Instance of Roll Character
 
-## To Run Roll Character
+In the project directory:
 
-In the project directory run:
+create a file named `.env`
+inside that file write `TOKEN={Your Bot's Token}`
+then run
 
-### `npm start`
+### `npm run dev`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This will spin up an instance of roll-character.
+Your terminal should read `Client Ready.`
 
-## MVP
-The current mvp of this project is a simple blank page, that displays a
-dynamically generated NPC name, gender, attraction-model, and pronoun profile.
+For information about what names, qualities, genders, and pronouns are included check out `src/JSON` for the files with all that information.
