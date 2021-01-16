@@ -1,1 +1,1 @@
-web npm run start
+worker: ts-node src/bot.ts
