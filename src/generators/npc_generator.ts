@@ -107,17 +107,14 @@ export function generateIdentity(): Identity {
   let numberOfGenders: number = 1;
 
   // Determine Probability of Multigender Identities
-  // 5% Bigender, 3% Polygender, 2% Pangender
+  // 5% Bigender, 5% Polygender
   const multigenderDie: number = dieRoll(100)
-  if (96 > multigenderDie && multigenderDie > 90 ) {
-    descriptor = 'bigender';
-    numberOfGenders = 2;
-  } else if (99 > multigenderDie && multigenderDie > 95 ) {
-    descriptor = 'polygender';
+  if (multigenderDie > 96 ) {
+    descriptor = 'Polygender';
     numberOfGenders = dieRoll(4) + 1
-  } else if (multigenderDie > 98 ) {
-    descriptor = 'pangender';
-    numberOfGenders = genderRoots.length;
+  } else if (multigenderDie > 90 ) {
+    descriptor = 'Bigender';
+    numberOfGenders = 2;
   } else {
     // this is the instance where one has only one gender
     // check to see if 50% chance of gender descriptor for single-gender
@@ -129,6 +126,7 @@ export function generateIdentity(): Identity {
 
   const totalGenders: string[] = randomizerCount(genderRoots, numberOfGenders);
 
+  let pronounBucket: string[] = [];
   let charPronouns: string[] = [];
 
   totalGenders.forEach(gender => {
@@ -137,34 +135,36 @@ export function generateIdentity(): Identity {
     if (expectedPronDie > 25 ) {
         switch(gender){
         case "Boy":
-          charPronouns.push("He/Him");
+          pronounBucket.push("He/Him");
           break;
         case "Girl":
-          charPronouns.push("She/Her");
+          pronounBucket.push("She/Her");
           break;
         case "Man":
-          charPronouns.push("He/Him");
+          pronounBucket.push("He/Him");
           break;
         case "Woman":
-          charPronouns.push("She/Her");
+          pronounBucket.push("She/Her");
           break;
         default:
-          charPronouns.push("They/Them");
+          pronounBucket.push("They/Them");
       }
     } else {
       // 25% chance for a random pronoun
       const randomPrn: string = randomizer(pronouns);
-      charPronouns.push(randomPrn);
+      pronounBucket.push(randomPrn);
     }
     // 25% chance for an extra pronoun.
     const extraPronDie: number = dieRoll(100);
     if (extraPronDie > 74) {
       const randomExtraPrn: string = randomizer(pronouns);
-      charPronouns.push(randomExtraPrn);
+      pronounBucket.push(randomExtraPrn);
     }
     // filter redundant pronouns
-    charPronouns.filter( (pronoun, i) => {
-      return charPronouns.indexOf(pronoun) === i;
+    pronounBucket.forEach((pronoun) => {
+      if (!charPronouns.includes(pronoun)){
+        charPronouns.push(pronoun);
+      }
     });
   });
 
@@ -172,19 +172,34 @@ const gender: GenderObject = {
   rts: totalGenders,
   desc: descriptor
 }
-  const sexualAttractionDesc: string = randomizer(attractionDescriptors)
-  const sexualAttractionRoot: string = randomizer(attractionRoots)
-  let romanticAttractionDesc: string
-  let romanticAttractionRoot: string
 
-  const expectedAttractionDie: number = dieRoll(100)
+
+const sexualAttractionRoot: string = randomizer(attractionRoots)
+let sexualAttractionDesc: string
+let romanticAttractionRoot: string
+let romanticAttractionDesc: string
+
+  const sexualAttractionDescDie: number = dieRoll(100)
+  // 50% chance of a sexual attraction descriptor
+  if (sexualAttractionDescDie > 50) {
+    sexualAttractionDesc = randomizer(attractionDescriptors)
+  } else {
+    sexualAttractionDesc = ""
+  }
+
+  const homogeneousAttractionDie: number = dieRoll(100)
   // 50% chance of a split orientation
-  if (expectedAttractionDie > 50) {
+  if (homogeneousAttractionDie > 50) {
     romanticAttractionDesc = sexualAttractionDesc;
     romanticAttractionRoot = sexualAttractionRoot;
   } else {
-    romanticAttractionDesc = randomizer(attractionDescriptors)
     romanticAttractionRoot = randomizer(attractionRoots)
+    const romanticAttractionDescDie: number = dieRoll(100)
+    if (romanticAttractionDescDie > 50) {
+      romanticAttractionDesc = randomizer(attractionDescriptors)
+    } else {
+      romanticAttractionDesc = ""
+    }
   }
 
   const sexualAttraction = `${sexualAttractionDesc}${sexualAttractionRoot}sexual`
