@@ -154,11 +154,18 @@ export function generateIdentity(): Identity {
       const randomPrn: string = randomizer(pronouns);
       pronounBucket.push(randomPrn);
     }
+    // Uncommon Pronoun Die
     // 25% chance for an extra pronoun.
-    const extraPronDie: number = dieRoll(100);
-    if (extraPronDie > 74) {
+    // 2% chance for "no pronoun"
+    // 2% chance for "any pronoun"
+    const uncommonPronounDie: number = dieRoll(100);
+    if (uncommonPronounDie > 74) {
       const randomExtraPrn: string = randomizer(pronouns);
       pronounBucket.push(randomExtraPrn);
+    } else if (uncommonPronounDie > 72) {
+        pronounBucket = ["No Pronoun"]
+    } else if  (uncommonPronounDie > 70) {
+        pronounBucket = ["Any Pronouns"]
     }
     // filter redundant pronouns
     pronounBucket.forEach((pronoun) => {
