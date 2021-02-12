@@ -4,18 +4,18 @@ Roll Character is a simple discord bot that generates dynamic NPCS.
 
 ### How to Use
 
-Click this link to invite [roll-character](https://t.co/9X0A9QqWst?amp=1) as a discord bot into your server.
+Click this link to invite [roll-character](https://t.co/9X0A9QqWst?amp=1) as a discord bot into your server.  
 When it's in your server it will respond to the command `!npc` with a randomly generated NPC.
 
 ### To Run Your Own Instance of Roll Character
 
-In the project directory:
+In the project directory:  
+  
+create a file named `.env`  
+inside that file write `TOKEN={Your Bot's Token}`  
+then run `npm run dev`  
 
-create a file named `.env`
-inside that file write `TOKEN={Your Bot's Token}`
-then run `npm run dev`
-
-This will spin up an instance of roll-character.
+This will spin up an instance of roll-character.  
 Your terminal should read `Client Ready.`
 
 For information about what names, qualities, genders, and pronouns are included check out `src/JSON` for the files with all that information.
@@ -38,28 +38,28 @@ Demi-, Fray-, Gray-
 A, Bi, Hetero, Homo, Pan, Poly
 
 #### Percentages: Names (1-4)
-100% First name
-85% First and Second name
-50% First, Second, and Third name
+100% First name  
+85% First and Second name  
+50% First, Second, and Third name  
 15% First, Second, Third, and Fourth name
 
 #### Percentages: Number of Genders
-90% One Gender
-5% Two Genders
+90% One Gender  
+5% Two Genders  
 5% 2-5 Genders (~1.25% each)
 
 #### Percentages: Gender Descriptor
 ~50% Has a Gender Descriptor
 
 #### Percentages: Pronoun informed by Gender
-71% chance that pronoun is the "common" choice for a given gender
-25% chance for an extra pronoun
-2% chance for no pronouns
+71% chance that pronoun is the "common" choice for a given gender  
+25% chance for an extra pronoun  
+2% chance for no pronouns  
 2% chance for any pronouns
 
 #### Percentages: Split Attraction Model
-50% Split Attraction Generation
-50% Attraction Descriptor
+50% Split Attraction Generation  
+50% Attraction Descriptor  
 
 ### License
 
