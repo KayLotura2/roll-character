@@ -2,6 +2,11 @@
 
 Roll Character is a simple discord bot that generates dynamic NPCS.
 
+### How to Use
+
+Click this link to invite [roll-character](https://t.co/9X0A9QqWst?amp=1) as a discord bot into your server.
+When it's in your server it will respond to the command `!npc` with a randomly generated NPC.
+
 ### To Run Your Own Instance of Roll Character
 
 In the project directory:
