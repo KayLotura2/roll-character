@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import Discord from 'discord.js';
-import {Name, Personality, Identity, generateName, generatePersonality, generateIdentity} from './generators/npc_generator'
+import moment from 'moment'
+import {Name, Personality, generateName, generatePersonality, generateIdentity} from './generators/npc_generator'
 dotenv.config();
 const client = new Discord.Client();
 client.login(process.env.TOKEN);
@@ -34,11 +35,12 @@ client.on('ready', () => {
   console.log('Client Ready');
 });
 
-client.on('message', (msg) => {
+client.on('message', (msg: Discord.Message) => {
   const content = msg.content
   const channel = msg.channel as Discord.TextChannel;
   if (content === '!npc') {
     const npc = generateNPC();
     channel.send(npc);
+    console.log(`${msg.guild} requested an npc at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${npc}`)
   }
 })
