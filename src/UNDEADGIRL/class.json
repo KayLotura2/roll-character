@@ -1,0 +1,570 @@
+{
+    "charClasses": [
+        {
+            "className": "Exsanguinated Doll",
+            "charClass": {
+                "desc": "You were drained of blood by some vampiric predator, the life stolen from you, and left for dead. Now you rise, a pallid bloodless thing. And you're so, so hungry",
+                "silver": {
+                    "numberDice": 1,
+                    "dieSize": 6,
+                    "multiplier": 10
+                },
+                "scrollType": "NORMAL",
+                "omensDie": 4,
+                "weaponDie": 6,
+                "armorDie": 2,
+                "reRollScroll": false,
+                "aglMod": -2,
+                "preMod": 1,
+                "strMod": 1,
+                "tghMod": 0,
+                "HD": 10,
+                "features": [
+                    {
+                        "featureName": "Bite Attack",
+                        "featureDesc": "This attack deals d4 damage. On a successful attack you may spend an omen to trigger one of the following effects: \n  1. Roll DC 15 Presence. If you succeed, the victim obeys a hypnotic command you give. \n 2. You drain blood and other vital fluids. Heal by the amount of damage done. \n 3. Victim swoons helplessly for as many rounds as the bite’s damage. \n 4. Entrancing effect. +1 Presence against your victim, cumulative, forever.",
+                        "featureEquipmentCVB": {
+                            "equipment": [],
+                            "companionVehilceBag": []
+                        }
+                    }
+                ],
+                "powers": {
+                    "number": 1,
+                    "listy": [
+                        {
+                            "featureName": "Hypnotic Bite",
+                            "featureDesc": "Your bite always allows you to attempt hypnotic (#1) command without expending an omen.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Draining Bite",
+                            "featureDesc": "Your bite always allows you to drain blood (#2) without expending an omen.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Swooning Bite",
+                            "featureDesc": "Your bite always allows you swoon your target (#3) without expending an omen.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Entrancing Bite",
+                            "featureDesc": "Your bite always allows you to entrance your target (#4) without expending an omen.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "className": "Sacrificial Waif",
+            "charClass": {
+                "desc": "You were picked out from the teeming masses of humanity. Told you were special. Plied with fine wine and other intoxicants. Adorned with beautiful ceremonial clothes, anointed with oil and paint. Then killed as an offering to something inhuman, your life snuffed out early",
+                "silver": {
+                    "numberDice": 2,
+                    "dieSize": 6,
+                    "multiplier": 10
+                },
+                "scrollType": "NORMAL",
+                "omensDie": 2,
+                "weaponDie": 6,
+                "reRollScroll": false,
+                "armorDie": 2,
+                "aglMod": 0,
+                "preMod": 2,
+                "strMod": -1,
+                "tghMod": -1,
+                "HD": 4,
+                "features": [
+                    {
+                        "featureName": "Undead Crucible",
+                        "featureDesc": "Your blood carries the power of the various herbs and alchemies they plied you with. Daily, you can use your body as an alchemical crucible, distilling the drugs in your blood and syphoning some off. You can produce d4 doses each day. As well as their listed effects, all the drugs you produce have a euphoric effect. \n When you Advance, roll another drug and learn how to make it, a dupliate result means you learn nothing.",
+                        "featureEquipmentCVB": {
+                            "equipment": [],
+                            "companionVehilceBag": []
+                        }
+                    }
+                ],
+                "powers": {
+                    "number": 2,
+                    "listy": [
+                        {
+                            "featureName": "Nepenthe Oil",
+                            "featureDesc": "Ingested or by contact. Victim makes a DC 16 Toughness roll or falls asleep.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Purifying Balm",
+                            "featureDesc": "Restores health. Ends Infection, +1 Presence for an hour.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Elixir Imortalis",
+                            "featureDesc": "Removes all fear of death, brings it near. Double all damage dealt and taken for an hour. Immune to Morale.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Xhat",
+                            "featureDesc": "Heals d6. Removes all scars and blemishes",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Liquid Peace",
+                            "featureDesc": "Ingested. Anybody who puts it in their mouth and swallows dies, instantly, no save no second chance.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Thanazine",
+                            "featureDesc": "Revives a sleeping, unconcious, comatose or Torpid character instantly, they heal d4 HP and regain an Omen",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Blank Slate",
+                            "featureDesc": "Ingested. Victim becomes disoriented and suggestible.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Black Moon Powder",
+                            "featureDesc": "Rubbed into the skin, dealing d2 damage. User rolls to use scrolls at -4 difficulty.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "className": "Pyre-borne Witch",
+            "charClass": {
+                "desc": "You never hurt anybody. Far from it, your practices were - a far as you’re concerned - perfectly benevolent. They burned you for it anyway. You died on the pyre, trying to scream for mercy with flame-ruined lungs. Now you’re back, you’re far less inclined to pity.",
+                "silver": {
+                    "numberDice": 1,
+                    "dieSize": 6,
+                    "multiplier": 10
+                },
+                "scrollType": "UNCLEAN",
+                "omensDie": 2,
+                "weaponDie": 4,
+                "armorDie": 1,
+                "reRollScroll": false,
+                "aglMod": -2,
+                "preMod": -2,
+                "strMod": 2,
+                "tghMod": 0,
+                "HD": 6,
+                "features": [
+                    {
+                        "featureName": "Arcane Lore",
+                        "featureDesc": "You begin play with a random unclean scroll (already in inventory) and roll Strength to use scrolls.",
+                        "featureEquipmentCVB": {
+                            "equipment": [
+                                "!unclean!"
+                            ],
+                            "companionVehilceBag": []
+                        }
+                    }
+                ],
+                "powers": {
+                    "number": 2,
+                    "listy": [
+                        {
+                            "featureName": "Spiting Fire",
+                            "featureDesc": "Ranged attack, roll to hit with Presence as normal, each bolt does d4 damage, and d4 damage each round until they put the fire out.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Unburnable",
+                            "featureDesc": "You are immune to fire, and cannot be hurt by it.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Cloak of Flame",
+                            "featureDesc": "You can cause yourself to combust, covering yourself in flickering flames. D2 damage to anybody you attack or who attacks you up close",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Conflagration Divination",
+                            "featureDesc": "A simple campfire can show you odd truths. DR 10 Presence and an evening’s concentration; if you pass, you get to ask a single yes/no question and get a truthful answer.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Salt the Earth",
+                            "featureDesc": "Things you burn - with supernatural or mundane fire - are utterly destroyed and forgotten. Records of them vanish, all traces of their existence fade away.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Burn Bright",
+                            "featureDesc": "Your fires - either supernatural or mundane - illuminate more than they should. In the area lit by them, it is impossible to hide, and invisible things are revealed.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Fire-Forged Thrall",
+                            "featureDesc": "If you set somebody on fire, they fall under your thrall. You may set them a task; the fire does no damage so long as they obey. Shirk, and the fire does d4 damage a round.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Backdraft",
+                            "featureDesc": "You can cause even slight flames to flare into dangerous fireballs. D12 damage to anybody caught in the blast. For everybody killed by the fireball, you heal 1 HP",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "className": "Doomed Romantic",
+            "charClass": {
+                "desc": "You had such plans. You were going run away, see the world, fall in love. Your life was going to be so beautiful. But when you set out, all that was waiting for you was a knife in the dark, and a cold shallow grave.",
+                "silver": {
+                    "numberDice": 1,
+                    "dieSize": 6,
+                    "multiplier": 10
+                },
+                "scrollType": "NORMAL",
+                "omensDie": 2,
+                "weaponDie": 10,
+                "armorDie": 4,
+                "reRollScroll": false,
+                "aglMod": 0,
+                "preMod": 2,
+                "strMod": -1,
+                "tghMod": -1,
+                "HD": 8,
+                "features": [
+                    {
+                        "featureName": "Retribution",
+                        "featureDesc": "Name the man who hurt you most; you always know the rough direction and distance to him.",
+                        "featureEquipmentCVB": {
+                            "equipment": [],
+                            "companionVehilceBag": []
+                        }
+                    }
+                ],
+                "powers": {
+                    "number": 1,
+                    "listy": [
+                        {
+                            "featureName": "Almost Inescapable: Climbing",
+                            "featureDesc": "You can walk up walls on your feet and fingertips like a lizard.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Almost Inescapable: Unrestrained",
+                            "featureDesc": "You cannot be grabbed, pinned, tied up, or otherwise restrained; you always break free effortlessly.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Almost Inescapable: Bloodhound",
+                            "featureDesc": "Once you’ve got somebody’s scent, you always know the rough direction and distance to them, forever",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Almost Inescapable: Borderless",
+                            "featureDesc": "You can walk through walls as if they weren’t there.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Almost Inescapable: Skimmer",
+                            "featureDesc": "You can walk on water.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Almost Inescapable: Hidden",
+                            "featureDesc": "You blend into your surroundings. Regardless of the circumstances, you roll to Hide at DC 8.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Almost Inescapable: The Glare",
+                            "featureDesc": "You can transfix others with your gaze. To do so, roll Presence at DC 12, if you succeed your victim cannot willingly break eye-contact or move away from you",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Almost Inescapable: Ben Sidhe",
+                            "featureDesc": "When you scream or sob, the sound renders those who hear it helpless. Roll Presence DR 16, if you pass listeners are paralysed for a round.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "className": "Assassinated Princess",
+            "charClass": {
+                "desc": "You had power, or influence, or status, or just an inhereted title lined up. The details hardly matter any more. Whatever it was, you were in somebody’s way, and they had you discretely removed. Now, stripped of your wealth, finery and titles, you’ve clawed your way out of your lonely grave, and you want what they took from you back.",
+                "silver": {
+                    "numberDice": 3,
+                    "dieSize": 6,
+                    "multiplier": 10
+                },
+                "scrollType": "NORMAL",
+                "omensDie": 2,
+                "weaponDie": 0,
+                "armorDie": 2,
+                "reRollScroll": false,
+                "aglMod": 0,
+                "preMod": 2,
+                "strMod": -2,
+                "tghMod": -2,
+                "HD": 6,
+                "features": [
+                    {
+                        "featureName": "Vengeful Heir",
+                        "featureDesc": "Name the monarch from whose blood you hail. You get+2 to all rolls against them, their bloodline, and beings in their service.",
+                        "featureEquipmentCVB": {
+                            "equipment": [
+                                "Fine Clothes (Worth d6x10s if sold)"
+                            ],
+                            "companionVehilceBag": []
+                        }
+                    }
+                ],
+                "powers": {
+                    "number": 1,
+                    "listy": [
+                        {
+                            "featureName": "A Diplomat’s Guide to Translation",
+                            "featureDesc": "All rolls to translate, understand, or communicate in other languages are DR 8. Always sounds a little posh.",
+                            "featureEquipmentCVB": {
+                                "equipment": [
+                                    "Book, A Diplomat’s Guide"
+                                ],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "A Rod of Correction",
+                            "featureDesc": "A weapon that does d4 damage, or d12 to any target that has ever disobeyed an order you gave them.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": [
+                                    "Rod of Correction, d4 (d12)"
+                                ]
+                            }
+                        },
+                        {
+                            "featureName": "A Radient Coronet",
+                            "featureDesc": "This can - at your command  - create or suppress light, to even to blinding  levels. When you have it active, your difficulty for attacks is 16 and for defence is 8.",
+                            "featureEquipmentCVB": {
+                                "equipment": [ "Radiant Coronet"],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "A  Gourmet's  Ring",
+                            "featureDesc": "That makes you immune to toxins, poisons etc. Presumably, they killed you some other way.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": [
+                                    "Gourmet's Ring"
+                                ]
+                            }
+                        },
+                        {
+                            "featureName": "A Pen of Office",
+                            "featureDesc": "Contracts written with it are supernaturally enforced; if a signatory breaks their side of the bargain, you instantly knowand can punish them from a distance, dealing d2 damage each round you torment them.",
+                            "featureEquipmentCVB": {
+                                "equipment": [
+                                    "Pen of  Office"
+                                ],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "A Protective Veil",
+                            "featureDesc": "Those who strike you with violent force find their bodies wracked with matching sympathetic injuries (taking half the damage you did). Doesn’t protect you from those related by blood, as you discovered.",
+                            "featureEquipmentCVB": {
+                                "equipment": [
+                                    "Protective Veil"
+                                ],
+                                "companionVehilceBag": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "className": "Silenced Wretch",
+            "charClass": {
+                "desc": "Well, you had opinions. Bold and unpopular ones you were outspoken about. It didn’t work out so well for you. When you refused to recant, it turned out society has ways to shut people like you up for good.",
+                "silver": {
+                    "numberDice": 1,
+                    "dieSize": 6,
+                    "multiplier": 10
+                },
+                "scrollType": "NORMAL",
+                "omensDie": 4,
+                "weaponDie": 6,
+                "armorDie": 1,
+                "reRollScroll": false,
+                "aglMod": 0,
+                "preMod": -2,
+                "strMod": 0,
+                "tghMod": 1,
+                "HD": 6,
+                "features": [
+                    {
+                        "featureName": "Stubborn Wretch",
+                        "featureDesc": "+4 to rolls to resist or shake off mind control, emotional manipulation, pain, coercion, and so on. \n When you Advance, roll for a second gift. The second time you Advance, and thereafter, you may re-roll one or both gifts.",
+                        "featureEquipmentCVB": {
+                            "equipment": [],
+                            "companionVehilceBag": []
+                        }
+                    }
+                ],
+                "powers": {
+                    "number": 1,
+                    "listy": [
+                        {
+                            "featureName": "Wretched Prophet",
+                            "featureDesc": "Once per day you can make a Prophecy. State something significant, interesting or weird that you believe will happen: when it does, regain all your Omens.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Wretched Tongue",
+                            "featureDesc": "Can talk to carrion-feeders and other scavenging animals - crows, hyenas, maggots - in their own tongue, and understand their words. +3 to Presence rolls to pursuade or understand them.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Sharp of Tongue and Tooth",
+                            "featureDesc": "You can spit teeth. Each does d6 damage, and rolls to hit with Strength. You have 29 teeth in total. You can spit multiple at once.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Kiss of Betrayal",
+                            "featureDesc": "Your kiss is venom. D12 damage to anyody who meets your lips, with no roll to avoid it.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Bad Blooded",
+                            "featureDesc": "Your blood rusts what it touches. Any metal weapon that damages you is corroded, doing half damage the first time, and useless the second.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Speaker of Portents",
+                            "featureDesc": "You can read people’s fortunes. When you do, your subject picks a die size (e.g. d6, d20, etc) and rolls it, noting down the result. When they would roll a die of the same size or have a die of that size rolled against them, they can substitute in the noted result instead of rolling, using it up. Somebody can only have one predicted fortune at once.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Doom Sayer",
+                            "featureDesc": "You see glimpses of your doom coming down upon you. Whenever you would go Torpid, before you do you get to make a Prophecy or read a Fortune. \n Prophesy: State something significant, interesting or weird that you believe will happen: when it does, regain all your Omens. \n Fortune: your subject picks a die size (e.g. d6, d20, etc) and rolls it, noting down the result. When they would roll a die of the same size or have a die of that size rolled against them, they can substitute in the noted result instead of rolling, using it up. Somebody can only have one predicted fortune at once.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        },
+                        {
+                            "featureName": "Death Sight",
+                            "featureDesc": "Once per victim, you can predict their eventual demise. Your prediction must be specific and unexpected. +7 to all rolls (including damage rolls) that would bring that particular demise closer.",
+                            "featureEquipmentCVB": {
+                                "equipment": [],
+                                "companionVehilceBag": []
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
