@@ -1,0 +1,172 @@
+{
+    "weapons": {
+        "femur": [
+            "Femur d4"
+        ],
+        "d4Weapons": [
+            "Cudgel d4",
+            "Knife d4",
+            "Shortsword d4",
+            "Sickle d4",
+            "Staff d4 (2-hands)",
+            "Wooden Stake d4"
+        ],
+        "d6Weapons": [
+            "Club d6",
+            "Halberd d6 (2-hands)",
+            "Handaxe d6",
+            "Mace d6",
+            "Scythe d6 (2-hands)",
+            "Spear d6 (2-hands)",
+            "Sword d6",
+            "Warhammer d6"
+        ],
+        "bow": [
+            "Bow d6 (2-hands)"
+        ],
+        "d8Weapons": [
+            "Battle Axe d8 (2-hands)",
+            "Flail d8 (2-hands)",
+            "Goedendag d8 (2-hands)"
+        ],
+        "crossbow": [
+            "Crossbow d8 (2-hands)"
+        ],
+        "zweihander": [
+            "Zweihander d10 (2-hands)"
+        ]
+    },
+    "armor": {
+        "tier0": [
+            "Whipstitched Rags (armor tier 0)",
+            "Oversized Robes (armor tier 0)",
+            "Itchy Wool Tunic (armor tier 0)"
+        ],
+        "tier1": [
+            "Rat-chewed Gambeson (armor tier 1) d2",
+            "Decaying Boiled Leather (armor tier 1) d2",
+            "Blood-Stained Rawhide (armor tier 1) d2"
+        ],
+        "tier2": [
+            "Moulding Jack-a-plate (armor tier 2) d4",
+            "Poorly Cured Lamellar (armor tier 2) d4",
+            "Salt-crusted Hauberk  (armor tier 2) d4"
+        ],
+        "tier3": [
+            "Cumbersome Wrought Iron Plate (armor tier 3) d6",
+            "Bronze-banded Ringmail Coat (armor tier 3) d6",
+            "Odorous Stone-fish Scalemail (armor tier 3) d6"
+        ]
+    },
+    "gearA": [
+        "Nothing but your clumsy paws, and what you can sling over your aching shoulders.",
+        "Only what you can carry in your greasy mits and tie to your shoddy excuse for a belt.",
+        "Backpack (Holds 7 items) ",
+        "Sack (Holds 10 items) ",
+        "Wagon, your greasy mits, and what you tie to your belt.",
+        "Donkey, your clumsy paws, and what you can sling over your shoulders."
+    ],
+    "gearB": [
+        "Rope (30ft)",
+        "Presence + 4 torches",
+        "Lantern with oil for Presence + 6 hours",
+        "Magnesium strip",
+        "Advanced Random Scroll",
+        "Sharp Needle",
+        "Medicine Chest (Presence + 4 uses): Stops bleeding/infection and +d6 HP.",
+        "Metal file and lockpicks",
+        "Bear Trap",
+        "Bomb",
+        "A bottle of red poison (d4 doses)",
+        "Silver Holy Symbol",
+        "Blanket",
+        "Firesteel",
+        "Chewing Tobacco (1d4+1 uses)",
+        "Salt (1d4+1 uses)",
+        "Wooden Holy Symbol",
+        "Chaulk  (1d6 sticks)",
+        "Manacles",
+        "A bottle of black poison (d4 doses): Toughness DR14 or d6 damage + can't see for one hour."
+    ],
+    "gearC": [
+        "Life Elixir d4 doses (heals d6 HP and removes infection)",
+        "Advanced Random Scroll",
+        "Small but vicious dog",
+        "Monkeys that ignore you (d4 monkeys)",
+        "Exquisite perfume (d4 doses) worth 25s",
+        "Toolbox",
+        "Heavy Chain (15ft)",
+        "Grappling Hook",
+        "Shield",
+        "Crowbar",
+        "Lard (d4+1 units)",
+        "Tent",
+        "Tame rats (1d6)",
+        "Mirror",
+        "Scissors",
+        "Meat Cleaver (d4)",
+        "Small sack of caltrops",
+        "Hammer (d4)",
+        "Wooden Stake (d4)",
+        "Heavy Iron Lock"
+    ],
+    "scrolls": {
+        "uncleanScrolls": [
+            "Oracle of a Dead Saint: d2 creatures regain d10 hp each",
+            "Grace for a Sinner:A creature of your choice gets +d6 on one roll.",
+            "Whispers Pass the Gate: Ask three questions to a deceased creature.",
+            "Aegis of Sorrow: A creature of your choice gains 2d6 HP for 10 rounds",
+            "Unmet Fate: One creature, dead for no more than a week, is awakened with terrible memories.",
+            "Bestial Speech: You may speak with animals for d20 minutes",
+            "False Dawn/ Night’s Chariot: Light or pitch black d4 creatures lose d8 HP each for 3d10 minutes",
+            "Hermetic Step: You find all traps in your path for 2d10 minutes.",
+            "Roskoe’s Consuming Glare: d4 creatures lose d8 HP each.",
+            "Enochian Syntax: One creature blindly obeys a single command."
+        ],
+        "sacredScrolls": [
+            "Palms Open the Southern Gate: A ball of fire hits d2 creatures dealing d8 damage per creature.",
+            "Tongue of Eris: A creature of your choice is confused for 10 minutes.",
+            "Te-le-kin-esis: Move an object up 1d10x10 feet for d6 minutes.",
+            "Lucy-Fires Levistation: Hover for Presence + d10 rounds.",
+            "Daemon of Capillaries: One creature suffocates for d6 rounds, losing d4 HP per round.",
+            "Nine Violet Signs Unknot the Storm: Produce d2 lightning bolts dealing d6 damage each.",
+            "Metzhuotl Blind Your Eye: A creature becomes invisible for d6 rounds or until it is damaged, attacking/defending with DR6",
+            "Foul PsychopompL Summon (d6) 1–3: d4 skeletons, 4–6: d4 zombies.",
+            "Eyelid Blinds the Mind: d4 creatures fall asleep for one hour unless they succeed a DR14 test.",
+            "Death: All creatures within 30 feet lose a total of 4d10 HP."
+        ],
+        "ochreTablets": [
+            "Dream Theory: The target begins to doubt it is real. Attacking and defending against it is -2 DR (+2 DR for affected PCs).",
+            "Total Matter Comprehension: Mends or breaks a normal-sized item, mundane or otherwise, including armor (increase/decrease one tier) and weapons.",
+            "Ping the Shared Subconscious: You sense the presence of living creatures within 70 feet even in adjacent rooms.",
+            "Logical Prognostication: Using Pure Logic you can deduce the nature of any traps or mechanisms within 30 feet or of any Powers used within 60 feet.",
+            "Carno-Organic Speleophagy: Transmogrifies a child-sized rock into burnt, chewy meat. Feeds d4 hungry people.",
+            "Time-Locked Pneumotoxin: This cracked tablet can be crushed to a coarse powder. If strewn upon a creature it takes d6 damage-on a 6 it chokes and dies. The tablet reappears each morning in its owner’s possession. This Power’s Presence test is harmless to the wielder, determining whether or not the powder finds the target. ",
+            "Induced Irrelevance: This tablet’s code literally removes a creature’s essential meaning for d4 rounds. During which enemies will not attack it, even if it attacks them first.",
+            "Structural Cryo-Condensation (Freezing Moon): Water freezes from the air forming a 15 foot long bridge or all water within 150 feet (unfortunately excluding that within living creatures) freezes.",
+            "Meta-Alchemy: The user may transform a container of liquid one of the following ways: ",
+            "Transmute it into two doses of Red Poison or Black Poison.",
+            "Create The Loathing of Vulark. The imbiber rolls a DC16 Toughness test or jumps from great heights. ",
+            "Transform poison to water or wine. ",
+            "Memetic Cognitive Palpitation: Near-imperceptible body shifts transmit a simple mind-plague which causes one creature to dance madly for d4 rounds. They may neither attack nor defend during this choreomania."
+        ],
+        "saltyWaterScrolls": [
+            "Aqueous Corpus: For d6 rounds turn your body into water, slipping through small gaps and avoiding damage from weapons.",
+            "Drowner’s Gasp: Breathe underwater for d6 hours",
+            "Flawless Reflection: Your body twists and turns as you take the form of another human-like creature you know for d6 hours",
+            "Leviathan’s Breath: Create a fog covering 100 feet in all directions, no one can clearly see past 5 feet, vanishes in d6 rounds",
+            "Orans Final Verdict: Gasping tentacles emerge from the ground and grab a creature, DR 12 Strength test to escape or take d4 damage",
+            "Thunder’s Crack: Touch a weapon and ignite it with lightning, lasting 1 minute, deal an extra +2 damage on attacks",
+            "Tidecall: Deal d6 damage and push or pull a creature 20 feet",
+            "Wavestriding: Walk on liquid for d6 minutes"
+        ],
+        "fungalScrolls": [
+            "Mycomorph: Roll 4d6. Turns creatures with total HP equal to the number rolled into edible mushrooms.",
+            "Spore Cloud: For the next d4 rounds each nearby creature takes d4 damage.",
+            "Rapid Decomposition: Mushrooms sprout from decaying (or living) flesh. Immediately destroys corpses. Deals 2d4 damage to a living target, rolling additional dice on the result of 4.",
+            "Fungal Speech: Speak with fungi for d20 minutes. Beware, the minds of fungi are difficult for animals to comprehend.",
+            "Fungal Healing: Deals d6 damage to d2 targets, each one heals 2d6 hp.",
+            "Call Fungus: Summons d4 fungal creatures, roll d6: 1. Spitzenkorpsen, 2-3. Sporelings4-6. Violent Fungus"
+        ]
+    }
+}

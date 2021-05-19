@@ -1,0 +1,55 @@
+{
+    "charClasses": [
+        {
+            "className": "Unclassed",
+            "charClass": {
+                "desc": "You never bothered to specialize",
+                "title": [
+                    "Bastard",
+                    "Rapscalion",
+                    "Sirrah",
+                    "Slime-foot",
+                    "Snake-eyes",
+                    "Ungrateful"
+                ],
+                "origins": [
+                    "In this life you can die a peasant or a warrior. You choose the latter.",
+                    "Money doesn't make itself, so something's got to be done.",
+                    "You don't talk about your background.",
+                    "You have a weapon, and you have an attitude, what more do you need?",
+                    "You were exiled for rudeness, crudeness, and serial murder.",
+                    "You're a simple dirt-farm kid seeking treasure and glory."
+                ],
+                "silver": {
+                    "numberDice": 3,
+                    "dieSize": 6,
+                    "multiplier": 10
+                },
+                "scrollType": "NORMAL",
+                "omensDie": 4,
+                "weaponDie": 10,
+                "armorDie": 4,
+                "reRollScroll": false,
+                "aglMod": 0,
+                "preMod": 0,
+                "strMod": 0,
+                "tghMod": 0,
+                "HD": 8,
+                "features": [
+                    {
+                        "featureName": "Feats",
+                        "featureDesc": "When you advance, you can take an unheroic feat. You may take up to three such feats.",
+                        "featureEquipmentCVB": {
+                            "equipment": [],
+                            "companionVehilceBag": []
+                        }
+                    }
+                ],
+                "powers": {
+                    "number": 0,
+                    "listy": []
+                }
+            }
+        }
+    ]
+}
