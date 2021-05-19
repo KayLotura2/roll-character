@@ -10,11 +10,29 @@ function randomizer(array: any[]) {
 
 /**
  * Takes in an integer for die size, and returns a random result for that die.
- * @param diesize
+ * @param dieSize
  */
-function dieRoll(diesize: number): number {
-  var die: number[] = Array.from(Array(diesize)).map((e, i) => i);
+function dieRoll(dieSize: number): number {
+  var die: number[] = Array.from(Array(dieSize)).map((e, i) => i);
   var result: number = (randomizer(die) + 1);
+  return result;
+}
+
+/**
+ * Takes in two integers, one for dice number, one for die size, and returns the sum of those dice results.
+ * eg. for 3d6, you would enter diceRoll(3, 6) 
+ * @param dieNumber
+ * @param dieSize
+ */
+function diceRoll(dieNumber: number, dieSize: number): number {
+
+  let result: number = 0
+
+  for (let i = 0; i < dieNumber; i++) {
+    const dieResult = dieRoll(6)
+    result += dieResult
+  }
+
   return result;
 }
 
@@ -57,4 +75,4 @@ function flipCoin() {
   }
 }
 
-export { flipCoin, randomizerCount, dieRoll, randomizer };
+export { flipCoin, randomizerCount, dieRoll, diceRoll, randomizer };
