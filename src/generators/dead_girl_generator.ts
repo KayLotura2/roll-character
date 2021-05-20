@@ -415,6 +415,93 @@ function generateSilver(numberDice: number, dieSize: number, multiplier: number)
   return result
 }
 
+import {  dieRoll, diceRoll } from './randomizers';
+
+/**
+ * Generates Dead Girl Loot based on Depth. 
+ * @param depth number (between 0 and 20)
+ * @returns string
+ */
+export function generateDeadGirlLoot(depth: number): string {
+
+    let result: string = ''
+    let i: number = 0
+    let lootRoll: number = (dieRoll(10) + depth)
+    while (i > 4 ) { 
+        if (lootRoll > 20) {
+            lootRoll = (dieRoll(20) + depth)
+        } 
+        i += 1
+    }
+    if (lootRoll > 20) {
+        lootRoll = 20
+    } 
+
+    switch (lootRoll) {
+        case 1:
+            result = `${diceRoll(3, 6)} silver`
+            break;
+        case 2:
+            result = `${diceRoll(2, 6)} pain gems.`
+            break;
+        case 3:
+            result = `Pouch of ${diceRoll(2, 6)} little blue pills.`
+            break;
+        case 4:
+            result = `A ring of carcass preservation.`
+            break;
+        case 5:
+            result = `A cruel love letter.`
+            break;
+        case 6:
+            result = `A bitter knife.`
+            break;
+        case 7:
+            result = `A bottle of Nemath's Water.`
+            break;
+        case 8:
+            result = `A tooth brooch.`
+            break;
+        case 9:
+            result = `A horned tiara.`
+            break;
+        case 10:
+            result = `${dieRoll(6)} mourning candles.`
+            break;
+        case 11:
+            result = `${diceRoll(2, 4)} deadly petals.`
+            break;
+        case 12:
+            result = `Box of ${diceRoll(4, 6)} little blue pills.`
+            break;
+        case 13:
+            result = `${dieRoll(3)} spikes of undead servitude.`
+            break;
+        case 14:
+            result = `A dead mouse in a bottle.`
+            break;
+        case 15:
+            result = `A ring of cold revenge.`
+            break;
+        case 16:
+            result = `An immaculate veil.`
+            break;
+        case 17:
+            result = `${dieRoll(3)} bottles of corpse wine.`
+            break;
+        case 18:
+            result = `${diceRoll(10, 6)} silver`
+            break;
+        case 19:
+            result = `Bottle of ${diceRoll(6, 6)} little blue pills.`
+            break;
+        case 20:
+            result = `Box of ${dieRoll(6)} baby teeth.`
+            break;
+    }
+    return result
+}
+
 /**
  * Edits EquipmentCVB, returning an array of strings with !variables! replaced; !name!, !scroll!, !weapon!
  * @param string[],
