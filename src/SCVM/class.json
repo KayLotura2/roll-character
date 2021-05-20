@@ -6,7 +6,7 @@
                 "desc": "You never bothered to specialize",
                 "title": [
                     "Bastard",
-                    "Rapscalion",
+                    "Rapscallion",
                     "Sirrah",
                     "Slime-foot",
                     "Snake-eyes",
@@ -41,7 +41,7 @@
                         "featureDesc": "When you advance, you can take an unheroic feat. You may take up to three such feats.",
                         "featureEquipmentCVB": {
                             "equipment": [],
-                            "companionVehilceBag": []
+                            "companionVehicleBag": []
                         }
                     }
                 ],

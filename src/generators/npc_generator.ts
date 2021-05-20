@@ -46,7 +46,7 @@ const attractionDescriptors: string[] = (<any>identityJSON).attractionDescriptor
 const attractionRoots: string[] = (<any>identityJSON).attractionRoots;
 
 /**
- * Retruns a character name composed with 1 to 4 names.
+ * Returns a character name composed with 1 to 4 names.
  * 100% of the time this will return a first name.
  *  85% of the time this will return a first and second name.
  *  50% of the time this will return a first, second, and third name.
@@ -81,7 +81,7 @@ export function generateName(): Name {
 }
 
 /**
- * Retruns a personality made from an aesthetic, quirk, trouble, and virute.
+ * Returns a personality made from an aesthetic, quirk, trouble, and virtue.
  */
 export function generatePersonality(): Personality {
   const aesthetic: string = randomizer(aesthetics);
@@ -100,7 +100,7 @@ export function generatePersonality(): Personality {
 }
 
 /**
- * Retruns a complex gender, pronoun, and attraction model.
+ * Returns a complex gender, pronoun, and attraction model.
  */
 export function generateIdentity(): Identity {
   let descriptor: string = '';
@@ -210,13 +210,13 @@ let romanticAttractionDesc: string
   }
 
   const sexualAttraction = `${sexualAttractionDesc}${sexualAttractionRoot}sexual`
-  const romantictAttraction = `${romanticAttractionDesc}${romanticAttractionRoot}romantic`
+  const romanticAttraction = `${romanticAttractionDesc}${romanticAttractionRoot}romantic`
 
   const result: Identity = {
     gender: `${gender.desc} ${gender.rts.join("/")}`,
     pronoun: charPronouns.join(", "),
     sexualAttraction: sexualAttraction,
-    romanticAttraction: romantictAttraction
+    romanticAttraction: romanticAttraction
   }
 
 return result
