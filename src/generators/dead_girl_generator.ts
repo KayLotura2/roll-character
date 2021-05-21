@@ -12,7 +12,7 @@ export type TypedGear = {
 // Gear for Mörk Borg can be Equipment (carried items), Companions, Vehicles, or a Bag. 
 export type EquipmentCVB = {
   equipment: string[],
-  companionVehilceBag: string[],
+  companionVehicleBag: string[],
 }
 
 // Structure of named abilities or features
@@ -104,7 +104,7 @@ export function generateName(): string {
   }
 
 /**
- * Retruns a random character class.
+ * Returns a random character class.
  * @returns CharClassObj
  */
 export function generateDeadGirlClass(): DeadGirlClassObj {
@@ -160,11 +160,11 @@ export function generateGearA(): EquipmentCVB {
   let gearARoll = dieRoll(6)
   let result: EquipmentCVB = {
     equipment: [],
-    companionVehilceBag: [
+    companionVehicleBag: [
       `${gearA[gearARoll - 1]}`
     ]
   };
-  if (gearARoll === 6) result.companionVehilceBag.push(`Skeleton, ${generateName()} [ Atk/Def 12 | fist d2 | 5 HP| Morale - | no armor ]`);
+  if (gearARoll === 6) result.companionVehicleBag.push(`Skeleton, ${generateName()} [ Atk/Def 12 | fist d2 | 5 HP| Morale - | no armor ]`);
 
   return result
 }
@@ -174,7 +174,7 @@ export function generateGearA(): EquipmentCVB {
  * @param scrollType ScrollType
  * @returns string
  */
-export function genearteScroll(scrollType: string): string {
+export function generateScroll(scrollType: string): string {
   let result: string = 'Scroll Error...'
   if (scrollType == 'NONE') { return result };
   if (scrollType == 'ANY') { scrollType = randomizer(['UNCLEAN', 'SACRED', 'FUNGAL', 'OCHRE', 'SALT']) };
@@ -226,7 +226,7 @@ export function generateReligion(): string {
       'a strange deamon of some sort',
       'an earthbound cult leader who claims to be a god',
       'IT, the Deep Leviathan of Salt',
-      'MIND, The Unknoable Ochre Thinker',
+      'MIND, The Unknowable Ochre Thinker',
       'MOON, keeper of dark secrets, arcane change, and miserable fungus',
       'some eldritch dead god long forgotten',
       'SUN, THESUNTHESUNTHESUN',
@@ -240,14 +240,14 @@ export function generateReligion(): string {
 /**
  * Generates Gear B: Some random junk you start with. 
  * @param presence number
- * @param scollType string
+ * @param scrollType string
  * @returns EquipmentCVB
  */
 export function generateGearB(presence: number, scrollType: string): EquipmentCVB {
 
   let result: EquipmentCVB = {
     equipment: [],
-    companionVehilceBag: []
+    companionVehicleBag: []
   }
   let gearBRoll: number;
 
@@ -287,16 +287,16 @@ export function generateGearB(presence: number, scrollType: string): EquipmentCV
       result.equipment.push('Crowbar, d3');
       break;
     case 9:
-      result.companionVehilceBag.push(`Affectionate Dead Crow, ${generateName()} ${dieRoll(4) + 2} HP`);
+      result.companionVehicleBag.push(`Affectionate Dead Crow, ${generateName()} ${dieRoll(4) + 2} HP`);
       break;
     case 10:
-      result.equipment.push(`Communune Waffers (${dieRoll(8)}x)`)
+      result.equipment.push(`Communion Waffers (${dieRoll(8)}x)`)
       break;
     case 11:
       result.equipment.push(`Net`);
       break;
     case 12:
-      result.equipment.push(genearteScroll(scrollType));
+      result.equipment.push(generateScroll(scrollType));
       break;
   }
   return result
@@ -305,14 +305,14 @@ export function generateGearB(presence: number, scrollType: string): EquipmentCV
 /**
  * Generates Gear C: Some random junk you start with. 
  * @param presence number
- * @param scollType string
+ * @param scrollType string
  * @returns EquipmentCVB
  */
 export function generateGearC(presence: number, scrollType: string): EquipmentCVB {
 
   let result: EquipmentCVB = {
     equipment: [],
-    companionVehilceBag: []
+    companionVehicleBag: []
   };
   let gearCRoll: number;
 
@@ -361,7 +361,7 @@ export function generateGearC(presence: number, scrollType: string): EquipmentCV
       result.equipment.push('Bottle of Fine Wine');
       break;
     case 12:
-      result.equipment.push(genearteScroll(scrollType));
+      result.equipment.push(generateScroll(scrollType));
       break;
   }
   return result
@@ -416,16 +416,101 @@ function generateSilver(numberDice: number, dieSize: number, multiplier: number)
 }
 
 /**
+ * Generates Dead Girl Loot based on Depth. 
+ * @param depth number (between 0 and 20)
+ * @returns string
+ */
+export function generateDeadGirlLoot(depth: number): string {
+
+    let result: string = ''
+    let i: number = 0
+    let lootRoll: number = (dieRoll(10) + depth)
+    while (i > 4 ) { 
+        if (lootRoll > 20) {
+            lootRoll = (dieRoll(20) + depth)
+        } 
+        i += 1
+    }
+    if (lootRoll > 20) {
+        lootRoll = 20
+    } 
+
+    switch (lootRoll) {
+        case 1:
+            result = `${diceRoll(3, 6)} silver`
+            break;
+        case 2:
+            result = `${diceRoll(2, 6)} pain gems.`
+            break;
+        case 3:
+            result = `Pouch of ${diceRoll(2, 6)} little blue pills.`
+            break;
+        case 4:
+            result = `A ring of carcass preservation.`
+            break;
+        case 5:
+            result = `A cruel love letter.`
+            break;
+        case 6:
+            result = `A bitter knife.`
+            break;
+        case 7:
+            result = `A bottle of Nemath's Water.`
+            break;
+        case 8:
+            result = `A tooth brooch.`
+            break;
+        case 9:
+            result = `A horned tiara.`
+            break;
+        case 10:
+            result = `${dieRoll(6)} mourning candles.`
+            break;
+        case 11:
+            result = `${diceRoll(2, 4)} deadly petals.`
+            break;
+        case 12:
+            result = `Box of ${diceRoll(4, 6)} little blue pills.`
+            break;
+        case 13:
+            result = `${dieRoll(3)} spikes of undead servitude.`
+            break;
+        case 14:
+            result = `A dead mouse in a bottle.`
+            break;
+        case 15:
+            result = `A ring of cold revenge.`
+            break;
+        case 16:
+            result = `An immaculate veil.`
+            break;
+        case 17:
+            result = `${dieRoll(3)} bottles of corpse wine.`
+            break;
+        case 18:
+            result = `${diceRoll(10, 6)} silver`
+            break;
+        case 19:
+            result = `Bottle of ${diceRoll(6, 6)} little blue pills.`
+            break;
+        case 20:
+            result = `Box of ${dieRoll(6)} baby teeth.`
+            break;
+    }
+    return result
+}
+
+/**
  * Edits EquipmentCVB, returning an array of strings with !variables! replaced; !name!, !scroll!, !weapon!
  * @param string[],
  * @returns string[]
  */
- function gearBangVarReplaceent(gearList: string[], presence: number): string[] {
+ function gearBangVarReplacement(gearList: string[], presence: number): string[] {
 
   const result: string[] = gearList.map(gearItem => {
     const nameReplaced: string = gearItem.replace('!name!', `${generateName()}`);
-    const scrollReplaced: string = nameReplaced.replace('!scroll!', `${genearteScroll('ANY')}`);
-    const uncleanReplaced: string = scrollReplaced.replace('!unclean!', `${genearteScroll('UNCLEAN')}`);
+    const scrollReplaced: string = nameReplaced.replace('!scroll!', `${generateScroll('ANY')}`);
+    const uncleanReplaced: string = scrollReplaced.replace('!unclean!', `${generateScroll('UNCLEAN')}`);
     const weaponReplaced = uncleanReplaced.replace('!weapon!', generateWeapon(8, presence));
     return weaponReplaced; 
   });
@@ -475,17 +560,17 @@ export function generateDeadGirlCharacter(): FullDeadGirlCharacter {
 
   // Compile Bags, Companions, and Vehicles
   let charCVB: string[] = [
-    ...charGearA.companionVehilceBag,
-    ...charGearB.companionVehilceBag,
-    ...charGearC.companionVehilceBag,
+    ...charGearA.companionVehicleBag,
+    ...charGearB.companionVehicleBag,
+    ...charGearC.companionVehicleBag,
   ]
 
-  totalFeatures.forEach(f => charCVB.push(...f.featureEquipmentCVB.companionVehilceBag));
+  totalFeatures.forEach(f => charCVB.push(...f.featureEquipmentCVB.companionVehicleBag));
   // Replace Bang Variables (!var!) in gear strings
-  charEquipment = gearBangVarReplaceent(charEquipment, presence);
-  charCVB = gearBangVarReplaceent(charCVB, presence);
+  charEquipment = gearBangVarReplacement(charEquipment, presence);
+  charCVB = gearBangVarReplacement(charCVB, presence);
 
-  // Now put it all togetehr
+  // Now put it all together
   const result: FullDeadGirlCharacter = {
     name: baseName,
     className: baseClassName,

@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
 import Discord from 'discord.js';
 import moment from 'moment'
-import {Name, Personality, generateName, generatePersonality, generateIdentity} from './generators/npc_generator'
+import { Name, Personality, generateName, generatePersonality, generateIdentity } from './generators/npc_generator'
 dotenv.config();
-import {FullCharacter, generateMBCharacter} from './generators/scvm_generator'
-import {FullDeadGirlCharacter, generateDeadGirlCharacter} from './generators/dead_girl_generator'
+import { FullCharacter, generateMBCharacter } from './generators/scvm_generator'
+import { FullDeadGirlCharacter, generateDeadGirlCharacter, generateDeadGirlLoot } from './generators/dead_girl_generator'
 const client = new Discord.Client();
 client.login(process.env.TOKEN);
 
@@ -25,12 +25,12 @@ function generateNPC(): string {
   const sexualAttraction: string = identity.sexualAttraction
   const romanticAttraction: string = identity.romanticAttraction
 
- 
-  const result: string  = `**Name:** ${stringName} \n**Gender:** ${gender} \
+
+  const result: string = `**Name:** ${stringName} \n**Gender:** ${gender} \
   \n**Pronoun:** ${pronoun} \n**Attraction:** ${romanticAttraction}/${sexualAttraction} \
   \n**Aesthetic:** ${aesthetic} \n**Quirk:** ${quirk} \n**Virtue:** ${virtue} \
   \n**Trouble:** ${trouble}`
-  
+
   return result
 }
 
@@ -53,7 +53,7 @@ function generateScvm(): string {
   \n**Companions & Vehicles**
   \n${scvm_npc.companionVehicles.join('\n')}
   \n
-  \n**Equipment (Carrying Capactiy: ${scvm_npc.inventoryCount}**\
+  \n**Equipment (Carrying Capacity: ${scvm_npc.inventoryCount}**\
   \n${scvm_npc.equipment.map((e: string, i: number) => `**${i + 1}**: ${e}`).join('\n')}`
 
   return result
@@ -78,7 +78,7 @@ function generateDeadGirl(): string {
   \n**Companions & Vehicles**
   \n${dead_girl_npc.companionVehicles.join('\n')}
   \n
-  \n**Equipment (Carrying Capactiy: ${dead_girl_npc.inventoryCount} )**\
+  \n**Equipment (Carrying Capacity: ${dead_girl_npc.inventoryCount} )**\
   \n${dead_girl_npc.equipment.map((e: string, i: number) => `**${i + 1}**: ${e}`).join('\n')}`
 
   return result
@@ -105,8 +105,22 @@ client.on('message', (msg: Discord.Message) => {
     console.log(`${msg.guild} requested lowdown scvm at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${scvm}`)
   }
   if (content === '!exhumegirl') {
-    const deadgirl = generateDeadGirl();
-    channel.send(deadgirl);
-    console.log(`${msg.guild} requested dead girl at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${deadgirl}`)
+    const deadGirl = generateDeadGirl();
+    channel.send(deadGirl);
+    console.log(`${msg.guild} requested dead girl at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${deadGirl}`)
+  }
+  if (content.startsWith('!exhumeloot')) {
+    const args: string[] = content.slice('!exhumeloot'.length).trim().split(' ');
+    console.log(args)
+    console.log(args[0])
+    let parsed: number = parseInt(args[0]);
+    let messageNote: string = ''
+    if (isNaN(parsed) || parsed < 0 || parsed > 20) {
+      parsed = 0
+      messageNote = `"${args[0]}" is not a positive number between 0 and 20, returning Loot for Depth 0 \n`
+    }
+    const deadGirlLoot: string = `${messageNote} ${generateDeadGirlLoot(parsed)}`
+    channel.send(deadGirlLoot);
+    console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${deadGirlLoot}`)
   }
 })
