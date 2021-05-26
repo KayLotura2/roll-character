@@ -1,7 +1,7 @@
-import * as classJSON from '../SCVM/class.json';
-import * as gearJSON from '../SCVM/gear.json';
-import * as namesJSON from '../JSON/name.json';
-import * as terribleTraitsJSON from '../SCVM/terribleTraits.json';
+import * as classJSON from '../JSON/SCVM/class.json';
+import * as gearJSON from '../JSON/SCVM/gear.json';
+import * as namesJSON from '../JSON/NPC/name.json';
+import * as terribleTraitsJSON from '../JSON/SCVM/terribleTraits.json';
 import { randomizer, dieRoll, diceRoll, randomizerCount, flipCoin } from './randomizers';
 
 // Structure of typed gear, such as Weapons, Armor, and Scrolls

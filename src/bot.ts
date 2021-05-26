@@ -97,17 +97,17 @@ client.on('message', (msg: Discord.Message) => {
   if (content === '!npc') {
     const npc = generateNPC();
     channel.send(npc);
-    console.log(`${msg.guild} requested an npc at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${npc}`)
+    console.log(`${msg.guild} requested an npc at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
   if (content === '!scvm') {
     const scvm = generateScvm();
     channel.send(scvm);
-    console.log(`${msg.guild} requested lowdown scvm at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${scvm}`)
+    console.log(`${msg.guild} requested lowdown scvm at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
   if (content === '!exhumegirl') {
     const deadGirl = generateDeadGirl();
     channel.send(deadGirl);
-    console.log(`${msg.guild} requested dead girl at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${deadGirl}`)
+    console.log(`${msg.guild} requested dead girl at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
   if (content.startsWith('!exhumeloot')) {
     const args: string[] = content.slice('!exhumeloot'.length).trim().split(' ');
@@ -121,6 +121,6 @@ client.on('message', (msg: Discord.Message) => {
     }
     const deadGirlLoot: string = `${messageNote} ${generateDeadGirlLoot(parsed)}`
     channel.send(deadGirlLoot);
-    console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${deadGirlLoot}`)
+    console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
 })

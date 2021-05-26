@@ -1,6 +1,6 @@
-import * as namesJSON from "../JSON/name.json";
-import * as personalityJSON from "../JSON/personality.json";
-import * as identityJSON from "../JSON/identity.json";
+import * as namesJSON from "../JSON/NPC/name.json";
+import * as personalityJSON from "../JSON/NPC/personality.json";
+import * as identityJSON from "../JSON/NPC/identity.json";
 import { randomizer, dieRoll, randomizerCount } from "./randomizers";
 
 // One to Four names, with empty names represented by empty strings
