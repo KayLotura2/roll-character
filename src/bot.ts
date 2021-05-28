@@ -4,6 +4,7 @@ import moment from 'moment'
 import { Name, Personality, generateName, generatePersonality, generateIdentity } from './generators/npc_generator'
 dotenv.config();
 import { FullCharacter, generateMBCharacter } from './generators/scvm_generator'
+import { ErrantFullCharacter, generateErrantCharacter } from './generators/errant_generator'
 import { FullDeadGirlCharacter, generateDeadGirlCharacter, generateDeadGirlLoot } from './generators/dead_girl_generator'
 const client = new Discord.Client();
 client.login(process.env.TOKEN);
@@ -84,7 +85,9 @@ function generateDeadGirl(): string {
   return result
 }
 
-
+function generateErrant(): string {
+  return JSON.stringify(generateErrantCharacter())
+}
 
 
 client.on('ready', () => {
@@ -122,5 +125,10 @@ client.on('message', (msg: Discord.Message) => {
     const deadGirlLoot: string = `${messageNote} ${generateDeadGirlLoot(parsed)}`
     channel.send(deadGirlLoot);
     console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
+  }
+  if (content === '!errant') {
+    const errant = generateErrant();
+    channel.send(errant);
+    console.log(`${msg.guild} requested errant at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
 })

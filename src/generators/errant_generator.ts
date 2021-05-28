@@ -44,7 +44,7 @@ export type Ancestry = {
 export type Archetype = {
   name: string,
   type: string,
-  alignment: string[],
+  alignments: string[],
   damageDie: number,
   primaryAttr: string,
   givenFeatures: string[],
@@ -73,7 +73,7 @@ export enum ArchetypeName {
 const ancestries: Ancestry[] = (<any>ancestriesJSON).ancestries
 const archetypes: Archetype[] = (<any>archetypesJSON).archetypes
 const baseGear: Item[] = (<any>equipmentJSON).baseGear
-const grimoirs: Item[] = (<any>equipmentJSON).grimoirs
+const grimoires: Item[] = (<any>equipmentJSON).grimoires
 const heavyRangedWeapons: Item[] = (<any>equipmentJSON).heavyRangedWeapons
 const heavyWeapons: Item[] = (<any>equipmentJSON).heavyWeapons
 const keepsakes: string[] = (<any>equipmentJSON).keepsakes
@@ -122,7 +122,7 @@ export function generateAge(ageDice: AgeDice): number {
 export function generateLanguage(mind: number): string[] {
   let result: string[] = []
   if (mind > 10) {
-    result = randomizerCount(languages, mind - 10);
+    result = randomizerCount(languages, (mind - 10));
   }
   result.push('Ancestral tongue')
   result.push('Regional common')
@@ -170,6 +170,7 @@ export function generateArchetypeBenefits(archetype: Archetype): Benefits {
         result.features.push(archetype.randomizedFeatures.masteryPairs[profDie])
       } else {
         const zeroToNine = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        console.log(zeroToNine)
         const profDice: number[] = randomizerCount(zeroToNine, 2);
         const toolDie: number = getToolRoll(profDice);
 
@@ -179,10 +180,9 @@ export function generateArchetypeBenefits(archetype: Archetype): Benefits {
       }
       break;
     case 'OCCULT':
-      const charGrimoirs: Item[] = randomizerCount(grimoirs, 4);
-
-      result.features.push(randomizer(archetype.randomizedFeatures.covenants));
-      result.items.push(...charGrimoirs);
+      const charGrimoires: Item[] = randomizerCount(grimoires, 4);
+      result.items.push(...charGrimoires);
+      //TODO Add Sorceries
       break;
     case 'VIOLENT':
       const violentGearDie: number = dieRoll(4)
@@ -263,7 +263,7 @@ export function generateErrantCharacter(): ErrantFullCharacter {
   const name: string = `${Object.values(generateName()).join(' ')}`;
   const archetypeName: string = `${archetype.type}`;
   const pronouns: string = `${generateIdentity().pronoun}`;
-  const alignment: string = `${randomizer(archetype.alignment)}`;
+  const alignment: string = `${randomizer(archetype.alignments)}`;
   const age: number = generateAge(ancestry.ageDice)
   const failedProfession: string = randomizer(professions);
   const keepsake: string = randomizer(keepsakes);
@@ -307,6 +307,7 @@ export function generateErrantCharacter(): ErrantFullCharacter {
     features: features
   }
 
+  console.log("What the backon")
   console.log(result);
 
   return result

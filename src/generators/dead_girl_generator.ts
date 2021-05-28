@@ -591,9 +591,5 @@ export function generateDeadGirlCharacter(): FullDeadGirlCharacter {
     inventoryCount: inventoryCount
   }
 
-  console.log(result);
-
   return result
 }
-
-generateDeadGirlCharacter();

@@ -29,7 +29,7 @@ function diceRoll(dieNumber: number, dieSize: number): number {
   let result: number = 0
 
   for (let i = 0; i < dieNumber; i++) {
-    const dieResult = dieRoll(6)
+    const dieResult = dieRoll(dieSize)
     result += dieResult
   }
 

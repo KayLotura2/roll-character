@@ -88,9 +88,7 @@
                 "Maleficence: Any number of prepared sorceries can be made unstable in order to make an attack which deals damage to all within an area, with a saving throw allowed for half damage.The range and area of effect of your maleficence is the same as that of a sorcery. Your maleficence deals 2d6 damage for the first prepared sorcery made unstable, plus an additional d6 damage for each additional prepared sorcery that is made unstable. \n Your maleficence is unique and the manner in which it deals damage should be defined by a one word descriptor (e.g. lightning, fire, necrosis).",
                 "Retort: When an enemy casts a sorcery or some other magical effect, you may use a retort to cast a prepared sorcery in response; a prepared sorcery cast this way is automatically made unstable. You may only use one retort per initiative turn."
             ],
-            "randomizedFeatures": {
-
-            }
+            "randomizedFeatures": {}
         }
     ]
 }
