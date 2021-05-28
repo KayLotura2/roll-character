@@ -1,0 +1,96 @@
+{
+    "archetypes": [
+        {
+            "name": "VIOLENT",
+            "type": "The Violent",
+            "alignments": [
+                "N0"
+            ],
+            "damageDie": 8,
+            "primaryAttr": "PHYS",
+            "givenFeatures": [
+                "Combat Dice: 2",
+                "Smite: When you make an attack, you may roll a combat die and add it to your damage.",
+                "Grit: When you take damage, you may roll a combat die and reduce the incoming damage by the amount rolled.",
+                "Sprint: When you move, you may roll a combat die and add the result to your movement roll."
+            ],
+            "randomizedFeatures": {}
+        },
+        {
+            "name": "DEVIANT",
+            "type": "The Deviant",
+            "alignments": [
+                "N0"
+            ],
+            "damageDie": 6,
+            "primaryAttr": "SKILL",
+            "givenFeatures": [
+                "Sneak attack: When you attack someone unaware of your presence, roll two damage die.",
+                "Jettons (!number!) \n - You regain jettons after 3 weeks. \n - You can spend jettons to reduce the DV by 1, for checks related to your Proficiencies \n - Wager: Boast about Proficiency skill, Roll d10 vs Jettons spent to be true. \n - Devil’s Bargain: Guide rolls, I may choose their (secret) die for higher stakes."
+            ],
+            "randomizedFeatures": {
+                "proficiencies": [
+                    "Proficiency: Anatomy. Checks related to alchemy, barber-surgery, cooking, autopsies, etc.",
+                    "Proficiency: Engineering. Checks related to disarming traps, lockpicking, architecture and dungeoncraft, demolitions, etc.",
+                    "Proficiency: Awareness. Checks related to investigating a room, checking for traps, detecting hidden characters, appraisal, etc.",
+                    "Proficiency: Fitness. Checks related to climbing, running, jumping, acrobatics, etc.",
+                    "Proficiency: Lore. Checks related to history, religion, philosophy, arcane knowledge, etc.",
+                    "Proficiency: Sleight-of-hand. Checks related to pickpocketing, legerdemain, misdirection, escape artistry, playing musical instruments, etc.",
+                    "Proficiency: Speechcraft. Checks related to bartering, haggling, deceiving, persuading, intimidating, performing, etc.",
+                    "Proficiency: Stealth. Checks related to hiding, moving silently and unseen, blending in with a crowd, masking your presence, etc.",
+                    "Proficiency: Survival. Checks related tracking, navigating, foraging and hunting, animal handling, etc."
+                ],
+                "masteryPairs": [
+                    "Proficiency: Anatomy. Checks related to alchemy, barber-surgery, cooking, autopsies, etc. \n Mastery, Alchemist: When you use an alchemist’s kit you can store 6 ingredients rather than 4.",
+                    "Proficiency: Engineering. Checks related to disarming traps, lockpicking, architecture and dungeoncraft, demolitions, etc. \n Mastery Locksmith: When lockpicking you may ignore the first jam.",
+                    "Proficiency: Awareness. Checks related to investigating a room, checking for traps, detecting hidden characters, appraisal, etc. \n Mastery Scout: You may still take actions even when surprised.",
+                    "Proficiency: Fitness. Checks related to climbing, running, jumping, acrobatics, etc. \n Mastery Fleet-footed: So long as your encumbrance is less than 5, it does not affect your speed.",
+                    "Proficiency: Lore. Checks related to history, religion, philosophy, arcane knowledge, etc. \n Mastery Scholar: You can cast sorceries from grimoires and can use any magic item, regardless of restriction; your sorcery duration is 1 and your renown is halved for the purposes of determining sorcery effects such as damage and range.",
+                    "Proficiency: Sleight-of-hand. Checks related to pickpocketing, legerdemain, misdirection, escape artistry, playing musical instruments, etc. \n Mastery Pack Rat: You can retrieve any item in any item slot instantly.",
+                    "Proficiency: Speechcraft. Checks related to bartering, haggling, deceiving, persuading, intimidating, performing, etc. \n Mastery Socialite: All reaction rolls for NPCs interacting with you are rolled with 3d6.",
+                    "Proficiency: Stealth. Checks related to hiding, moving silently and unseen, blending in with a crowd, masking your presence, etc. \n Mastery Assassin: You roll 3 damage die when making a sneak attack.",
+                    "Proficiency: Survival. Checks related tracking, navigating, foraging and hunting, animal handling, etc. \n Mastery Beast Master: You gain an animal companion. It takes its own actions during initiative turns, though it obeys your commands. All checks made by your animal companion are resolved using your skill; it has HP equal to your skill, and a damage die of d6. If your animal companion dies, you gain a new one at the start of the next downtime turn."
+                ]
+            }
+        },
+        {
+            "name": "ZEALOT",
+            "type": "The Zealot",
+            "alignments": [
+                "L1",
+                "C1"
+            ],
+            "damageDie": 6,
+            "primaryAttr": "PRES",
+            "givenFeatures": [
+                "Favor (!number!)",
+                "You can attune one relic, mystical tools consecrated in the name of your covenant. Any item can be consecrated as a relic, provided it meets the requirements. \n It costs 200 pennies and takes one travel turn to consecrate an item as a relic. You may un-attune from a relic but doing so requires it be consecrated again to re-attune.",
+                "Miracle: You can perform a supernatural feat related to your covenant’s eminences. Roll a d6 plus an additional d6 for each relic to which they are attuned, and sum the result. High rolls indicate success, while low rolls presage failure, doom, or even death. Favour can be used to increase the result of a miracle roll. "
+            ],
+            "randomizedFeatures": {
+                "covenants": [
+                    "Covenant of the Sun: Eminences in light, fire, and growth. \n Blessing:  Burn Bright. Any light sources that you stand within gain +1 Burn. \n Blessing: Brilliant Rage. Any fire damage dealt near has its die size increased once",
+                    "Covenant of Decay: Eminences in the forgotten, growth and decay. \n Blessing: Rightful Dominion. Your mind is a rhizome, you can not be mind controlled. \n Blessing: As Decay. When you find a corpse, you can tell when it has died as well as the manner of their death.",
+                    "Covenant of Iron: Eminences in metal, smoke, and progress. \n Blessing: Master of Metal. Examining any piece of metal for a few minutes reveals its properties and mechanics. \n Inner Furnace. When you move in combat, you may sacrifice any number of hp and roll that many extra die."
+                ]
+            }
+        },
+        {
+            "name": "OCCULT",
+            "type": "The Occult",
+            "alignments": [
+                "N0"
+            ],
+            "damageDie": 4,
+            "primaryAttr": "MIND",
+            "givenFeatures":  [
+                "Sorcery: You can cast sorceries. You begin play with the four grimoires in your possession, whose sorceries you have already learned. A sorcery may be cast by directly reading it from a grimoire, once per day. Doing so takes two actions during an initiative turn. \n Each day you may also prepare 2 sorceries, which allows you to cast them without referencing a grimoire. Doing so takes one action during an initiative turn. You may prepare the same sorcery multiple times. \n If a sorcery has an ongoing effect, its duration is 1 round \n When you cast a prepared sorcery, you may make a MIND check with a DV equal to your stabilize value plus your encumbrance. If you succeed, you may safely cast that sorcery again. \n If you fail, that prepared sorcery has become unstable, and casting it again risks miscasting. \n To avoid miscasting, you must succeed on a MIND check with a DV equal to d20+the number of times that sorcery has been cast since becoming unstable.",
+                "Maleficence: Any number of prepared sorceries can be made unstable in order to make an attack which deals damage to all within an area, with a saving throw allowed for half damage.The range and area of effect of your maleficence is the same as that of a sorcery. Your maleficence deals 2d6 damage for the first prepared sorcery made unstable, plus an additional d6 damage for each additional prepared sorcery that is made unstable. \n Your maleficence is unique and the manner in which it deals damage should be defined by a one word descriptor (e.g. lightning, fire, necrosis).",
+                "Retort: When an enemy casts a sorcery or some other magical effect, you may use a retort to cast a prepared sorcery in response; a prepared sorcery cast this way is automatically made unstable. You may only use one retort per initiative turn."
+            ],
+            "randomizedFeatures": {
+
+            }
+        }
+    ]
+}

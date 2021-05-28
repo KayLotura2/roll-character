@@ -1,0 +1,58 @@
+{
+    "ancestries": [
+        {
+            "type": "Tough",
+            "ageDice": {
+                "numberOfDice": 2,
+                "dieSize": 20,
+                "adder": 10
+            },
+            "options": [
+                "Dwarf",
+                "Orc",
+                "Ghoul"
+            ],
+            "feature": "Once per session, when you would be reduced to 0 hp, you may choose to be reduced to 1 hp instead."
+        },
+        {
+            "type": "Arcane",
+            "ageDice": {
+                "numberOfDice": 3,
+                "dieSize": 20,
+                "adder": 10
+            },
+            "options": [
+                "Elf",
+                "Demon",
+                "Dryad"
+            ],
+            "feature": "Once per session, you can attempt to perform a minor magical feat related to your ancestry: roll 2d6 and add your renown, on a 10+ you succeed, on a 7-9 a complication occurs, on a 6 or lower, failure."
+        },
+        {
+            "type": "Cunning",
+            "ageDice": {
+                "numberOfDice": 1,
+                "dieSize": 20,
+                "adder": 10
+            },
+            "options": [
+                "Halfling",
+                "Goblin"
+            ],
+            "feature": "Once per session, you may reroll any d20 roll."
+        },
+        {
+            "type": "Adaptable",
+            "ageDice": {
+                "numberOfDice": 1,
+                "dieSize": 10,
+                "adder": 10
+            },
+            "options": [
+                "Human",
+                "Half-Human"
+            ],
+            "feature": "Once per session, you may choose to use one attribute for a check in lieu of another."
+        }
+    ]
+}

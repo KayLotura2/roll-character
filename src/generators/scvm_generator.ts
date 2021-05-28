@@ -585,9 +585,5 @@ export function generateMBCharacter(): FullCharacter {
     inventoryCount: inventoryCount
   }
 
-  console.log(result);
-
   return result
 }
-
-// generateMBCharacter();
