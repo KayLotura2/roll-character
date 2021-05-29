@@ -180,7 +180,6 @@ export function generateArchetypeBenefits(archetype: Archetype, skill: number): 
       } else {
         const zeroToEight = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         const profDice: number[] = randomizerCount(zeroToEight, 2);
-        console.log(profDice)
         const toolDie: number = getToolRoll(profDice);
 
         result.items.push(tools[toolDie]);
@@ -372,9 +371,5 @@ export function generateErrantCharacter(): ErrantFullCharacter {
     features: features
   }
 
-  // console.log(result);
-
   return result
 }
-
-generateErrantCharacter();
