@@ -50,7 +50,7 @@ function generateScvm(): string {
   \n**Armor:** ${scvm_npc.armor && scvm_npc.armor} \
   \n**Features** 
   \n${scvm_npc.features.map(p => `**${p.featureName}**: ${p.featureDesc}`).join('\n')} \
-  \n 
+  \n
   \n**Companions & Vehicles**
   \n${scvm_npc.companionVehicles.join('\n')}
   \n
@@ -75,7 +75,7 @@ function generateDeadGirl(): string {
   \n**Armor:** ${dead_girl_npc.armor && dead_girl_npc.armor} \
   \n**Features** 
   \n${dead_girl_npc.features.map(p => `**${p.featureName}**: ${p.featureDesc}`).join('\n')} \
-  \n 
+  \n
   \n**Companions & Vehicles**
   \n${dead_girl_npc.companionVehicles.join('\n')}
   \n
@@ -86,8 +86,27 @@ function generateDeadGirl(): string {
 }
 
 function generateErrant(): string {
-  return JSON.stringify(generateErrantCharacter())
+  const errant: ErrantFullCharacter = generateErrantCharacter();
+
+  const result: string = `**Name:** ${errant.name}  **Pronouns:** ${errant.pronouns}  **Age:** ${errant.age} \
+  \n**Archetype:** ${errant.archetype}  **Alignment:** ${errant.alignment}  **Failed Profession:** ${errant.failedProfession} \
+  \n**Ancestry:** ${errant.ancestry}  **Keepsake:** ${errant.keepsake}
+  \n**PHYS:** ${errant.phys}  **SKILL:** ${errant.skill}  **MIND:** ${errant.mind}  **PRES:** ${errant.pres} \
+  \n**Damage Die**: ${errant.damageDie}  **Speed:** ${errant.speed} \
+  \n**Hit Points**: ${errant.phys}  **Favour:** ${errant.pres - 8} \
+  \n**Features** 
+  \n${errant.features.map(f => `${f}`).join('\n')} \
+  \n
+  \n**Languages** 
+  \n${errant.languages.map(lang => `${lang}`).join('\n')} \
+  \n
+  \n**Equipment (Carrying Capacity: ${errant.phys}**\
+  \n${errant.inventory.map((e: string) => `${e}`).join('\n')}`
+
+  return result
 }
+
+
 
 
 client.on('ready', () => {

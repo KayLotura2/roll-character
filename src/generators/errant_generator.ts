@@ -3,6 +3,7 @@ import * as ancestriesJSON from '../JSON/ERRANT/ancestries.json';
 import * as professionsJSON from '../JSON/ERRANT/professions.json';
 import * as equipmentJSON from '../JSON/ERRANT/gear.json';
 import * as languageJSON from '../JSON/NPC/languages.json';
+import * as sorceriesJSON from '../JSON/ERRANT/sorceries.json';
 import { randomizer, flipCoin, diceRoll, dieRoll, randomizerCount } from './randomizers';;
 import { generateName, generateIdentity } from './npc_generator';
 
@@ -51,6 +52,13 @@ export type Archetype = {
   randomizedFeatures: any,
 }
 
+export type Attributes = {
+  mind: number,
+  phys: number,
+  pres: number,
+  skill: number,
+};
+
 export type Benefits = {
   items: Item[],
   features: string[]
@@ -85,6 +93,8 @@ const quiver: Item = (<any>equipmentJSON).quiver
 const relics: Item[] = (<any>equipmentJSON).relics
 const shields: Item[] = (<any>equipmentJSON).shields
 const tools: Item[] = (<any>equipmentJSON).tools
+const effects: string[] = (<any>sorceriesJSON).effects
+const spheres: string[] = (<any>sorceriesJSON).spheres
 
 /**
  * Returns a random Errant Archetype.
@@ -124,8 +134,8 @@ export function generateLanguage(mind: number): string[] {
   if (mind > 10) {
     result = randomizerCount(languages, (mind - 10));
   }
-  result.push('Ancestral tongue')
-  result.push('Regional common')
+  result.unshift('Ancestral tongue')
+  result.unshift('Regional common')
   return result;
 }
 
@@ -150,7 +160,7 @@ export function getToolRoll(profDice: number[]): number {
  * @param string (ArchetypeName enum)
  * @returns Benefits
  */
-export function generateArchetypeBenefits(archetype: Archetype): Benefits {
+export function generateArchetypeBenefits(archetype: Archetype, skill: number): Benefits {
 
   let result: Benefits = {
     items: [],
@@ -178,9 +188,11 @@ export function generateArchetypeBenefits(archetype: Archetype): Benefits {
         result.features.push(archetype.randomizedFeatures.proficiencies[profDice[0]])
         result.features.push(archetype.randomizedFeatures.proficiencies[profDice[1]])
       }
+      result.features.push(`Jettons: ${skill +2}`)
       break;
     case 'OCCULT':
       const charGrimoires: Item[] = randomizerCount(grimoires, 4);
+      charGrimoires.map((g) => `Grimoire with sorcery of ${generateSorcery} \n`)
       result.items.push(...charGrimoires);
       //TODO Add Sorceries
       break;
@@ -227,10 +239,18 @@ export function generateBaseWeapon(): Item[] {
 }
 
 /**
+ * Returns a sorcery for a grimoire.
+ * @returns string
+ */
+export function generateSorcery(): string {
+  return `${randomizer(effects)} ${randomizer(spheres)}`
+}
+
+/**
  * Calculates a character's encumbrance based on how many items they're carrying.
-* @param phys: number
-* @param items: Item[]
-* @returns number
+ * @param phys
+ * @param items
+ * @returns number
  */
 export function calcEncumbrance(phys: number, items: Item[]): number {
   let result: number = 0
@@ -252,38 +272,77 @@ export function calcEncumbrance(phys: number, items: Item[]): number {
 }
 
 /**
+ * Conversts Item[] to string[] with slots used.
+ * @param inventory
+ * @returns string[]
+ */
+export function writeInventory(inventory: Item[]): string[] {
+  const result: string[] = inventory.map((item: Item) => {
+    return `${item.type}, ${item.QSlots / 4} slots`
+  });
+  return result;
+}
+
+/**
+ * Rolls Attribute scores, then swaps one for optimal archetype matching.
+ * @param primaryAttr
+ * @returns Attributes
+ */
+export function generateAttributes(primaryAttr: string): Attributes {
+  let result: Attributes = {
+    mind: diceRoll(4,4),
+    phys: diceRoll(4,4),
+    pres: diceRoll(4,4),
+    skill: diceRoll(4,4),
+  }
+  const highestAttr: Array<string|number> = Object.entries(result).reduce((previousValue, [key, value]) => value > previousValue[1] ? [key, value] : previousValue);
+  
+  if (highestAttr[0] === primaryAttr) {
+    return result
+  } else {
+    const highestAttrNameTyped = highestAttr[0] as keyof typeof result;
+    const primaryAttrNameTyped = primaryAttr as keyof typeof result;
+
+    const highestScore: number =  highestAttr[1] as number;
+    const oldScore: number = result[primaryAttrNameTyped];
+
+    result[highestAttrNameTyped] = oldScore;
+    result[primaryAttrNameTyped] = highestScore;
+
+    return result;
+  }
+}
+
+/**
  * Build a full character.
  */
 export function generateErrantCharacter(): ErrantFullCharacter {
   const archetype: Archetype = generateArchetype();
   const ancestry: Ancestry = generateAncestry();
-  const benefits: Benefits = generateArchetypeBenefits(archetype);
   const baseWeapon: Item[] = generateBaseWeapon();
+  const attributes: Attributes = generateAttributes(archetype.primaryAttr)
+  const benefits: Benefits = generateArchetypeBenefits(archetype, attributes.skill);
 
   const name: string = `${Object.values(generateName()).join(' ')}`;
   const archetypeName: string = `${archetype.type}`;
   const pronouns: string = `${generateIdentity().pronoun}`;
   const alignment: string = `${randomizer(archetype.alignments)}`;
-  const age: number = generateAge(ancestry.ageDice)
+  const age: number = generateAge(ancestry.ageDice);
   const failedProfession: string = randomizer(professions);
   const keepsake: string = randomizer(keepsakes);
-  const ancestryName: string = `${ancestry.type}`;
-  // TODO, hotswap ATTR for best in class
-  // It'd be good to make a hot swap on these based on Archetype
-  // Say hunt down highest number, and swap it with Archetype Favored
-  const phys: number = diceRoll(4, 4);
-  const skill: number = diceRoll(4, 4);
-  const mind: number = diceRoll(4, 4);
-  const pres: number = diceRoll(4, 4);
-  //
-  const damageDie: number = archetype.damageDie
-  const speed: number = Math.floor(skill / 4)
+  // Migh intigrate this in some touchup point
+  // const ancestryName: string = `${ancestry.type}`;
+  const phys: number = attributes.phys;
+  const skill: number = attributes.skill;
+  const mind: number = attributes.mind;
+  const pres: number = attributes.pres;
+  const damageDie: number = archetype.damageDie;
   const languages: string[] = generateLanguage(mind);
-  const itemSlots: number = phys;
-  const inventory: Item[] = [...baseWeapon, ...baseGear, ...benefits.items]
-  const features: string[] = benefits.features;
+  const inventory: Item[] = [...baseWeapon, ...baseGear, ...benefits.items];
+  const features: string[] = [ancestry.feature, ...benefits.features];
   const encumbrance: number = calcEncumbrance(phys, inventory);
-  const encSpeed: number = Math.floor((skill - encumbrance) / 4)
+  const encSpeed: number = Math.floor((skill - encumbrance) / 4);
+  const inventoryString: string[] = writeInventory(inventory);
 
   // Now put it all together
   const result: ErrantFullCharacter = {
@@ -303,11 +362,10 @@ export function generateErrantCharacter(): ErrantFullCharacter {
     speed: encSpeed,
     languages: languages,
     encumbrance: encumbrance,
-    inventory: [`${inventory}`],
+    inventory: inventoryString,
     features: features
   }
 
-  console.log("What the backon")
   console.log(result);
 
   return result

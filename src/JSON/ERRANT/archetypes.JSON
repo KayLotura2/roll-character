@@ -7,7 +7,7 @@
                 "N0"
             ],
             "damageDie": 8,
-            "primaryAttr": "PHYS",
+            "primaryAttr": "phys",
             "givenFeatures": [
                 "Combat Dice: 2",
                 "Smite: When you make an attack, you may roll a combat die and add it to your damage.",
@@ -23,10 +23,10 @@
                 "N0"
             ],
             "damageDie": 6,
-            "primaryAttr": "SKILL",
+            "primaryAttr": "skill",
             "givenFeatures": [
                 "Sneak attack: When you attack someone unaware of your presence, roll two damage die.",
-                "Jettons (!number!) \n - You regain jettons after 3 weeks. \n - You can spend jettons to reduce the DV by 1, for checks related to your Proficiencies \n - Wager: Boast about Proficiency skill, Roll d10 vs Jettons spent to be true. \n - Devil’s Bargain: Guide rolls, I may choose their (secret) die for higher stakes."
+                "You regain jettons after 3 weeks. \n - You can spend jettons to reduce the DV by 1, for checks related to your Proficiencies \n - Wager: Boast about Proficiency skill, Roll d10 vs Jettons spent to be true. \n - Devil’s Bargain: Guide rolls, I may choose their (secret) die for higher stakes."
             ],
             "randomizedFeatures": {
                 "proficiencies": [
@@ -61,7 +61,7 @@
                 "C1"
             ],
             "damageDie": 6,
-            "primaryAttr": "PRES",
+            "primaryAttr": "pres",
             "givenFeatures": [
                 "Favor (!number!)",
                 "You can attune one relic, mystical tools consecrated in the name of your covenant. Any item can be consecrated as a relic, provided it meets the requirements. \n It costs 200 pennies and takes one travel turn to consecrate an item as a relic. You may un-attune from a relic but doing so requires it be consecrated again to re-attune.",
@@ -82,7 +82,7 @@
                 "N0"
             ],
             "damageDie": 4,
-            "primaryAttr": "MIND",
+            "primaryAttr": "mind",
             "givenFeatures":  [
                 "Sorcery: You can cast sorceries. You begin play with the four grimoires in your possession, whose sorceries you have already learned. A sorcery may be cast by directly reading it from a grimoire, once per day. Doing so takes two actions during an initiative turn. \n Each day you may also prepare 2 sorceries, which allows you to cast them without referencing a grimoire. Doing so takes one action during an initiative turn. You may prepare the same sorcery multiple times. \n If a sorcery has an ongoing effect, its duration is 1 round \n When you cast a prepared sorcery, you may make a MIND check with a DV equal to your stabilize value plus your encumbrance. If you succeed, you may safely cast that sorcery again. \n If you fail, that prepared sorcery has become unstable, and casting it again risks miscasting. \n To avoid miscasting, you must succeed on a MIND check with a DV equal to d20+the number of times that sorcery has been cast since becoming unstable.",
                 "Maleficence: Any number of prepared sorceries can be made unstable in order to make an attack which deals damage to all within an area, with a saving throw allowed for half damage.The range and area of effect of your maleficence is the same as that of a sorcery. Your maleficence deals 2d6 damage for the first prepared sorcery made unstable, plus an additional d6 damage for each additional prepared sorcery that is made unstable. \n Your maleficence is unique and the manner in which it deals damage should be defined by a one word descriptor (e.g. lightning, fire, necrosis).",
