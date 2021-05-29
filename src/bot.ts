@@ -135,8 +135,6 @@ client.on('message', (msg: Discord.Message) => {
   }
   if (content.startsWith('!exhumeloot')) {
     const args: string[] = content.slice('!exhumeloot'.length).trim().split(' ');
-    console.log(args)
-    console.log(args[0])
     let parsed: number = parseInt(args[0]);
     let messageNote: string = ''
     if (isNaN(parsed) || parsed < 0 || parsed > 20) {
