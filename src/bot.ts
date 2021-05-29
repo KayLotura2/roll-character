@@ -147,7 +147,6 @@ client.on('message', (msg: Discord.Message) => {
   }
   if (content === '!errant') {
     const errant = generateErrant();
-    console.log(errant)
     channel.send(errant);
     console.log(`${msg.guild} requested errant at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
