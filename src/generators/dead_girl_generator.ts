@@ -554,7 +554,6 @@ export function generateDeadGirlCharacter(): FullDeadGirlCharacter {
     ...charGearB.equipment,
     ...charGearC.equipment
   ];
-  console.log(totalFeatures);
   totalFeatures.forEach(f => charEquipment.push(...f.featureEquipmentCVB.equipment))
   charEquipment.push(...silverPouches)
 

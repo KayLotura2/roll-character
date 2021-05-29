@@ -206,7 +206,6 @@ export function generateScroll(scrollType: string): string {
       result = `Salty Scroll of ${randomizer(scrolls.saltyWaterScrolls)}`;
       break;
   }
-  console.log(result)
   return result
 }
 

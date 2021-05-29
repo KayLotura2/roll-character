@@ -167,7 +167,6 @@ export function generateArchetypeBenefits(archetype: Archetype, skill: number): 
     features: []
   }
 
-  // TODO: Gatta hacktogeher sorceries from grimoires...
   switch (archetype.name) {
     case 'DEVIANT':
       const hasMastery = flipCoin();
@@ -179,9 +178,9 @@ export function generateArchetypeBenefits(archetype: Archetype, skill: number): 
         result.items.push(tools[toolDie]);
         result.features.push(archetype.randomizedFeatures.masteryPairs[profDie])
       } else {
-        const zeroToNine = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-        console.log(zeroToNine)
-        const profDice: number[] = randomizerCount(zeroToNine, 2);
+        const zeroToEight = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        const profDice: number[] = randomizerCount(zeroToEight, 2);
+        console.log(profDice)
         const toolDie: number = getToolRoll(profDice);
 
         result.items.push(tools[toolDie]);
@@ -192,22 +191,28 @@ export function generateArchetypeBenefits(archetype: Archetype, skill: number): 
       break;
     case 'OCCULT':
       const charGrimoires: Item[] = randomizerCount(grimoires, 4);
-      charGrimoires.map((g) => `Grimoire with sorcery of ${generateSorcery} \n`)
-      result.items.push(...charGrimoires);
-      //TODO Add Sorceries
+      const sorcGrimoires: Item[] = charGrimoires.map((g) => {
+        g.type = (`Grimoire with sorcery of ${generateSorcery()}    ` + g.type)
+        return g
+      })
+      result.items.push(...sorcGrimoires);
       break;
     case 'VIOLENT':
       const violentGearDie: number = dieRoll(4)
       switch (violentGearDie) {
         case 1:
           result.items.push(randomizer(heavyWeapons));
+          break
         case 2:
           result.items.push(randomizer(heavyRangedWeapons));
           result.items.push(quiver);
+          break
         case 3:
           result.items.push(shields[0]);
+          break
         case 4:
           result.items.push(shields[1]);
+          break
       }
       break
     case 'ZEALOT':
@@ -255,17 +260,18 @@ export function generateSorcery(): string {
 export function calcEncumbrance(phys: number, items: Item[]): number {
   let result: number = 0
   let weight: number = 0
+  const caryCap = (phys * 4)
 
   for (var item of items) {
     weight += item.QSlots
   }
 
-  if (weight > phys * 4) {
+  if (weight > caryCap) {
     result = 4
-    const extraWeight = Math.floor(weight - (phys * 4) / 4)
+    const extraWeight = Math.floor((weight - caryCap) / 4)
     result += extraWeight
   } else {
-    const enc: number = Math.floor((phys * weight) / 4)
+    const enc: number = Math.floor(weight / phys)
     result = enc;
   }
   return result;
@@ -366,7 +372,7 @@ export function generateErrantCharacter(): ErrantFullCharacter {
     features: features
   }
 
-  console.log(result);
+  // console.log(result);
 
   return result
 }
