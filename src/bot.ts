@@ -4,6 +4,7 @@ import moment from 'moment'
 import { Name, Personality, generateName, generatePersonality, generateIdentity } from './generators/npc_generator'
 dotenv.config();
 import { FullCharacter, generateMBCharacter } from './generators/scvm_generator'
+import { ErrantFullCharacter, generateErrantCharacter } from './generators/errant_generator'
 import { FullDeadGirlCharacter, generateDeadGirlCharacter, generateDeadGirlLoot } from './generators/dead_girl_generator'
 const client = new Discord.Client();
 client.login(process.env.TOKEN);
@@ -47,13 +48,13 @@ function generateScvm(): string {
   \n**Toughness:** ${scvm_npc.toughness} \
   \n**Weapon:** ${scvm_npc.weapon} \
   \n**Armor:** ${scvm_npc.armor && scvm_npc.armor} \
-  \n**Features** 
+  \n**Features** \
   \n${scvm_npc.features.map(p => `**${p.featureName}**: ${p.featureDesc}`).join('\n')} \
-  \n 
-  \n**Companions & Vehicles**
+  \n \
+  \n**Companions & Vehicles** \
   \n${scvm_npc.companionVehicles.join('\n')}
-  \n
-  \n**Equipment (Carrying Capacity: ${scvm_npc.inventoryCount}**\
+  \n \
+  \n**Equipment (Carrying Capacity: ${scvm_npc.inventoryCount} )** \
   \n${scvm_npc.equipment.map((e: string, i: number) => `**${i + 1}**: ${e}`).join('\n')}`
 
   return result
@@ -72,14 +73,37 @@ function generateDeadGirl(): string {
   \n**Toughness:** ${dead_girl_npc.toughness} \
   \n**Weapon:** ${dead_girl_npc.weapon} \
   \n**Armor:** ${dead_girl_npc.armor && dead_girl_npc.armor} \
-  \n**Features** 
+  \n**Features** \
   \n${dead_girl_npc.features.map(p => `**${p.featureName}**: ${p.featureDesc}`).join('\n')} \
-  \n 
-  \n**Companions & Vehicles**
-  \n${dead_girl_npc.companionVehicles.join('\n')}
-  \n
-  \n**Equipment (Carrying Capacity: ${dead_girl_npc.inventoryCount} )**\
+  \n \
+  \n**Companions & Vehicles** \
+  \n${dead_girl_npc.companionVehicles.join('\n')} \
+  \n \
+  \n**Equipment (Carrying Capacity: ${dead_girl_npc.inventoryCount} )** \
   \n${dead_girl_npc.equipment.map((e: string, i: number) => `**${i + 1}**: ${e}`).join('\n')}`
+
+  return result
+}
+
+function generateErrant(): string {
+  const errant: ErrantFullCharacter = generateErrantCharacter();
+
+  const result: string = `**Name:** ${errant.name}    **Pronouns:** ${errant.pronouns}    **Age:** ${errant.age} \
+  \n**Archetype:** ${errant.archetype}    **Alignment:** ${errant.alignment}    **Failed Profession:** ${errant.failedProfession} \
+  \n**Ancestry:** ${errant.ancestry}    **Keepsake:** ${errant.keepsake} \
+  \n \
+  \n**PHYS:** ${errant.phys}  **SKILL:** ${errant.skill}  **MIND:** ${errant.mind}  **PRES:** ${errant.pres} \
+  \n**Damage Die**: ${errant.damageDie}    **Speed:** ${errant.speed}   **Encumberance:** ${errant.encumbrance}\
+  \n**Hit Points**: ${errant.phys}    **Favour:** ${errant.pres - 8} \
+  \n \
+  \n**Features** \
+  \n${errant.features.map(f => `${f}`).join('\n')} \
+  \n \
+  \n**Languages** \
+  \n${errant.languages.map(lang => `${lang}`).join('\n')} \
+  \n \
+  \n**Equipment (Carrying Capacity: ${errant.phys} )** \
+  \n${errant.inventory.map((e: string) => `${e}`).join('\n')}`
 
   return result
 }
@@ -97,17 +121,17 @@ client.on('message', (msg: Discord.Message) => {
   if (content === '!npc') {
     const npc = generateNPC();
     channel.send(npc);
-    console.log(`${msg.guild} requested an npc at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${npc}`)
+    console.log(`${msg.guild} requested an npc at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
   if (content === '!scvm') {
     const scvm = generateScvm();
     channel.send(scvm);
-    console.log(`${msg.guild} requested lowdown scvm at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${scvm}`)
+    console.log(`${msg.guild} requested lowdown scvm at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
   if (content === '!exhumegirl') {
     const deadGirl = generateDeadGirl();
     channel.send(deadGirl);
-    console.log(`${msg.guild} requested dead girl at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${deadGirl}`)
+    console.log(`${msg.guild} requested dead girl at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
   if (content.startsWith('!exhumeloot')) {
     const args: string[] = content.slice('!exhumeloot'.length).trim().split(' ');
@@ -121,6 +145,12 @@ client.on('message', (msg: Discord.Message) => {
     }
     const deadGirlLoot: string = `${messageNote} ${generateDeadGirlLoot(parsed)}`
     channel.send(deadGirlLoot);
-    console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}, they received the following: \n ${deadGirlLoot}`)
+    console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
+  }
+  if (content === '!errant') {
+    const errant = generateErrant();
+    console.log(errant)
+    channel.send(errant);
+    console.log(`${msg.guild} requested errant at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
 })

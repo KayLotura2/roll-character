@@ -1,0 +1,682 @@
+{
+    "keepsakes": [
+        "The sword of the hero Black Mask. Useless, but looks really cool.",
+        "A big, floppy cork hat. Waterproof.",
+        "A strange pair of boots, with four wheels attached to each sole.",
+        "A jar of pungent pickled eggs, given to you by a stranger on a carriage.",
+        "A pair of cozy, woolen socks.",
+        "A bucket filled with crabs.",
+        "A goblin child: it is convinced you are its mother.",
+        "A case of costume jewelry. Worthless, but convincing from a distance.",
+        "A deck of cards with an extra ace.",
+        "A banned edition of the major holy text of the land, filled with heretical dogma and apocryphal stories.",
+        "A large hoop skirt, big enough to hide a small child in.",
+        "Bagpipes.",
+        "Black leather boots, knee high. Black leather gloves, elbow length. A riding crop. A gag.",
+        "Just two guys, ready to help you out. They’re burly, they’re brawny, they’re best friends.",
+        "A coat you stole from a disgraced magician. Full of kerchiefs, dead doves, and other miscellanea.",
+        "The signet ring of an unknown king.",
+        "A dwarven treasure dog, loyal but cowardly.",
+        "A pouch of firecrackers",
+        "A dolorous cow.",
+        "A link of 12 hard sausages.",
+        "A bottle of incredibly fine whiskey, which you clearly stole.",
+        "A 10’ spool of thin, copper wire.",
+        "A pincushion, filled with pins.",
+        "The finest ham in all the land, smoked by the man, Pitmaster Sam!",
+        "A long, strong elastic cord.",
+        "A bowling ball.",
+        "A small vial of acid. Very corrosive.",
+        "A bag of chili powder.",
+        "Needle and thread.",
+        "A wig of beautiful golden hair. Reaches down to your ankles.",
+        "A bag of beloved marbles that you won from a child.",
+        "Several small jars of bright acrylic paints.",
+        "An unnerving and upsettingly lifelike puppet.",
+        "Incredibly avant-garde and impractical clothes that no sane person would be willing to purchase.",
+        "A small bag of incredibly pungent and heady herbs. When burned, even smelling the smoke is enough too intoxicate someone.",
+        "A package, addressed to someone you don’t know, in some place you’ve never heard",
+        "A rake.",
+        "A bottle of lubricant, suitable for internal, external, and industrial use.",
+        "An extremely springy spring.",
+        "A mechanically articulated hand attached to a stick. All of the fingers can be controlled independently, though it is quite confusing to operate.",
+        "A lump of clay.",
+        "A wind-up music box.",
+        "A tube of fast-drying, industrial strength glue.",
+        "A pair of stilts.",
+        "A book of fiery, righteous political polemic.",
+        "A pair of tinted spectacles.",
+        "A very fine squash.",
+        "A vial of medicine, syrupy and sweet. Makes one quite drowsy.",
+        "A bag of flour.",
+        "A plague doctor’s mask, stuffed with fragrant herbs.",
+        "A wheel of aged Grey Matter, the mouldiest cheese in the world. Causes intense hallucinations.",
+        "A pouch of laxative powder.",
+        "A snorkel.",
+        "A worn, dog-eared copy of the novel “Lust & Larceny, the Trysts of the Amorous Elven Thief, Vol 1.” While lowbrow, the book is incredibly engrossing, and hard to pull yourself away from.",
+        "Glitter.",
+        "A jug of genuine wolf piss.",
+        "A fire-squirt.",
+        "A bottle of rat poison.",
+        "A pouch of beans.",
+        "Snake.",
+        "A few pamphlets of surprisingly convincing conspiracy theories.",
+        "A pot labelled rice pudding that is actually filled with liquid cement.",
+        "A glass case of pinned butterflies.",
+        "Two magnetic spoons.",
+        "A collapsible walking cane.",
+        "Priest’s vestments.",
+        "A game with stone pieces and a cloth board. The accompanying instruction booklet is full of poorly worded, incomprehensible, and contradictory rules.",
+        "A trio of newborn puppies.",
+        "A small glass cylinder, rounded at the tips. Quite phallic.",
+        "A sachet of dried cooking herbs.",
+        "Packets of various coloured dye powders.",
+        "A thick, heavy blanket you’ve carried with you since childhood.",
+        "A hand-bound notebook, containing six quite touching love poems. The names of the beloved in each poem have been crossed out and rewritten multiple time.",
+        "A set of clothes lined with fleece. Very warm.",
+        "A dismembered pinky finger, with a long painted red fingernail.",
+        "The flu.",
+        "A small sundial attached to a wrist strap.",
+        "A booklet of various fashionable hair, beard, and moustache styles.",
+        "A crystal monocle, also useful as a lens.",
+        "A polished, metal hand mirror.",
+        "A delicious cake, baked for you by your sweetheart.",
+        "An incredibly belligerent goose.",
+        "A four leafed clover.",
+        "A packet of saccharinely sweet lollipops.",
+        "A large bar of hard soap, floral scented.",
+        "A bag of small ceramic balls, which explode in a blinding flash of light when thrown.",
+        "A small tube of pale pink face paint.",
+        "An umbrella.",
+        "A tub of styling gel.",
+        "A rapidly decomposing fish.",
+        "A bottle of incredibly pungent perfume.",
+        "A trained messenger pigeon.",
+        "A fine-mesh net.",
+        "A pouch of itching powder.",
+        "A hand drum.",
+        "A dozen angry hornets in a jar.",
+        "A wind-up clockwork toy.",
+        "Your dad. Capable of criticizing anyone till they feel incompetent and worthless.",
+        "A jar of sweet, sticky honey.",
+        "A set of loaded dice."
+    ],
+    "baseGear": [
+        {
+            "type": "Backpack",
+            "QSlots": 0
+        },
+        {
+            "type": "Bedroll",
+            "QSlots": 4
+        },
+        {
+            "type": "Torch (Burn 2)",
+            "QSlots": 2
+        },
+        {
+            "type": "50ft of Rope",
+            "QSlots": 2
+        },
+        {
+            "type": "Mess kit",
+            "QSlots": 1
+        },
+        {
+            "type": "Tinderbox",
+            "QSlots": 1
+        },
+        {
+            "type": "Rations (Depl 2)",
+            "QSlots": 1
+        },
+        {
+            "type": "Waterskin",
+            "QSlots": 1
+        },
+        {
+            "type": "Supply (x4)",
+            "QSlots": 4
+        }
+    ],
+    "grimoires": [
+        {
+            "type": "Silver Hand-Mirror. Reflection, mirror, prediction.",
+            "QSlots": 4
+        },
+        {
+            "type": "Silent Tuning Fork. Sound, music, resonance.",
+            "QSlots": 4
+        },
+        {
+            "type": "Chilled Iron Chain. Metal, restraint, imprisonment.",
+            "QSlots": 4
+        },
+        {
+            "type": "Large Odious Toad. Possession, betrayal, parasitism.",
+            "QSlots": 4
+        },
+        {
+            "type": "Human-skin Bound Tome. Flesh, secrets, extortion.",
+            "QSlots": 4
+        },
+        {
+            "type": "Infernal Contract. Oath, trust, witness.",
+            "QSlots": 4
+        },
+        {
+            "type": "Blank Bounty Poster. Assassination, retribution, target.",
+            "QSlots": 4
+        },
+        {
+            "type": "Wrought Iron Lamp. Illumination, shadow, flicker.",
+            "QSlots": 4
+        },
+        {
+            "type": "Decanter of Poisonous Gas. Miasma, contagion, breath.",
+            "QSlots": 4
+        },
+        {
+            "type": "Ebony Crystal Ball. Clairvoyance, truth, fortune.",
+            "QSlots": 4
+        },
+        {
+            "type": "Rainbow Crystaline Prism. Refraction, vision, geometry.",
+            "QSlots": 4
+        },
+        {
+            "type": "Live Ship in a Bottl. Microcosm, voyage, homecoming.",
+            "QSlots": 4
+        },
+        {
+            "type": "An Engraved Talisman. Sacrifice, wisdom, prophecy.",
+            "QSlots": 4
+        },
+        {
+            "type": "Textured Silver Disc. Return, arc, gravity.",
+            "QSlots": 4
+        },
+        {
+            "type": "Black Silk Blindfold. Perception, foresight, awareness.",
+            "QSlots": 4
+        },
+        {
+            "type": "Paper Möbius strip. Perspective, containment, curvature.",
+            "QSlots": 4
+        },
+        {
+            "type": "Precise Wind Chimes. Tone, air, catalyst.",
+            "QSlots": 4
+        },
+        {
+            "type": "Glass Sphere filled with Snow. Ice, cessation, continuation.",
+            "QSlots": 4
+        },
+        {
+            "type": "Dripping Candle Stump. Fire, extinguish, forbiddance.",
+            "QSlots": 4
+        },
+        {
+            "type": "Tarnished Bronze Cup. Water, treachery, pressure.",
+            "QSlots": 4
+        },
+        {
+            "type": "Ornate hand shovel. Earth, openings, weight.",
+            "QSlots": 4
+        },
+        {
+            "type": "Unmoving Weather Vane. Storms, navigation, flight.",
+            "QSlots": 4
+        },
+        {
+            "type": "Copper Lightning Rod. Lightning, conductivity, thunder.",
+            "QSlots": 4
+        },
+        {
+            "type": "Animated King's Skull. Undeath, oppression, hierarchy.",
+            "QSlots": 4
+        },
+        {
+            "type": "Worn Sack-cloth Doll. Nostalgia, haunting, denial.",
+            "QSlots": 4
+        },
+        {
+            "type": "Emotional Wooden Mask. Identity, disguise, personality.",
+            "QSlots": 4
+        },
+        {
+            "type": "Bone Planchette Board.Puzzle, solution, contradiction.",
+            "QSlots": 4
+        },
+        {
+            "type": "Weeping Onyx Pendant. Egocentrism, trinket, expression",
+            "QSlots": 4
+        },
+        {
+            "type": "Withered Dead Heart. Revival, rejuvenation, animation.",
+            "QSlots": 4
+        },
+        {
+            "type": "Marble Snake Eyes. Persuasion, manipulation, contempt.",
+            "QSlots": 4
+        },
+        {
+            "type": "Silent Music Box. Silence, melody, listening.",
+            "QSlots": 4
+        },
+        {
+            "type": "Life-like Marionette. Replication, subversion, belief.",
+            "QSlots": 4
+        },
+        {
+            "type": "Playing Card with Swimming Ink. Fluidity, doubt, cowardice.",
+            "QSlots": 4
+        },
+        {
+            "type": "Sack of Gossamer Wool. Slumber, consciousness, meditation.",
+            "QSlots": 4
+        },
+        {
+            "type": " Swirling Fractal Stopwatch. Ambiguity, confusion, hypnosis",
+            "QSlots": 4
+        },
+        {
+            "type": "Iron Bell and Stone Hammer. Intent, purpose, narrative.",
+            "QSlots": 4
+        },
+        {
+            "type": "Mysterious Old Journal. Memory, archive, history.",
+            "QSlots": 4
+        },
+        {
+            "type": "Wrought Gold Lotus. Threshold, passivity, motion.",
+            "QSlots": 4
+        },
+        {
+            "type": "Hollow Clay Cylinder. Emptiness, disparity, difference.",
+            "QSlots": 4
+        },
+        {
+            "type": "Kaleidoscopic Silken Veil. Void, origin, periphery.",
+            "QSlots": 4
+        },
+        {
+            "type": "Ceremonial Tea Set. Culture, tradition, artefact.",
+            "QSlots": 4
+        },
+        {
+            "type": "Heavy Iron Key-ring. Entrance, forbiddance, security.",
+            "QSlots": 4
+        },
+        {
+            "type": "Toy Top of Dancing Figures. Rotation, perpetuation, cycle.",
+            "QSlots": 4
+        },
+        {
+            "type": "Rusted Old Spectacles. Clarification, association, relativism.",
+            "QSlots": 4
+        },
+        {
+            "type": "Compelling Golden Ring. Heist, hold, prize.",
+            "QSlots": 4
+        },
+        {
+            "type": "Bloody Training Muzzle. Potential, domestication, savagery.",
+            "QSlots": 4
+        },
+        {
+            "type": "Chained Metal Censer. Odour, intoxication, unconsciousness.",
+            "QSlots": 4
+        },
+        {
+            "type": "Cruelly Thorned Whip. Torture, resilience, limit.",
+            "QSlots": 4
+        },
+        {
+            "type": "Falsified Chimera Trophy. Survival, adaptation, predation.",
+            "QSlots": 4
+        },
+        {
+            "type": "Featureless Uncanny Effigy. Representation, fortitude, vitality.",
+            "QSlots": 4
+        },
+        {
+            "type": "Esteemed Wooden Gavel. Authority, judgement, corruption.",
+            "QSlots": 4
+        },
+        {
+            "type": "Blood Soaked Rope. Escape, fate, crime.",
+            "QSlots": 4
+        },
+        {
+            "type": "Pristine Winged Boots. Celerity, delivery, contact.",
+            "QSlots": 4
+        },
+        {
+            "type": "Pouch of Pungent Herbs. Benevolence, medicine, dosage",
+            "QSlots": 4
+        },
+        {
+            "type": "Diary of Temptations. Record, temptation, repugnance.",
+            "QSlots": 4
+        },
+        {
+            "type": "Chpped Bronze Shield. Armour, protection, integrity.",
+            "QSlots": 4
+        },
+        {
+            "type": "Empty Tool Kit. Fortification, repair, construction.",
+            "QSlots": 4
+        },
+        {
+            "type": "Broken Beaded Abacus. Reduction, multiplication, calculation.",
+            "QSlots": 4
+        },
+        {
+            "type": "Ripped in half Autograph. Signature, disappointment, division.",
+            "QSlots": 4
+        },
+        {
+            "type": "Crumpled Paper Crown. Banishment, position, expulsion.",
+            "QSlots": 4
+        },
+        {
+            "type": "Clean Preserved Finger. Pact, willpower, malice.",
+            "QSlots": 4
+        },
+        {
+            "type": "Pale Bone Scalpel. Pestilence, desperation, frailty.",
+            "QSlots": 4
+        },
+        {
+            "type": "Broken Shard of a Murel. Completion, separation, origin.",
+            "QSlots": 4
+        },
+        {
+            "type": "Unfertilized Phoenix Egg. Fertility, reincarnation, gestation.",
+            "QSlots": 4
+        },
+        {
+            "type": "Goat-shaped Vial of Perfume. Lust, chastity, obscenity.",
+            "QSlots": 4
+        },
+        {
+            "type": "Wineskin made from Pig leather. Gluttony, temperance, inebriation.",
+            "QSlots": 4
+        },
+        {
+            "type": "Blood-Red Seal Stamp. War, provocation, injury",
+            "QSlots": 4
+        },
+        {
+            "type": "Reparied Porcelain Figurine. Youth, redemption, forgiveness.",
+            "QSlots": 4
+        },
+        {
+            "type": "Unbalanced Bone Dice. Luck, probability, gamble.",
+            "QSlots": 4
+        },
+        {
+            "type": "Bronze Snake Bangle. Causality, consequence, inevitability.",
+            "QSlots": 4
+        },
+        {
+            "type": "Portrait of your Mother. Birth, shame, guilt.",
+            "QSlots": 4
+        },
+        {
+            "type": "Charred Cooking Pot. Famine, cruelty, depletion.",
+            "QSlots": 4
+        },
+        {
+            "type": "Jade Skeletal Horse Figurine. Death, overthrow, mortality.",
+            "QSlots": 4
+        },
+        {
+            "type": "Blood-flecked Yellow Arrow. Hostility, recklessness, dedication.",
+            "QSlots": 4
+        },
+        {
+            "type": "Pillow with Snail Sigil. Sloth, diligence, rest.",
+            "QSlots": 4
+        },
+        {
+            "type": "Deck of well worn cards. Chance, play, serendipity.",
+            "QSlots": 4
+        },
+        {
+            "type": "Glittering Toad embossed Coin. Greed, charity, property.",
+            "QSlots": 4
+        },
+        {
+            "type": "Rough Wooden Plank. Creation, texture, destruction.",
+            "QSlots": 4
+        },
+        {
+            "type": "Enticing Lacey Undergarnments. Passion, diplomacy, power.",
+            "QSlots": 4
+        },
+        {
+            "type": "Ancient Red Brick. Architecture, support, decay.",
+            "QSlots": 4
+        },
+        {
+            "type": "Illuminated Writ of Recall. Learning, loss, irony.",
+            "QSlots": 4
+        },
+        {
+            "type": "Brittle Bird's Nest. Home, empathy, hunger.",
+            "QSlots": 4
+        },
+        {
+            "type": "Purring Preserved Cat's Paw. Toxin, psyche, affection.",
+            "QSlots": 4
+        },
+        {
+            "type": "Shard of Stained Glass. Shatter, sight, distortion.",
+            "QSlots": 4
+        },
+        {
+            "type": "Oddly Heavy Chisel. Leverage, rebellion, resistance.",
+            "QSlots": 4
+        },
+        {
+            "type": "Painted Scroll of Mountains. Exploration, discovery, alignment.",
+            "QSlots": 4
+        },
+        {
+            "type": "Moth-worn Burial Shroud. Ritual, compassion, community.",
+            "QSlots": 4
+        },
+        {
+            "type": "Slimy Stinking Ooze. Stench, slime, oozes.",
+            "QSlots": 4
+        },
+        {
+            "type": "Dirty Woven-grass Crown. Recognition, honour, resourcefulness.",
+            "QSlots": 4
+        },
+        {
+            "type": "Incorrect Screed on Flaking Parchment. Foolishness, reprisal, gender.",
+            "QSlots": 4
+        },
+        {
+            "type": "Sun-baked Skin of Serpent. Secrets, growth, heat.",
+            "QSlots": 4
+        },
+        {
+            "type": "Pouch of Powdery Grave Soil. Dirt, focus, rebirth.",
+            "QSlots": 4
+        },
+        {
+            "type": "Sweat-Stained Rags of a Giant. Denial, filth, depression.",
+            "QSlots": 4
+        },
+        {
+            "type": "Ellaborate Broken Sword. Wrath, patience, violence.",
+            "QSlots": 4
+        },
+        {
+            "type": "Book of Plagurized Poetry. Envy, gratitude, theft.",
+            "QSlots": 4
+        },
+        {
+            "type": "Tight Ornate Doublet. Pride, humility, hubris.",
+            "QSlots": 4
+        },
+        {
+            "type": "Yellowed Flaking Scroll. Prudence, reason, discernment.",
+            "QSlots": 4
+        },
+        {
+            "type": "Battered and Wellworn Wheel. Temperance, appetites, production.",
+            "QSlots": 4
+        },
+        {
+            "type": "Simple Ancient Club. Fortitude, courage, defence",
+            "QSlots": 4
+        },
+        {
+            "type": "Brilliant Copper Scales. Justice, proportionality, impartiality.",
+            "QSlots": 4
+        }
+    ],
+    "heavyRangedWeapons": [
+        {
+            "type": "Compound crossbow, ranged hvy wpn",
+            "QSlots": 8
+        },
+        {
+            "type": "Flintlock Musket, ranged hvy wpn",
+            "QSlots": 8
+        },
+        {
+            "type": "Recurve bow, ranged hvy wpn",
+            "QSlots": 8
+        }
+    ],
+    "heavyWeapons": [
+        {
+            "type": "Halberd, Hvy wpn",
+            "QSlots": 8
+        },
+        {
+            "type": "Great Axe, Hvy wpn",
+            "QSlots": 8
+        },
+        {
+            "type": "Claymore, Hvy wpn",
+            "QSlots": 8
+        },
+        {
+            "type": "Spear, Hvy wpn",
+            "QSlots": 8
+        },
+        {
+            "type": "Quarterstaff, Hvy wpn",
+            "QSlots": 8
+        },
+        {
+            "type": "Glaive, Hvy wpn",
+            "QSlots": 8
+        }
+    ],
+    "mediumRangedWeapons": [
+        {
+            "type": "Arquebus pistol, ranged med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Recurve crossbow, ranged med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Self bow, ranged med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Sling, ranged med wpn",
+            "QSlots": 4
+        }
+    ],
+    "mediumWeapons": [
+        {
+            "type": "Arming sword, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Club, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Flail, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Flanged Mace, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Morning star, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "War hammer, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Rapier, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Saber, med wpn",
+            "QSlots": 4
+        },
+        {
+            "type": "Battle Axe, med wpn",
+            "QSlots": 4
+        }
+    ],
+    "quiver": {
+        "type": "Quiver, holds ammo. Depl 10",
+        "QSlots": 4
+    },
+    "relics": [
+        {
+            "type": "Blade Relic: When you deal damage, you can spend favour to inflict a condition on your opponent. This condition is chosen when the relic is attuned to. The condition lasts for a number of initiative turns equal to favour spent.",
+            "QSlots": 4
+        },
+        {
+            "type": "Wand Relic: When a character makes a check, you can spend favour to reduce the DV of that check by an amount equal to favour spent.",
+            "QSlots": 4
+        },
+        {
+            "type": "Shield Relic: When you or an ally takes damage, you can spend favour to impair that damage a number of steps equal to the favour spent.",
+            "QSlots": 4
+        },
+        {
+            "type": "Cup Relic: You can spend favour to grant a number of allies, equal to the amount of favour spent, immunity to a condition. This immunity has a duration equal to your miracle duration.",
+            "QSlots": 4
+        }
+    ],
+    "shields": [
+        {
+            "type": "Small shield,  4 Blocks",
+            "QSlots": 4
+        },
+        {
+            "type": "Large shield, 6 Blocks",
+            "QSlots": 8
+        }
+    ],
+    "tools": [
+        {
+            "type": "Alchemist tools.",
+            "QSlots": 4
+        },
+        {
+            "type": "Burglar’s tools.",
+            "QSlots": 4
+        }
+    ]
+}

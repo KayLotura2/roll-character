@@ -1,7 +1,7 @@
-import * as classJSON from '../UNDEADGIRL/class.json';
-import * as gearJSON from '../UNDEADGIRL/gear.json';
-import * as namesJSON from '../UNDEADGIRL/name.json';
-import * as terribleTraitsJSON from '../UNDEADGIRL/terribleTraits.json';
+import * as classJSON from '../JSON/UNDEADGIRL/class.json';
+import * as gearJSON from '../JSON/UNDEADGIRL/gear.json';
+import * as namesJSON from '../JSON/UNDEADGIRL/name.json';
+import * as terribleTraitsJSON from '../JSON/UNDEADGIRL/terribleTraits.json';
 import { randomizer, dieRoll, diceRoll, randomizerCount, flipCoin } from './randomizers';
 
 // Structure of typed gear, such as Weapons, Armor, and Scrolls
@@ -554,7 +554,6 @@ export function generateDeadGirlCharacter(): FullDeadGirlCharacter {
     ...charGearB.equipment,
     ...charGearC.equipment
   ];
-  console.log(totalFeatures);
   totalFeatures.forEach(f => charEquipment.push(...f.featureEquipmentCVB.equipment))
   charEquipment.push(...silverPouches)
 
@@ -591,9 +590,5 @@ export function generateDeadGirlCharacter(): FullDeadGirlCharacter {
     inventoryCount: inventoryCount
   }
 
-  console.log(result);
-
   return result
 }
-
-generateDeadGirlCharacter();

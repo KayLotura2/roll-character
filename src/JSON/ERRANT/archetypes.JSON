@@ -1,0 +1,93 @@
+{
+    "archetypes": [
+        {
+            "name": "VIOLENT",
+            "type": "The Violent",
+            "alignments": [
+                "N0"
+            ],
+            "damageDie": 8,
+            "primaryAttr": "phys",
+            "givenFeatures": [
+                "Combat Dice: 2",
+                "Smite: When you make an attack, you may roll a combat die and add it to your damage.",
+                "Grit: When you take damage, you may roll a combat die and reduce the incoming damage by the amount rolled.",
+                "Sprint: When you move, you may roll a combat die and add the result to your movement roll."
+            ],
+            "randomizedFeatures": {}
+        },
+        {
+            "name": "DEVIANT",
+            "type": "The Deviant",
+            "alignments": [
+                "N0"
+            ],
+            "damageDie": 6,
+            "primaryAttr": "skill",
+            "givenFeatures": [
+                "Sneak attack: When you attack someone unaware of your presence, roll two damage die.",
+                "You regain jettons after 3 weeks. \n - You can spend jettons to reduce the DV by 1, for checks related to your Proficiencies \n - Wager: Boast about Proficiency skill, Roll d10 vs Jettons spent to be true. \n - Devil’s Bargain: Guide rolls, I may choose their (secret) die for higher stakes."
+            ],
+            "randomizedFeatures": {
+                "proficiencies": [
+                    "Proficiency: Anatomy. Checks related to alchemy, barber-surgery, cooking, autopsies, etc.",
+                    "Proficiency: Engineering. Checks related to disarming traps, lockpicking, architecture and dungeoncraft, demolitions, etc.",
+                    "Proficiency: Awareness. Checks related to investigating a room, checking for traps, detecting hidden characters, appraisal, etc.",
+                    "Proficiency: Fitness. Checks related to climbing, running, jumping, acrobatics, etc.",
+                    "Proficiency: Lore. Checks related to history, religion, philosophy, arcane knowledge, etc.",
+                    "Proficiency: Sleight-of-hand. Checks related to pickpocketing, legerdemain, misdirection, escape artistry, playing musical instruments, etc.",
+                    "Proficiency: Speechcraft. Checks related to bartering, haggling, deceiving, persuading, intimidating, performing, etc.",
+                    "Proficiency: Stealth. Checks related to hiding, moving silently and unseen, blending in with a crowd, masking your presence, etc.",
+                    "Proficiency: Survival. Checks related tracking, navigating, foraging and hunting, animal handling, etc."
+                ],
+                "masteryPairs": [
+                    "Proficiency: Anatomy. Checks related to alchemy, barber-surgery, cooking, autopsies, etc. **Mastery Alchemist:** When you use an alchemist’s kit you can store 6 ingredients rather than 4.",
+                    "Proficiency: Engineering. Checks related to disarming traps, lockpicking, architecture and dungeoncraft, demolitions, etc. **Mastery Locksmith:** When lockpicking you may ignore the first jam.",
+                    "Proficiency: Awareness. Checks related to investigating a room, checking for traps, detecting hidden characters, appraisal, etc. **Mastery Scout:** You may still take actions even when surprised.",
+                    "Proficiency: Fitness. Checks related to climbing, running, jumping, acrobatics, etc. **Mastery Fleet-footed:** So long as your encumbrance is less than 5, it does not affect your speed.",
+                    "Proficiency: Lore. Checks related to history, religion, philosophy, arcane knowledge, etc. **Mastery Scholar:** You can cast sorceries from grimoires and can use any magic item, regardless of restriction; your sorcery duration is 1 and your renown is halved for the purposes of determining sorcery effects such as damage and range.",
+                    "Proficiency: Sleight-of-hand. Checks related to pickpocketing, legerdemain, misdirection, escape artistry, playing musical instruments, etc. **Mastery Pack Rat:** You can retrieve any item in any item slot instantly.",
+                    "Proficiency: Speechcraft. Checks related to bartering, haggling, deceiving, persuading, intimidating, performing, etc. **Mastery Socialite:** All reaction rolls for NPCs interacting with you are rolled with 3d6.",
+                    "Proficiency: Stealth. Checks related to hiding, moving silently and unseen, blending in with a crowd, masking your presence, etc. **Mastery Assassin:** You roll 3 damage die when making a sneak attack.",
+                    "Proficiency: Survival. Checks related tracking, navigating, foraging and hunting, animal handling, etc. **Mastery Beast Master:** You gain an animal companion. It takes its own actions during initiative turns, though it obeys your commands. All checks made by your animal companion are resolved using your skill; it has HP equal to your skill, and a damage die of d6. If your animal companion dies, you gain a new one at the start of the next downtime turn."
+                ]
+            }
+        },
+        {
+            "name": "ZEALOT",
+            "type": "The Zealot",
+            "alignments": [
+                "L1",
+                "C1"
+            ],
+            "damageDie": 6,
+            "primaryAttr": "pres",
+            "givenFeatures": [
+                "You can attune one relic. You can also consecrate items into relics. You can be attuned to one relic.",
+                "Miracle: Perform a supernatural feat related to your eminences. Roll d6 +  d6 for each relic you are attuned to. Favour can be used to increase the result. "
+            ],
+            "randomizedFeatures": {
+                "covenants": [
+                    "Covenant of the Sun: Eminences in light, fire, and growth. \n Blessing, Burn Bright. Any light sources that you stand in gain +1 Burn. \n Blessing, Brilliant Rage. Any fire damage dealt near you has its die size increased once",
+                    "Covenant of Decay: Eminences in the forgotten, growth and decay. \n Blessing, Rightful Dominion. Your mind is a rhizome, you can not be mind controlled. \n Blessing, As Decay. When you find a corpse, you can tell when and how it died.",
+                    "Covenant of Iron: Eminences in metal, smoke, and progress. \n Blessing, Master of Metal. Examining any piece of metal for a few minutes reveals its properties and mechanics. \n Inner Furnace. When moving, spend any number of hp and roll that many extra movement die."
+                ]
+            }
+        },
+        {
+            "name": "OCCULT",
+            "type": "The Occult",
+            "alignments": [
+                "N0"
+            ],
+            "damageDie": 4,
+            "primaryAttr": "mind",
+            "givenFeatures":  [
+                "Sorcery: You know the four sorceries of the four grimoires you have.",
+                "Maleficence: Unstable prepared sorceries to make an area attack, save for half. Deals 2d6 damage  for one unstabling, plus d6 for each additional unstabling.",
+                "Retort: Cast a sorcery in response to an enemies sorcery or magical effect, once per intitiative turn."
+            ],
+            "randomizedFeatures": {}
+        }
+    ]
+}
