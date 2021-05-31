@@ -26,7 +26,6 @@ function generateNPC(): string {
   const sexualAttraction: string = identity.sexualAttraction
   const romanticAttraction: string = identity.romanticAttraction
 
-
   const result: string = `**Name:** ${stringName} \n**Gender:** ${gender} \
   \n**Pronoun:** ${pronoun} \n**Attraction:** ${romanticAttraction}/${sexualAttraction} \
   \n**Aesthetic:** ${aesthetic} \n**Quirk:** ${quirk} \n**Virtue:** ${virtue} \
@@ -108,6 +107,26 @@ function generateErrant(): string {
   return result
 }
 
+function getHelp(): string {
+  const result: string = `**roll-character Help** \n \
+  roll-character generates random characters and npcs for various ttrpg purposes.\n \
+  \n \
+  User Commands \n \
+  * \`!help\` calls for help, lists commands \n \
+  * \`!npc\` generates a complex character profile including pronouns, gender, and split attraction model. \n \
+  * \`!scvm\` a teaser for ScvmBjörn, this generates a classless Mörk Borg character. \n \
+  * \`!errant\`  generates a character for Errant. \n \
+  * \`!exhumegirl\` generates a dead-girl character for Dead Girls in Sarkash Forest.  \n \
+  * \`!exhumeloot [number]\` generates loot, based on depth, for Dead Girls in Sarkash Forest. \n \
+  \n \
+  Thank you for using roll-character! \n \
+  Feel free to leave feedback at either of the following locations! \n \
+  * https://kaylotura.itch.io/roll-character \n \
+  * https://github.com/KayLotura2/roll-character`
+
+  return result
+}
+
 
 
 
@@ -149,5 +168,10 @@ client.on('message', (msg: Discord.Message) => {
     const errant = generateErrant();
     channel.send(errant);
     console.log(`${msg.guild} requested errant at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
+  }
+  if (content === '!help') {
+    const help = getHelp();
+    channel.send(help);
+    console.log(`${msg.guild} requested help at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
 })
