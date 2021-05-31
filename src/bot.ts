@@ -108,21 +108,17 @@ function generateErrant(): string {
 }
 
 function getHelp(): string {
-  const result: string = `**roll-character Help** \n \
-  roll-character generates random characters and npcs for various ttrpg purposes.\n \
-  \n \
-  User Commands \n \
-  * \`!help\` calls for help, lists commands \n \
-  * \`!npc\` generates a complex character profile including pronouns, gender, and split attraction model. \n \
-  * \`!scvm\` a teaser for ScvmBjörn, this generates a classless Mörk Borg character. \n \
-  * \`!errant\`  generates a character for Errant. \n \
-  * \`!exhumegirl\` generates a dead-girl character for Dead Girls in Sarkash Forest.  \n \
-  * \`!exhumeloot [number]\` generates loot, based on depth, for Dead Girls in Sarkash Forest. \n \
-  \n \
-  Thank you for using roll-character! \n \
-  Feel free to leave feedback at either of the following locations! \n \
-  * https://kaylotura.itch.io/roll-character \n \
-  * https://github.com/KayLotura2/roll-character`
+  const result: string = `**Roll-Character Help** \nRoll-Character generates random characters and npcs for various ttrpg purposes.\n \n \
+User Commands \n \
+  \`!help\`    calls for help, lists commands \n \
+  \`!npc\`    generates a complex queer inclusive character. \n \
+  \`!scvm\`    a teaser for ScvmBjörn, this generates a classless Mörk Borg character. \n \
+  \`!errant\`    generates a character for Errant. \n \
+  \`!exhumegirl\`    generates a dead-girl character for Dead Girls in Sarkash Forest.  \n \
+  \`!exhumeloot [number]\`    generates loot, based on depth, for Dead Girls in Sarkash Forest. \n \n \
+Thank you for using roll-character! \nFeel free to leave feedback at either of the following locations! \n \
+    <https://kaylotura.itch.io/roll-character> \n \
+    <https://github.com/KayLotura2/roll-character>`
 
   return result
 }
