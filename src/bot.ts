@@ -123,9 +123,6 @@ Thank you for using roll-character! \nFeel free to leave feedback at either of t
   return result
 }
 
-
-
-
 client.on('ready', () => {
   console.log('Client Ready');
 });
