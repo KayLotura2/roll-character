@@ -354,12 +354,12 @@ export function generateGearC(presence: number, scrollType: string): EquipmentCV
       result.equipment.push(`Life Elixir (${dieRoll(4)} doses): heals d6 HP and removes infection`);
       break;
     case 2:
-      result.companionVehicleBag.push(`Small but vicious dog only obeys you, ${generateName()} [Atk/Def 12 | bite d4 | ${dieRoll(6) + 2} HP | No armor ]`);
+      result.companionVehicleBag.push(`Small but vicious dog only obeys you, ${generateName()} [ ${dieRoll(6) + 2} HP | Morale 7 | no armor | bite d4 ]`);
       break;
     case 3:
       const monkeyRoll = dieRoll(4);
       for (let i = 0; i < monkeyRoll; i++) {
-        result.companionVehicleBag.push(`A monkey who loves but ignores you, ${generateName()} [Atk/Def 12 | punch d4 | ${dieRoll(4) + 2} HP | No armor ]`);
+        result.companionVehicleBag.push(`A monkey who loves but ignores you, ${generateName()} [ ${dieRoll(4) + 2} HP | Morale 5 | no armor | punch d4 ]`);
       }
       break;
     case 4:
@@ -381,7 +381,7 @@ export function generateGearC(presence: number, scrollType: string): EquipmentCV
       result.equipment.push('Crowbar');
       break;
     case 10:
-      result.equipment.push(`Lard (${dieRoll(4 + 1)} doses): each dose can serve as up to 5 rough meals`)
+      result.equipment.push(`Lard (${dieRoll(4) + 1} doses): each dose can serve as up to 5 rough meals`)
       break;
     case 11:
       result.equipment.push('Tent');
@@ -389,7 +389,7 @@ export function generateGearC(presence: number, scrollType: string): EquipmentCV
     case 12:
       const ratRoll = dieRoll(6);
       for (let i = 0; i < ratRoll; i++) {
-        result.companionVehicleBag.push(`A tame rat, ${generateName()} [Atk/Def 12 | punch d4 | 2 HP | No armor ], could make a rough meal`);
+        result.companionVehicleBag.push(`A tame rat, ${generateName()} [ ${dieRoll(3)} HP | Morale 6 | no armor | bite 1 ], could make a rough meal`);
       }
       break;
     case 13:
