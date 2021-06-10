@@ -164,7 +164,7 @@ export function generateGearA(): EquipmentCVB {
       `${gearA[gearARoll - 1]}`
     ]
   };
-  if (gearARoll === 6) result.companionVehicleBag.push(`Skeleton, ${generateName()} [ Atk/Def 12 | fist d2 | 5 HP| Morale - | no armor ]`);
+  if (gearARoll === 6) result.companionVehicleBag.push(`Skeleton, ${generateName()} [ HP ${dieRoll(6) + 2} | Morale - | no armor | bony fist d2 ]`);
 
   return result
 }
@@ -287,7 +287,7 @@ export function generateGearB(presence: number, scrollType: string): EquipmentCV
       result.equipment.push('Crowbar, d3');
       break;
     case 9:
-      result.companionVehicleBag.push(`Affectionate Dead Crow, ${generateName()} ${dieRoll(4) + 2} HP`);
+      result.companionVehicleBag.push(`Affectionate Dead Crow, ${generateName()} HP ${dieRoll(4) + 2}`);
       break;
     case 10:
       result.equipment.push(`Communion Waffers (${dieRoll(8)}x)`)
