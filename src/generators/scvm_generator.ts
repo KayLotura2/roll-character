@@ -166,7 +166,7 @@ export function generateGearA(): EquipmentCVB {
       `${gearA[gearARoll - 1]}`
     ]
   };
-  if (gearARoll === 6) result.companionVehicleBag.push(`Donkey, ${generateName()} [ Atk/Def 10 | bite d2 | 6 HP| Morale 7 | no armor ]`);
+  if (gearARoll === 6) result.companionVehicleBag.push(`Donkey, ${generateName()} [ HP ${dieRoll(6)+3} | Morale 8 | no armor | kick d6 ]`);
 
   return result
 }
@@ -354,12 +354,12 @@ export function generateGearC(presence: number, scrollType: string): EquipmentCV
       result.equipment.push(`Life Elixir (${dieRoll(4)} doses): heals d6 HP and removes infection`);
       break;
     case 2:
-      result.companionVehicleBag.push(`Small but vicious dog only obeys you, ${generateName()} [Atk/Def 12 | bite d4 | ${dieRoll(6) + 2} HP | No armor ]`);
+      result.companionVehicleBag.push(`Small but vicious dog only obeys you, ${generateName()} [ HP ${dieRoll(6) + 2} | Morale 7 | no armor | bite d4 ]`);
       break;
     case 3:
       const monkeyRoll = dieRoll(4);
       for (let i = 0; i < monkeyRoll; i++) {
-        result.companionVehicleBag.push(`A monkey who loves but ignores you, ${generateName()} [Atk/Def 12 | punch d4 | ${dieRoll(4) + 2} HP | No armor ]`);
+        result.companionVehicleBag.push(`A monkey who loves but ignores you, ${generateName()} [ HP ${dieRoll(4) + 2}  | Morale 5 | no armor | punch d4 ]`);
       }
       break;
     case 4:
@@ -375,13 +375,13 @@ export function generateGearC(presence: number, scrollType: string): EquipmentCV
       result.equipment.push('Grappling Hook');
       break;
     case 8:
-      result.equipment.push('Shield: -1 HP damage or have the shield break to ignore one attack');
+      result.equipment.push('Shield: -1 damage or have the shield break to ignore one attack');
       break;
     case 9:
       result.equipment.push('Crowbar');
       break;
     case 10:
-      result.equipment.push(`Lard (${dieRoll(4 + 1)} doses): each dose can serve as up to 5 rough meals`)
+      result.equipment.push(`Lard (${dieRoll(4) + 1} doses): each dose can serve as up to 5 rough meals`)
       break;
     case 11:
       result.equipment.push('Tent');
@@ -389,7 +389,7 @@ export function generateGearC(presence: number, scrollType: string): EquipmentCV
     case 12:
       const ratRoll = dieRoll(6);
       for (let i = 0; i < ratRoll; i++) {
-        result.companionVehicleBag.push(`A tame rat, ${generateName()} [Atk/Def 12 | punch d4 | 2 HP | No armor ], could make a rough meal`);
+        result.companionVehicleBag.push(`A tame rat, ${generateName()} [ HP ${dieRoll(3)} | Morale 6 | no armor | bite 1 ], could make a rough meal`);
       }
       break;
     case 13:
@@ -541,7 +541,7 @@ export function generateMBCharacter(): FullCharacter {
   let charEquipment: string[] = [
     charWeapon, 
     charArmor,
-    `Food (${foodCount} Days)`,
+    `Food (${foodCount} days)`,
     'Water Skin',
     ...charGearA.equipment,
     ...charGearB.equipment,

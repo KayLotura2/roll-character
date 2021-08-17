@@ -40,11 +40,12 @@ function generateScvm(): string {
 
   const result: string = `**Name:** ${scvm_npc.name} \n**Class:** ${scvm_npc.className} \
   \n**Background:** ${scvm_npc.classDescription}  ${scvm_npc.origin} \
-  \n**Traits:** You are ${scvm_npc.terribleTraitA}, and ${scvm_npc.terribleTraitB} \
-  \n**Hit Points:** ${scvm_npc.hitPoints}  ||  **Omens:** d${scvm_npc.omens}, ${dieRoll(scvm_npc.omens)}\
+
+  \n**Traits:** You are ${scvm_npc.terribleTraitA}, and you are ${scvm_npc.terribleTraitB}. \
+  \n**Hit Points:** ${scvm_npc.hitPoints}  ||  **Omens:** d${scvm_npc.omens}, ${dieRoll(scvm_npc.omens)} \
   \n**Strength:** ${scvm_npc.strength} \
   \n**Agility:** ${scvm_npc.agility} \
-  \n**Presence:** ${scvm_npc.presence} \ 
+  \n**Presence:** ${scvm_npc.presence} \
   \n**Toughness:** ${scvm_npc.toughness} \
   \n**Weapon:** ${scvm_npc.weapon} \
   \n**Armor:** ${scvm_npc.armor && scvm_npc.armor} \
@@ -52,7 +53,7 @@ function generateScvm(): string {
   \n${scvm_npc.features.map(p => `**${p.featureName}**: ${p.featureDesc}`).join('\n')} \
   \n \
   \n**Companions & Vehicles** \
-  \n${scvm_npc.companionVehicles.join('\n')}
+  \n${scvm_npc.companionVehicles.join('\n')} \
   \n \
   \n**Equipment (Carrying Capacity: ${scvm_npc.inventoryCount} )** \
   \n${scvm_npc.equipment.map((e: string, i: number) => `**${i + 1}**: ${e}`).join('\n')}`
@@ -69,7 +70,7 @@ function generateDeadGirl(): string {
   \n**Hit Points:** ${dead_girl_npc.hitPoints}  ||  **Omens:** ${dead_girl_npc.omens} \
   \n**Strength:** ${dead_girl_npc.strength} \
   \n**Agility:** ${dead_girl_npc.agility} \
-  \n**Presence:** ${dead_girl_npc.presence} \ 
+  \n**Presence:** ${dead_girl_npc.presence} \
   \n**Toughness:** ${dead_girl_npc.toughness} \
   \n**Weapon:** ${dead_girl_npc.weapon} \
   \n**Armor:** ${dead_girl_npc.armor && dead_girl_npc.armor} \

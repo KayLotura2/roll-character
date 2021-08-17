@@ -12,7 +12,7 @@
                 "Orc",
                 "Ghoul"
             ],
-            "feature": "Once per session, when you would be reduced to 0 hp, you may choose to be reduced to 1 hp instead."
+            "feature": "Once per session, when you would be reduced to 0 HP, you may choose to be reduced to 1 HP instead."
         },
         {
             "type": "Arcane",
