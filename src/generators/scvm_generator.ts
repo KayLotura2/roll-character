@@ -480,7 +480,7 @@ function generateSilver(numberDice: number, dieSize: number, multiplier: number)
   const silverQuotient = Math.floor(silverCount / 50);
   const silverRemainder = silverCount % 50;
   for (let i = 0; i < silverQuotient; i++) {
-    result.push('A small pouch of 50 silver coins');
+    result.push('A pouch of 50 silver coins');
   }
   if (silverRemainder > 0) {
     result.push(`A pouch of ${silverRemainder} silver coins`)
