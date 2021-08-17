@@ -6,6 +6,7 @@ dotenv.config();
 import { FullCharacter, generateMBCharacter } from './generators/scvm_generator'
 import { ErrantFullCharacter, generateErrantCharacter } from './generators/errant_generator'
 import { FullDeadGirlCharacter, generateDeadGirlCharacter, generateDeadGirlLoot } from './generators/dead_girl_generator'
+import { dieRoll } from './generators/randomizers';
 const client = new Discord.Client();
 client.login(process.env.TOKEN);
 
@@ -40,7 +41,7 @@ function generateScvm(): string {
   const result: string = `**Name:** ${scvm_npc.name} \n**Class:** ${scvm_npc.className} \
   \n**Background:** ${scvm_npc.classDescription}  ${scvm_npc.origin} \
   \n**Traits:** You are ${scvm_npc.terribleTraitA}, and ${scvm_npc.terribleTraitB} \
-  \n**Hit Points:** ${scvm_npc.hitPoints}  ||  **Omens:** d${scvm_npc.omens} \
+  \n**Hit Points:** ${scvm_npc.hitPoints}  ||  **Omens:** d${scvm_npc.omens}, ${dieRoll(scvm_npc.omens)}\
   \n**Strength:** ${scvm_npc.strength} \
   \n**Agility:** ${scvm_npc.agility} \
   \n**Presence:** ${scvm_npc.presence} \ 

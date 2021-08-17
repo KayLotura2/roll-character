@@ -409,7 +409,7 @@ function generateSilver(numberDice: number, dieSize: number, multiplier: number)
     result.push('A small pouch of 50 silver coins');
   }
   if (silverRemainder > 0) {
-    result.push(`A small pouch of ${silverRemainder} silver coins`)
+    result.push(`A pouch of ${silverRemainder} silver coins`)
   }
 
   return result

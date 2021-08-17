@@ -483,7 +483,7 @@ function generateSilver(numberDice: number, dieSize: number, multiplier: number)
     result.push('A small pouch of 50 silver coins');
   }
   if (silverRemainder > 0) {
-    result.push(`A small pouch of ${silverRemainder} silver coins`)
+    result.push(`A pouch of ${silverRemainder} silver coins`)
   }
 
   return result
@@ -523,7 +523,8 @@ export function generateMBCharacter(): FullCharacter {
   const agility: number = generateAbility(baseClass.aglMod);
   const presence: number = generateAbility(baseClass.preMod);
   const toughness: number = generateAbility(baseClass.tghMod);
-  const hitPoints: number = dieRoll(baseClass.HD) + toughness;
+  let hitPoints: number = dieRoll(baseClass.HD) + toughness;
+  if (hitPoints > 1) hitPoints = 1;
   const charScrollType: string = baseClass.scrollType;
   const omens: number = baseClass.omensDie;
   const silverPouches: string[] = generateSilver(baseClass.silver.numberDice, baseClass.silver.dieSize, baseClass.silver.multiplier);
