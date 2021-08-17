@@ -524,7 +524,6 @@ export function generateMBCharacter(): FullCharacter {
   const presence: number = generateAbility(baseClass.preMod);
   const toughness: number = generateAbility(baseClass.tghMod);
   let hitPoints: number = dieRoll(baseClass.HD) + toughness;
-  if (hitPoints > 1) hitPoints = 1;
   const charScrollType: string = baseClass.scrollType;
   const omens: number = baseClass.omensDie;
   const silverPouches: string[] = generateSilver(baseClass.silver.numberDice, baseClass.silver.dieSize, baseClass.silver.multiplier);
@@ -571,7 +570,7 @@ export function generateMBCharacter(): FullCharacter {
     terribleTraitA: charTerTraits[0],
     terribleTraitB: charTerTraits[1],
     origin: classOrigin,
-    hitPoints: hitPoints,
+    hitPoints: Math.max(hitPoints, 1),
     strength: strength,
     agility: agility,
     presence: presence,
