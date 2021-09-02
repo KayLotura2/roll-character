@@ -151,13 +151,19 @@ client.on('message', (msg: Discord.Message) => {
     const args: string[] = content.slice('!exhumeloot'.length).trim().split(' ');
     let parsed: number = parseInt(args[0]);
     let messageNote: string = ''
-    if (isNaN(parsed) || parsed < 0 || parsed > 20) {
-      parsed = 0
-      messageNote = `"${args[0]}" is not a positive number between 0 and 20, returning Loot for Depth 0 \n`
+    if (parsed === 777) {
+      messageNote = ` All praise Yetsabu-Nech, the underworld's Nightmare, the black disk which stands before the sun! All praise Verhu, beaming with delight! All praise the fire which burns all! And the darkness shall swallow the darkness. \n The game and your lives are over.\n Delete Server. \n Burn the Book.`
+      channel.send(messageNote);
+      console.log(`${msg.guild} ENDED THE WORLD, 777 ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
+    } else {
+      if (isNaN(parsed) || parsed < 0 || parsed > 20) {
+        parsed = 0
+        messageNote = `"${args[0]}" is not a positive number between 0 and 20, returning Loot for Depth 0 \n`
+      }
+      const deadGirlLoot: string = `${messageNote} ${generateDeadGirlLoot(parsed)}`
+      channel.send(deadGirlLoot);
+      console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
     }
-    const deadGirlLoot: string = `${messageNote} ${generateDeadGirlLoot(parsed)}`
-    channel.send(deadGirlLoot);
-    console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
   if (content === '!errant') {
     const errant = generateErrant();
