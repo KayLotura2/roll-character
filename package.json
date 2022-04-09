@@ -6,7 +6,7 @@
     "@types/node": "^12.12.28",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "ts-node": "^9.1.1",
     "typescript": "^3.7.5"
   },
