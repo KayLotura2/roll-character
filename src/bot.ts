@@ -132,22 +132,22 @@ client.on('ready', () => {
 client.on('message', (msg: Discord.Message) => {
   const content = msg.content
   const channel = msg.channel as Discord.TextChannel;
-  if (content === '!npc') {
+  if (content.replace(/\s/g, "").toLowerCase() === '!npc') {
     const npc = generateNPC();
     channel.send(npc);
     console.log(`${msg.guild} requested an npc at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
-  if (content === '!scvm') {
+  if (content.replace(/\s/g, "").toLowerCase() === '!scvm') {
     const scvm = generateScvm();
     channel.send(scvm);
     console.log(`${msg.guild} requested lowdown scvm at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
-  if (content === '!exhumegirl') {
+  if (content.replace(/\s/g, "").toLowerCase() === '!exhumegirl') {
     const deadGirl = generateDeadGirl();
     channel.send(deadGirl);
     console.log(`${msg.guild} requested dead girl at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
-  if (content.startsWith('!exhumeloot')) {
+  if (content.replace(/\s/g, "").toLowerCase().startsWith('!exhumeloot')) {
     const args: string[] = content.slice('!exhumeloot'.length).trim().split(' ');
     let parsed: number = parseInt(args[0]);
     let messageNote: string = ''
@@ -165,12 +165,12 @@ client.on('message', (msg: Discord.Message) => {
       console.log(`${msg.guild} requested dead girl LOOT at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
     }
   }
-  if (content === '!errant') {
+  if (content.replace(/\s/g, "").toLowerCase() === '!errant') {
     const errant = generateErrant();
     channel.send(errant);
     console.log(`${msg.guild} requested errant at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)
   }
-  if (content === '!help') {
+  if (content.replace(/\s/g, "").toLowerCase() === '!help') {
     const help = getHelp();
     channel.send(help);
     console.log(`${msg.guild} requested help at ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`)

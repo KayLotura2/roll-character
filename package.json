@@ -11,6 +11,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "local": "npm i & ts-node src/bot.ts",
     "dev": "ts-node-dev src/bot.ts",
     "start": "ts-node src/bot.ts"
   },
