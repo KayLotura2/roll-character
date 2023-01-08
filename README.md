@@ -7,13 +7,16 @@ Roll Character is a simple discord bot that generates dynamic NPCS.
 Click this link to invite [roll-character](https://t.co/9X0A9QqWst?amp=1) as a discord bot into your server.  
 When it's in your server it will respond to the command `!npc` with a randomly generated NPC.
 
-### To Run Your Own Instance of Roll Character
+### To Run Your Own Instance of a Roll Character Bot
 
-In the project directory:  
+First, log into discord developers portal and create your own Discord Bot, and get it's Discord Token
+  * https://discord.com/developers/applications
+
+Then, locally in the roll-character directory:  
   
 create a file named `.env`  
 inside that file write `TOKEN={Your Bot's Token}`  
-then run `npm run dev`  
+then run `npm run local`  
 
 This will spin up an instance of roll-character.  
 Your terminal should read `Client Ready.`
@@ -60,6 +63,11 @@ A, Bi, Hetero, Homo, Pan, Poly
 #### Percentages: Split Attraction Model
 50% Split Attraction Generation  
 50% Attraction Descriptor  
+
+#### Logging
+When the discord bot is used, it logs the Discord Guild the bot was called from, the command requested, and the date-time of the call. These logs are not saved, they are temporarily available mostly for use tracking and trouble-shooting.
+
+Example: `Roll Character Alpha Testing requested an npc at Sunday, January 8th 2023, 10:58:44 am`
 
 ### License
 
