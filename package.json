@@ -1,6 +1,6 @@
 {
   "name": "roll-character",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "dependencies": {
     "@types/node": "^12.12.28",
