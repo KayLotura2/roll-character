@@ -9,6 +9,8 @@ When it's in your server it will respond to the command `!npc` with a randomly g
 
 ### To Run Your Own Instance of a Roll Character Bot
 
+You will need to have node and npm [installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
 First, log into discord developers portal and create your own Discord Bot, and get it's Discord Token
   * https://discord.com/developers/applications
 
